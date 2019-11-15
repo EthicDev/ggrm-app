@@ -1,0 +1,12 @@
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\bin\Debug\GGRMApp.exe.config
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\bin\Debug\GGRMApp.exe
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\bin\Debug\GGRMApp.pdb
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.csprojAssemblyReference.cache
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.AddItem.resources
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.Form1.resources
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.Properties.Resources.resources
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.csproj.GenerateResource.cache
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.csproj.CoreCompileInputs.cache
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.exe
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.pdb
+C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.NewCustomer.resources
