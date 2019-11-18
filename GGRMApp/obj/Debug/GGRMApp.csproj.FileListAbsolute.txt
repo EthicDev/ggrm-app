@@ -10,3 +10,17 @@ C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.csproj.C
 C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.exe
 C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.pdb
 C:\Users\coope\Desktop\Go-Go Robo Mow\GGRMApp\GGRMApp\obj\Debug\GGRMApp.NewCustomer.resources
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\bin\Debug\GGRMApp.exe.config
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\bin\Debug\GGRMApp.exe
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\bin\Debug\GGRMApp.pdb
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\bin\Debug\GGRMLib.dll
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\bin\Debug\GGRMLib.pdb
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csprojAssemblyReference.cache
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.AddItem.resources
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.Form1.resources
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.NewCustomer.resources
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.Properties.Resources.resources
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.GenerateResource.cache
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.CopyComplete
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.exe
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.pdb

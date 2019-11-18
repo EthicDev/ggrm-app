@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GGRMLib;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -15,8 +16,13 @@ namespace GGRMApp
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //Initialize the database connection
+            GlobalConfig.InitializeConnections();
+
             Application.Run(new Form1());
         }
     }
