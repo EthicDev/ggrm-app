@@ -24,3 +24,17 @@ C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.GenerateR
 C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.CopyComplete
 C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.exe
 C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\obj\Debug\GGRMApp.pdb
+C:\Users\coope\Documents\ggrm-app\GGRMApp\bin\Debug\GGRMApp.exe.config
+C:\Users\coope\Documents\ggrm-app\GGRMApp\bin\Debug\GGRMApp.exe
+C:\Users\coope\Documents\ggrm-app\GGRMApp\bin\Debug\GGRMApp.pdb
+C:\Users\coope\Documents\ggrm-app\GGRMApp\bin\Debug\GGRMLib.pdb
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csprojAssemblyReference.cache
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.AddItem.resources
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.Form1.resources
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.NewCustomer.resources
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.Properties.Resources.resources
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.GenerateResource.cache
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.CoreCompileInputs.cache
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.CopyComplete
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.exe
+C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.pdb
