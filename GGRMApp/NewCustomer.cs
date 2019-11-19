@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using GGRMLib;
 using GGRMLib.Models;
 
+//Coded by Cooper Keddy & Macklem Curtis
+
 namespace GGRMApp
 {
     public partial class NewCustomer : Form

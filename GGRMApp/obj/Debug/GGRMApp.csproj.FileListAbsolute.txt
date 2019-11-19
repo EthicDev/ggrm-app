@@ -38,3 +38,4 @@ C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.CoreCompileIn
 C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.csproj.CopyComplete
 C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.exe
 C:\Users\coope\Documents\ggrm-app\GGRMApp\obj\Debug\GGRMApp.pdb
+C:\Users\Mack\Desktop\Github\ggrm-app\GGRMApp\bin\Debug\GGRMLib.dll.config
