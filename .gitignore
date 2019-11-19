@@ -1,3 +1,8 @@
-GGRMApp/bin/Debug
+# Generated files
+GGRMApp/bin/
+GGRMApp/obj/
+*.suo
+
+# Except database
 !GGRMApp/bin/Debug/Emmas.mdf
 !GGRMApp/bin/Debug/Emmas_log.ldf
