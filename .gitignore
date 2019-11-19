@@ -1,7 +1,9 @@
+# VS User Folder
+/.vs
+
 # Generated files
 GGRMApp/bin/
 GGRMApp/obj/
-*.suo
 
 # Except database
 !GGRMApp/bin/Debug/Emmas.mdf
