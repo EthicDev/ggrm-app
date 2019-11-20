@@ -11,7 +11,8 @@ using System.Windows.Forms;
 using GGRMLib;
 using GGRMLib.Models;
 
-//Coded by Cooper Keddy & Macklem Curtis
+//Coded by: Cooper Keddy & Macklem Curtis
+//Date: Nov 2019
 
 namespace GGRMApp
 {
