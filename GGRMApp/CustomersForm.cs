@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace GGRMApp
 {
-    public partial class AddItem : Form
+    public partial class CustomersForm : Form
     {
-        public AddItem()
+        public CustomersForm()
         {
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            NewCustomerForm add = new NewCustomerForm();
+            add.Show();
         }
     }
 }

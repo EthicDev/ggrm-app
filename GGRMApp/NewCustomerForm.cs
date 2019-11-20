@@ -15,9 +15,9 @@ using GGRMLib.Models;
 
 namespace GGRMApp
 {
-    public partial class NewCustomer : Form
+    public partial class NewCustomerForm : Form
     {
-        public NewCustomer()
+        public NewCustomerForm()
         {
             InitializeComponent();
         }

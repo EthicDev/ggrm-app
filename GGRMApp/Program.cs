@@ -23,7 +23,7 @@ namespace GGRMApp
             //Initialize the database connection
             GlobalConfig.InitializeConnections();
 
-            Application.Run(new Form1());
+            Application.Run(new SalesForm());
         }
     }
     
