@@ -12,6 +12,35 @@ namespace GGRMApp
 {
     public partial class SalesForm : Form
     {
+        private bool mouseDown;
+        private Point lastLocation;
+        
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point cursorLocation = this.PointToClient(System.Windows.Forms.Cursor.Position);
+
+            if (mouseDown && cursorLocation.Y < 20)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+            lblDebug.Text = "X: " + cursorLocation.X + " Y: " + cursorLocation.Y;
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
         public SalesForm()
         {
             InitializeComponent();
@@ -32,6 +61,16 @@ namespace GGRMApp
         {
             CustomersForm cust = new CustomersForm();
             cust.Show();
+        }
+
+        private void WindowClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void WindowMaximize_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

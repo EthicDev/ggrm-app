@@ -35,6 +35,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblDebug = new System.Windows.Forms.Label();
+            this.windowClose = new System.Windows.Forms.Button();
+            this.windowMaximize = new System.Windows.Forms.Button();
+            this.windowMinimize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,12 +140,73 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Item List";
             // 
+            // lblDebug
+            // 
+            this.lblDebug.AutoSize = true;
+            this.lblDebug.ForeColor = System.Drawing.Color.White;
+            this.lblDebug.Location = new System.Drawing.Point(534, 233);
+            this.lblDebug.Name = "lblDebug";
+            this.lblDebug.Size = new System.Drawing.Size(49, 13);
+            this.lblDebug.TabIndex = 4;
+            this.lblDebug.Text = "lblDebug";
+            // 
+            // windowClose
+            // 
+            this.windowClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.windowClose.FlatAppearance.BorderSize = 0;
+            this.windowClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.windowClose.Font = new System.Drawing.Font("Marlett", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.windowClose.ForeColor = System.Drawing.Color.White;
+            this.windowClose.Location = new System.Drawing.Point(780, 0);
+            this.windowClose.Margin = new System.Windows.Forms.Padding(0);
+            this.windowClose.Name = "windowClose";
+            this.windowClose.Size = new System.Drawing.Size(20, 20);
+            this.windowClose.TabIndex = 5;
+            this.windowClose.Text = "r";
+            this.windowClose.UseVisualStyleBackColor = true;
+            this.windowClose.Click += new System.EventHandler(this.WindowClose_Click);
+            // 
+            // windowMaximize
+            // 
+            this.windowMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.windowMaximize.FlatAppearance.BorderSize = 0;
+            this.windowMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.windowMaximize.Font = new System.Drawing.Font("Marlett", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.windowMaximize.ForeColor = System.Drawing.Color.White;
+            this.windowMaximize.Location = new System.Drawing.Point(760, 0);
+            this.windowMaximize.Margin = new System.Windows.Forms.Padding(0);
+            this.windowMaximize.Name = "windowMaximize";
+            this.windowMaximize.Size = new System.Drawing.Size(20, 20);
+            this.windowMaximize.TabIndex = 5;
+            this.windowMaximize.Text = "1";
+            this.windowMaximize.UseVisualStyleBackColor = true;
+            this.windowMaximize.Click += new System.EventHandler(this.WindowMaximize_Click);
+            // 
+            // windowMinimize
+            // 
+            this.windowMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.windowMinimize.FlatAppearance.BorderSize = 0;
+            this.windowMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.windowMinimize.Font = new System.Drawing.Font("Marlett", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.windowMinimize.ForeColor = System.Drawing.Color.White;
+            this.windowMinimize.Location = new System.Drawing.Point(740, 0);
+            this.windowMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.windowMinimize.Name = "windowMinimize";
+            this.windowMinimize.Size = new System.Drawing.Size(20, 20);
+            this.windowMinimize.TabIndex = 5;
+            this.windowMinimize.Text = "0";
+            this.windowMinimize.UseVisualStyleBackColor = true;
+            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(804, 441);
+            this.ClientSize = new System.Drawing.Size(800, 440);
+            this.Controls.Add(this.windowMinimize);
+            this.Controls.Add(this.windowMaximize);
+            this.Controls.Add(this.windowClose);
+            this.Controls.Add(this.lblDebug);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -149,9 +214,13 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "SalesForm";
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,6 +236,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDebug;
+        private System.Windows.Forms.Button windowClose;
+        private System.Windows.Forms.Button windowMaximize;
+        private System.Windows.Forms.Button windowMinimize;
     }
 }
 
