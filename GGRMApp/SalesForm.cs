@@ -33,7 +33,6 @@ namespace GGRMApp
 
                 this.Update();
             }
-            lblDebug.Text = "X: " + cursorLocation.X + " Y: " + cursorLocation.Y;
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
@@ -60,7 +59,7 @@ namespace GGRMApp
         private void BtnCustomers_Click(object sender, EventArgs e)
         {
             CustomersForm cust = new CustomersForm();
-            cust.Show();
+            cust.ShowDialog();
         }
 
         private void WindowClose_Click(object sender, EventArgs e)
@@ -71,6 +70,12 @@ namespace GGRMApp
         private void WindowMaximize_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+            GarbageForReference test = new GarbageForReference();
+            test.Show();
         }
     }
 }

@@ -35,7 +35,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblDebug = new System.Windows.Forms.Label();
             this.windowClose = new System.Windows.Forms.Button();
             this.windowMaximize = new System.Windows.Forms.Button();
             this.windowMinimize = new System.Windows.Forms.Button();
@@ -139,16 +138,7 @@
             this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Item List";
-            // 
-            // lblDebug
-            // 
-            this.lblDebug.AutoSize = true;
-            this.lblDebug.ForeColor = System.Drawing.Color.White;
-            this.lblDebug.Location = new System.Drawing.Point(534, 233);
-            this.lblDebug.Name = "lblDebug";
-            this.lblDebug.Size = new System.Drawing.Size(49, 13);
-            this.lblDebug.TabIndex = 4;
-            this.lblDebug.Text = "lblDebug";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // windowClose
             // 
@@ -206,7 +196,6 @@
             this.Controls.Add(this.windowMinimize);
             this.Controls.Add(this.windowMaximize);
             this.Controls.Add(this.windowClose);
-            this.Controls.Add(this.lblDebug);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -214,7 +203,6 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "SalesForm";
             this.Text = "Form1";
@@ -236,7 +224,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblDebug;
         private System.Windows.Forms.Button windowClose;
         private System.Windows.Forms.Button windowMaximize;
         private System.Windows.Forms.Button windowMinimize;
