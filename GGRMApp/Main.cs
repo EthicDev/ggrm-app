@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGRMLib;
+using GGRMLib.Models;
 using GGRMLib.DataSet_CustomersTableAdapters;
 using GGRMLib.DataAccess;
 
@@ -54,12 +55,28 @@ namespace GGRMApp
             mainView.SelectedTab = tabPOS;
         }
 
+
+
+        //coloring cells of table layout panels
         private void TlpCustomerSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {
             if(e.Column == 1)
             {
                 e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 48, 48, 48)), e.CellBounds);
             }
+        }
+
+        private void TlpMain_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if(e.Row == 0)
+            {
+                e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 48, 48, 48)), e.CellBounds);
+            }
+        }
+
+        private void BtnSelectCustomer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
