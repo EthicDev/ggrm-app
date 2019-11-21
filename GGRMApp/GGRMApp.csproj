@@ -62,6 +62,7 @@
     <Compile Include="CustomerLookup.Designer.cs">
       <DependentUpon>CustomerLookup.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalData.cs" />
     <Compile Include="InventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>

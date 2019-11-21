@@ -133,16 +133,16 @@ namespace GGRMApp
 
         private void SubtabCustomers_Enter(object sender, EventArgs e)
         {
-            // Display list of customer data
-            using (SqlConnection conn = new SqlConnection(GlobalConfig.ConString("GGRM")))
-            {
-                conn.Open();
-                string sqlCommand = "SELECT id, custLast+', '+custFirst AS custName, custPhone, custAddress, custCity, custPostal, custEmail FROM customer";
-                SqlDataAdapter sqlDa = new SqlDataAdapter(sqlCommand, conn);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dgvCustomers.DataSource = dtbl;
-            }
+            string status;
+
+            // Get customer objects from database
+            //List<Customer> customers = new List<Customer>();
+            //customers = GlobalConfig.Connection.GetCustomersList(out status);
+
+            // Display list of customer data in DataGridView
+            DataTable dtCustomers = GlobalConfig.Connection.GetCustomersDataTable(out status);
+            dgvCustomers.DataSource = dtCustomers;
+
         }
 
         // Code to run after customer data is populated
@@ -161,7 +161,20 @@ namespace GGRMApp
             mainView.SelectedTab = tabPOS;
         }
 
+        private void BtnSelectCustomer_Click(object sender, EventArgs e)
+        {
+            string status;
+            Customer selectedCust = GlobalConfig.Connection.GetCustomerByID((int)dgvCustomers.SelectedRows[0].Cells["id"].Value, out status);
 
+            if (GlobalData.ViewData.ContainsKey("posSelectedCustomer")) 
+            {
+                GlobalData.ViewData["posSelectedCustomer"] = selectedCust;
+            } else
+            {
+                GlobalData.ViewData.Add("posSelectedCustomer", selectedCust);  
+            }
+            mainView.SelectedTab = tabPOS;
+        }
 
         //coloring cells of table layout panels
         private void TlpCustomerSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -180,10 +193,7 @@ namespace GGRMApp
             }
         }
 
-        private void BtnSelectCustomer_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
 
@@ -255,6 +265,12 @@ namespace GGRMApp
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void tabPOS_Enter(object sender, EventArgs e)
+        {
+            Customer selectedCust = (Customer)GlobalData.ViewData["posSelectedCustomer"];
+            lblSelectedCustomer.Text = selectedCust.CustFirst ?? "No customer selected.";
         }
     }
 }
