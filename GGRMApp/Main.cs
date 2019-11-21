@@ -12,6 +12,9 @@ using GGRMLib;
 using GGRMLib.DataSet_CustomersTableAdapters;
 using GGRMLib.DataAccess;
 
+//Coded by: Cooper Keddy & Macklem Curtis
+//Date: Nov/Dec 2019
+
 namespace GGRMApp
 {
     public partial class Main : Form
@@ -23,6 +26,7 @@ namespace GGRMApp
 
         private void SubtabCustomers_Enter(object sender, EventArgs e)
         {
+            // Display list of customer data
             using (SqlConnection conn = new SqlConnection(GlobalConfig.ConString("GGRM")))
             {
                 conn.Open();
@@ -32,6 +36,12 @@ namespace GGRMApp
                 sqlDa.Fill(dtbl);
                 dgvCustomers.DataSource = dtbl;
             }
+        }
+
+        // Code to run after customer data is populated
+        private void dgvCustomers_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvCustomers.Columns["id"].Visible = false;
         }
 
         private void BtnCustomers_Click(object sender, EventArgs e)
