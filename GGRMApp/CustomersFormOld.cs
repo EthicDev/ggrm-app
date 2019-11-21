@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace GGRMApp
 {
-    public partial class CustomersForm : Form
+    public partial class CustomersFormOld : Form
     {
-        public CustomersForm()
+        public CustomersFormOld()
         {
             InitializeComponent();
         }

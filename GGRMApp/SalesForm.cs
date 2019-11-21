@@ -58,7 +58,7 @@ namespace GGRMApp
 
         private void BtnCustomers_Click(object sender, EventArgs e)
         {
-            CustomersForm cust = new CustomersForm();
+            CustomersFormOld cust = new CustomersFormOld();
             cust.ShowDialog();
         }
 
@@ -74,8 +74,7 @@ namespace GGRMApp
 
         private void Label2_Click(object sender, EventArgs e)
         {
-            GarbageForReference test = new GarbageForReference();
-            test.Show();
+
         }
     }
 }

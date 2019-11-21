@@ -1,6 +1,6 @@
 ﻿namespace GGRMApp
 {
-    partial class CustomersForm
+    partial class CustomersFormOld
     {
         /// <summary>
         /// Required designer variable.

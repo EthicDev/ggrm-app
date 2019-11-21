@@ -138,7 +138,6 @@
             this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Item List";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // windowClose
             // 
