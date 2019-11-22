@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GGRMLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,18 @@ namespace GGRMApp
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            main.Show();
-            this.Hide();
+            string status;
+            int empID = GlobalConfig.Connection.AuthenticateLogin(txtUsername.Text, txtPassword.Text, out status);
+            if (empID != -1)
+            {
+                Main main = new Main();
+                main.Show();
+                this.Hide();
+            } else
+            {
+                MessageBox.Show(status, "Authentication Result");
+            }
+            
         }
 
         private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
