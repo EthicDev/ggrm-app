@@ -75,10 +75,10 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Views\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Views\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="SalesForm.cs">
@@ -104,6 +104,12 @@
     <Compile Include="TablessControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\subtabCustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\tabPOSView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="AddItemForm.resx">
       <DependentUpon>AddItemForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,7 +122,7 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesForm.resx">
