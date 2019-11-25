@@ -65,5 +65,10 @@ namespace GGRMApp
         {
             mouseDown = false;
         }
+
+        private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
     }
 }

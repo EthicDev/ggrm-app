@@ -1,4 +1,4 @@
-﻿namespace GGRMApp.Views
+﻿namespace GGRMApp
 {
     partial class Main
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -62,34 +63,13 @@
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.tlpCustomerSearch = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCustomerSearch = new System.Windows.Forms.TextBox();
+            this.btnCustomerSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCustomersBack = new System.Windows.Forms.Button();
             this.btnSelectCustomer = new System.Windows.Forms.Button();
             this.btnNewCustomer = new System.Windows.Forms.Button();
             this.btnEditCustomer = new System.Windows.Forms.Button();
-            this.subtabNewCustomer = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tlpCustomerInfoEntry = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNewCustomerFirst = new System.Windows.Forms.TextBox();
-            this.txtNewCustomerLast = new System.Windows.Forms.TextBox();
-            this.txtNewCustomerPhone = new System.Windows.Forms.TextBox();
-            this.txtNewCustomerAddress = new System.Windows.Forms.TextBox();
-            this.txtNewCustomerCity = new System.Windows.Forms.TextBox();
-            this.txtNewCustomerPostal = new System.Windows.Forms.TextBox();
-            this.txtNewCustomerEmail = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnCreateCustomer = new System.Windows.Forms.Button();
-            this.lblNewCustomerStatus = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPOS = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
@@ -122,11 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tlpCustomerSearch.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            this.subtabNewCustomer.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
-            this.tlpCustomerInfoEntry.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tlpTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -175,7 +150,6 @@
             this.mainView.Controls.Add(this.tabReports);
             this.mainView.Controls.Add(this.tabUsers);
             this.mainView.Controls.Add(this.subtabCustomers);
-            this.mainView.Controls.Add(this.subtabNewCustomer);
             this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainView.Location = new System.Drawing.Point(175, 0);
             this.mainView.Margin = new System.Windows.Forms.Padding(0);
@@ -231,7 +205,7 @@
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tableLayoutPanel6.Controls.Add(this.btnCustomers, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(461, 0);
@@ -365,7 +339,7 @@
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 1;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
             this.tableLayoutPanel13.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.button3, 0, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -455,7 +429,7 @@
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
             this.tableLayoutPanel10.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(461, 0);
@@ -579,10 +553,22 @@
             // 
             // dgvCustomers
             // 
+            this.dgvCustomers.AllowUserToAddRows = false;
+            this.dgvCustomers.AllowUserToDeleteRows = false;
+            this.dgvCustomers.AllowUserToResizeColumns = false;
+            this.dgvCustomers.AllowUserToResizeRows = false;
             this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCustomers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dgvCustomers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCustomers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -597,6 +583,7 @@
             this.dgvCustomers.GridColor = System.Drawing.Color.Gray;
             this.dgvCustomers.Location = new System.Drawing.Point(0, 30);
             this.dgvCustomers.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvCustomers.MultiSelect = false;
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.RowHeadersWidth = 51;
@@ -604,14 +591,17 @@
             this.dgvCustomers.Size = new System.Drawing.Size(509, 411);
             this.dgvCustomers.TabIndex = 0;
             this.dgvCustomers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvCustomers_DataBindingComplete);
+            this.dgvCustomers.SelectionChanged += new System.EventHandler(this.DgvCustomers_SelectionChanged);
             // 
             // tlpCustomerSearch
             // 
-            this.tlpCustomerSearch.ColumnCount = 2;
+            this.tlpCustomerSearch.ColumnCount = 3;
             this.tlpCustomerSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpCustomerSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCustomerSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tlpCustomerSearch.Controls.Add(this.label2, 0, 0);
-            this.tlpCustomerSearch.Controls.Add(this.textBox1, 1, 0);
+            this.tlpCustomerSearch.Controls.Add(this.txtCustomerSearch, 1, 0);
+            this.tlpCustomerSearch.Controls.Add(this.btnCustomerSearch, 2, 0);
             this.tlpCustomerSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCustomerSearch.Location = new System.Drawing.Point(0, 0);
             this.tlpCustomerSearch.Margin = new System.Windows.Forms.Padding(0);
@@ -634,19 +624,34 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "🔎";
             // 
-            // textBox1
+            // txtCustomerSearch
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(32, 2);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(475, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtCustomerSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtCustomerSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustomerSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCustomerSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerSearch.ForeColor = System.Drawing.Color.White;
+            this.txtCustomerSearch.Location = new System.Drawing.Point(32, 2);
+            this.txtCustomerSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerSearch.MaxLength = 50;
+            this.txtCustomerSearch.Name = "txtCustomerSearch";
+            this.txtCustomerSearch.Size = new System.Drawing.Size(385, 22);
+            this.txtCustomerSearch.TabIndex = 2;
+            // 
+            // btnCustomerSearch
+            // 
+            this.btnCustomerSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnCustomerSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCustomerSearch.FlatAppearance.BorderSize = 0;
+            this.btnCustomerSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerSearch.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerSearch.Location = new System.Drawing.Point(422, 3);
+            this.btnCustomerSearch.Name = "btnCustomerSearch";
+            this.btnCustomerSearch.Size = new System.Drawing.Size(84, 24);
+            this.btnCustomerSearch.TabIndex = 3;
+            this.btnCustomerSearch.Text = "Search";
+            this.btnCustomerSearch.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel8
             // 
@@ -684,12 +689,13 @@
             this.btnCustomersBack.TabIndex = 0;
             this.btnCustomersBack.Text = "Back";
             this.btnCustomersBack.UseVisualStyleBackColor = false;
-            this.btnCustomersBack.Click += new System.EventHandler(this.GoBack);
+            this.btnCustomersBack.Click += new System.EventHandler(this.BtnCustomersBack_Click);
             // 
             // btnSelectCustomer
             // 
             this.btnSelectCustomer.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSelectCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectCustomer.Enabled = false;
             this.btnSelectCustomer.FlatAppearance.BorderSize = 0;
             this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -717,12 +723,12 @@
             this.btnNewCustomer.TabIndex = 2;
             this.btnNewCustomer.Text = "New Customer";
             this.btnNewCustomer.UseVisualStyleBackColor = false;
-            this.btnNewCustomer.Click += new System.EventHandler(this.BtnNewCustomer_Click);
             // 
             // btnEditCustomer
             // 
             this.btnEditCustomer.BackColor = System.Drawing.Color.SteelBlue;
             this.btnEditCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEditCustomer.Enabled = false;
             this.btnEditCustomer.FlatAppearance.BorderSize = 0;
             this.btnEditCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -733,335 +739,6 @@
             this.btnEditCustomer.TabIndex = 3;
             this.btnEditCustomer.Text = "Edit Customer";
             this.btnEditCustomer.UseVisualStyleBackColor = false;
-            // 
-            // subtabNewCustomer
-            // 
-            this.subtabNewCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.subtabNewCustomer.Controls.Add(this.tableLayoutPanel15);
-            this.subtabNewCustomer.Location = new System.Drawing.Point(4, 22);
-            this.subtabNewCustomer.Name = "subtabNewCustomer";
-            this.subtabNewCustomer.Padding = new System.Windows.Forms.Padding(3);
-            this.subtabNewCustomer.Size = new System.Drawing.Size(663, 445);
-            this.subtabNewCustomer.TabIndex = 9;
-            this.subtabNewCustomer.Text = "subtabNewCustomer";
-            this.subtabNewCustomer.Leave += new System.EventHandler(this.SubtabNewCustomer_Leave);
-            // 
-            // tableLayoutPanel15
-            // 
-            this.tableLayoutPanel15.ColumnCount = 3;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel16, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.tlpCustomerInfoEntry, 1, 0);
-            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel17, 2, 0);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 1;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(657, 439);
-            this.tableLayoutPanel15.TabIndex = 0;
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 1;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel16.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel16.Controls.Add(this.label7, 0, 2);
-            this.tableLayoutPanel16.Controls.Add(this.label8);
-            this.tableLayoutPanel16.Controls.Add(this.label9, 0, 4);
-            this.tableLayoutPanel16.Controls.Add(this.label10, 0, 4);
-            this.tableLayoutPanel16.Controls.Add(this.label11, 0, 6);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 8;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(119, 433);
-            this.tableLayoutPanel16.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 21);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "First Name";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(30, 64);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 21);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Last Name";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(47, 114);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 21);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Phone #";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(46, 164);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 21);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Address";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(20, 264);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 21);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Postal Code";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(78, 214);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 21);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "City";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(4, 314);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 21);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Email Address";
-            // 
-            // tlpCustomerInfoEntry
-            // 
-            this.tlpCustomerInfoEntry.ColumnCount = 1;
-            this.tlpCustomerInfoEntry.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCustomerInfoEntry.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCustomerInfoEntry.Controls.Add(this.txtNewCustomerFirst, 0, 0);
-            this.tlpCustomerInfoEntry.Controls.Add(this.txtNewCustomerLast);
-            this.tlpCustomerInfoEntry.Controls.Add(this.txtNewCustomerPhone, 0, 2);
-            this.tlpCustomerInfoEntry.Controls.Add(this.txtNewCustomerAddress, 0, 3);
-            this.tlpCustomerInfoEntry.Controls.Add(this.txtNewCustomerCity, 0, 4);
-            this.tlpCustomerInfoEntry.Controls.Add(this.txtNewCustomerPostal, 0, 5);
-            this.tlpCustomerInfoEntry.Controls.Add(this.txtNewCustomerEmail, 0, 6);
-            this.tlpCustomerInfoEntry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCustomerInfoEntry.Location = new System.Drawing.Point(128, 3);
-            this.tlpCustomerInfoEntry.Name = "tlpCustomerInfoEntry";
-            this.tlpCustomerInfoEntry.RowCount = 8;
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpCustomerInfoEntry.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCustomerInfoEntry.Size = new System.Drawing.Size(344, 433);
-            this.tlpCustomerInfoEntry.TabIndex = 1;
-            this.tlpCustomerInfoEntry.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.TlpCustomerInfoEntry_CellPaint);
-            // 
-            // txtNewCustomerFirst
-            // 
-            this.txtNewCustomerFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewCustomerFirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtNewCustomerFirst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewCustomerFirst.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewCustomerFirst.ForeColor = System.Drawing.Color.White;
-            this.txtNewCustomerFirst.Location = new System.Drawing.Point(10, 10);
-            this.txtNewCustomerFirst.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.txtNewCustomerFirst.MaxLength = 100;
-            this.txtNewCustomerFirst.Name = "txtNewCustomerFirst";
-            this.txtNewCustomerFirst.Size = new System.Drawing.Size(324, 29);
-            this.txtNewCustomerFirst.TabIndex = 0;
-            // 
-            // txtNewCustomerLast
-            // 
-            this.txtNewCustomerLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewCustomerLast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtNewCustomerLast.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewCustomerLast.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewCustomerLast.ForeColor = System.Drawing.Color.White;
-            this.txtNewCustomerLast.Location = new System.Drawing.Point(10, 60);
-            this.txtNewCustomerLast.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.txtNewCustomerLast.MaxLength = 100;
-            this.txtNewCustomerLast.Name = "txtNewCustomerLast";
-            this.txtNewCustomerLast.Size = new System.Drawing.Size(324, 29);
-            this.txtNewCustomerLast.TabIndex = 1;
-            // 
-            // txtNewCustomerPhone
-            // 
-            this.txtNewCustomerPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewCustomerPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtNewCustomerPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewCustomerPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewCustomerPhone.ForeColor = System.Drawing.Color.White;
-            this.txtNewCustomerPhone.Location = new System.Drawing.Point(10, 110);
-            this.txtNewCustomerPhone.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.txtNewCustomerPhone.MaxLength = 100;
-            this.txtNewCustomerPhone.Name = "txtNewCustomerPhone";
-            this.txtNewCustomerPhone.Size = new System.Drawing.Size(324, 29);
-            this.txtNewCustomerPhone.TabIndex = 2;
-            // 
-            // txtNewCustomerAddress
-            // 
-            this.txtNewCustomerAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewCustomerAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtNewCustomerAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewCustomerAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewCustomerAddress.ForeColor = System.Drawing.Color.White;
-            this.txtNewCustomerAddress.Location = new System.Drawing.Point(10, 160);
-            this.txtNewCustomerAddress.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.txtNewCustomerAddress.MaxLength = 100;
-            this.txtNewCustomerAddress.Name = "txtNewCustomerAddress";
-            this.txtNewCustomerAddress.Size = new System.Drawing.Size(324, 29);
-            this.txtNewCustomerAddress.TabIndex = 3;
-            // 
-            // txtNewCustomerCity
-            // 
-            this.txtNewCustomerCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewCustomerCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtNewCustomerCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewCustomerCity.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewCustomerCity.ForeColor = System.Drawing.Color.White;
-            this.txtNewCustomerCity.Location = new System.Drawing.Point(10, 210);
-            this.txtNewCustomerCity.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.txtNewCustomerCity.MaxLength = 100;
-            this.txtNewCustomerCity.Name = "txtNewCustomerCity";
-            this.txtNewCustomerCity.Size = new System.Drawing.Size(324, 29);
-            this.txtNewCustomerCity.TabIndex = 4;
-            // 
-            // txtNewCustomerPostal
-            // 
-            this.txtNewCustomerPostal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewCustomerPostal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtNewCustomerPostal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewCustomerPostal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewCustomerPostal.ForeColor = System.Drawing.Color.White;
-            this.txtNewCustomerPostal.Location = new System.Drawing.Point(10, 260);
-            this.txtNewCustomerPostal.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.txtNewCustomerPostal.MaxLength = 100;
-            this.txtNewCustomerPostal.Name = "txtNewCustomerPostal";
-            this.txtNewCustomerPostal.Size = new System.Drawing.Size(324, 29);
-            this.txtNewCustomerPostal.TabIndex = 5;
-            // 
-            // txtNewCustomerEmail
-            // 
-            this.txtNewCustomerEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewCustomerEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtNewCustomerEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewCustomerEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewCustomerEmail.ForeColor = System.Drawing.Color.White;
-            this.txtNewCustomerEmail.Location = new System.Drawing.Point(10, 310);
-            this.txtNewCustomerEmail.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.txtNewCustomerEmail.MaxLength = 100;
-            this.txtNewCustomerEmail.Name = "txtNewCustomerEmail";
-            this.txtNewCustomerEmail.Size = new System.Drawing.Size(324, 29);
-            this.txtNewCustomerEmail.TabIndex = 6;
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.ColumnCount = 1;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Controls.Add(this.button4, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.btnCreateCustomer, 0, 1);
-            this.tableLayoutPanel17.Controls.Add(this.lblNewCustomerStatus, 0, 2);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(478, 3);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 3;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(176, 433);
-            this.tableLayoutPanel17.TabIndex = 2;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(3, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 44);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Back";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.GoBack);
-            // 
-            // btnCreateCustomer
-            // 
-            this.btnCreateCustomer.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCreateCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCreateCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCreateCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCreateCustomer.Location = new System.Drawing.Point(3, 53);
-            this.btnCreateCustomer.Name = "btnCreateCustomer";
-            this.btnCreateCustomer.Size = new System.Drawing.Size(170, 94);
-            this.btnCreateCustomer.TabIndex = 1;
-            this.btnCreateCustomer.Text = "Create Customer";
-            this.btnCreateCustomer.UseVisualStyleBackColor = false;
-            this.btnCreateCustomer.Click += new System.EventHandler(this.BtnCreateCustomer_Click);
-            // 
-            // lblNewCustomerStatus
-            // 
-            this.lblNewCustomerStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblNewCustomerStatus.AutoSize = true;
-            this.lblNewCustomerStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCustomerStatus.ForeColor = System.Drawing.Color.White;
-            this.lblNewCustomerStatus.Location = new System.Drawing.Point(51, 160);
-            this.lblNewCustomerStatus.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.lblNewCustomerStatus.Name = "lblNewCustomerStatus";
-            this.lblNewCustomerStatus.Size = new System.Drawing.Size(74, 273);
-            this.lblNewCustomerStatus.TabIndex = 2;
-            this.lblNewCustomerStatus.Text = "Test Status";
             // 
             // tableLayoutPanel3
             // 
@@ -1280,7 +957,7 @@
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(850, 488);
+            this.MinimumSize = new System.Drawing.Size(768, 488);
             this.Name = "Main";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "Main";
@@ -1309,14 +986,6 @@
             this.tlpCustomerSearch.ResumeLayout(false);
             this.tlpCustomerSearch.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
-            this.subtabNewCustomer.ResumeLayout(false);
-            this.tableLayoutPanel15.ResumeLayout(false);
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
-            this.tlpCustomerInfoEntry.ResumeLayout(false);
-            this.tlpCustomerInfoEntry.PerformLayout();
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tlpTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1353,7 +1022,7 @@
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.TableLayoutPanel tlpCustomerSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCustomerSearch;
         private System.Windows.Forms.Button btnSelectCustomer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label4;
@@ -1373,29 +1042,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSelectedCustomer;
+        private System.Windows.Forms.Button btnCustomerSearch;
         private System.Windows.Forms.Button btnNewCustomer;
         private System.Windows.Forms.Button btnEditCustomer;
-        private System.Windows.Forms.TabPage subtabNewCustomer;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.TableLayoutPanel tlpCustomerInfoEntry;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtNewCustomerFirst;
-        private System.Windows.Forms.TextBox txtNewCustomerLast;
-        private System.Windows.Forms.TextBox txtNewCustomerPhone;
-        private System.Windows.Forms.TextBox txtNewCustomerAddress;
-        private System.Windows.Forms.TextBox txtNewCustomerCity;
-        private System.Windows.Forms.TextBox txtNewCustomerPostal;
-        private System.Windows.Forms.TextBox txtNewCustomerEmail;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnCreateCustomer;
-        private System.Windows.Forms.Label lblNewCustomerStatus;
     }
 }

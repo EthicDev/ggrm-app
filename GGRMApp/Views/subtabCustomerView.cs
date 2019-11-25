@@ -52,5 +52,10 @@ namespace GGRMApp.Views
             }
             mainView.SelectedTab = tabPOS;
         }
+        private void BtnNewCustomer_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabNewCustomer;
+        }
     }
 }

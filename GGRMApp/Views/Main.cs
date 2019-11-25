@@ -21,6 +21,9 @@ namespace GGRMApp.Views
     public partial class Main : Form
     {
         List<Button> buttons = new List<Button>();
+
+        //Previous Tab for Back buttons
+        public TabPage previousTab = null;
         public Main()
         {
             InitializeComponent();
@@ -135,6 +138,7 @@ namespace GGRMApp.Views
 
         private void BtnCustomers_Click(object sender, EventArgs e)
         {
+            savePreviousTab();
             mainView.SelectedTab = subtabCustomers;
         }
 
@@ -234,5 +238,17 @@ namespace GGRMApp.Views
         }
 
 
+        //BACK BUTTONS
+        private void savePreviousTab()
+        {
+            previousTab = mainView.SelectedTab;
+        }
+
+        public void GoBack(object sender, EventArgs e)
+        {
+            mainView.SelectedTab = previousTab;
+        }
+
+        
     }
 }
