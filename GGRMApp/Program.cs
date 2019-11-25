@@ -1,4 +1,5 @@
-﻿using GGRMLib;
+﻿using GGRMApp.Views;
+using GGRMLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -23,7 +24,7 @@ namespace GGRMApp
             //Initialize the database connection
             GlobalConfig.InitializeConnections();
 
-            Application.Run(new Login());
+            Application.Run(new Main());
         }
     }
     

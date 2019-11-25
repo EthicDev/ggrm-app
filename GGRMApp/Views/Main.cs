@@ -131,20 +131,7 @@ namespace GGRMApp.Views
             }
         }
 
-
         //--------------------------------------------------------
-
-
-
-        private void BtnCustomers_Click(object sender, EventArgs e)
-        {
-            savePreviousTab();
-            mainView.SelectedTab = subtabCustomers;
-        }
-
-
-
-
 
         //coloring cells of table layout panels
         private void TlpCustomerSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -163,10 +150,10 @@ namespace GGRMApp.Views
             }
         }
 
-        
-
-
-
+        private void BtnCustomers_Click(object sender, EventArgs e)
+        {
+            mainView.SelectedTab = subtabCustomers;
+        }
 
         //code to make the colours of the buttons change when you click thems
         private void BtnPOS_Click(object sender, EventArgs e)
@@ -235,20 +222,20 @@ namespace GGRMApp.Views
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+
+        //BACK BUTTONS
+        private void savePreviousTab()
+        {
+            previousTab = mainView.SelectedTab;
+        }
+
+        public void GoBack(object sender, EventArgs e)
+        {
+            mainView.SelectedTab = previousTab;
         }
 
-
-        //BACK BUTTONS
-        private void savePreviousTab()
-        {
-            previousTab = mainView.SelectedTab;
-        }
-
-        public void GoBack(object sender, EventArgs e)
-        {
-            mainView.SelectedTab = previousTab;
-        }
-
-        
+       
     }
 }

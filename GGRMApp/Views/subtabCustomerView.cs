@@ -57,5 +57,13 @@ namespace GGRMApp.Views
             savePreviousTab();
             mainView.SelectedTab = subtabNewCustomer;
         }
+
+        private void btnCustomerSearch_Click(object sender, EventArgs e)
+        {
+            string status;
+
+            DataTable dtCustomers = GlobalConfig.Connection.GetCustomersDataTable(out status, txtCustomerSearch.Text);
+            dgvCustomers.DataSource = dtCustomers;
+        }
     }
 }
