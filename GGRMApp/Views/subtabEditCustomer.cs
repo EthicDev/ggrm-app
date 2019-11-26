@@ -12,7 +12,19 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
-
+        private void subtabEditCustomer_Enter(object sender, EventArgs e)
+        {
+            
+            Customer customerToEdit = (Customer)GlobalData.ViewData["editSelectedCustomer"];
+            lblEditCustomerStatus.Text = customerToEdit.CustFirst;
+            txtEditCustomerAddress.Text = customerToEdit.CustAddress;
+            txtEditCustomerCity.Text = customerToEdit.CustCity;
+            txtEditCustomerEmail.Text = customerToEdit.CustEmail;
+            txtEditCustomerFirst.Text = customerToEdit.CustFirst;
+            txtEditCustomerLast.Text = customerToEdit.CustLast;
+            txtEditCustomerPhone.Text = customerToEdit.CustPhone;
+            txtEditCustomerPostal.Text = customerToEdit.CustPostal;
+        }
         private void btnConfirmChanges_Click(object sender, EventArgs e)
         {
 
@@ -73,7 +85,8 @@ namespace GGRMApp.Views
                     txtEditCustomerCity.Text,
                     txtEditCustomerPostal.Text,
                     txtEditCustomerEmail.Text);
-                cust.ID = (int)GlobalData.ViewData["editSelectedCustomerID"];
+                Customer customerToEdit = (Customer)GlobalData.ViewData["editSelectedCustomer"];
+                cust.ID = customerToEdit.ID;
                 GlobalConfig.Connection.EditCustomer(cust, out status);
                 if (status == "Customer update succeeded.")
                 {

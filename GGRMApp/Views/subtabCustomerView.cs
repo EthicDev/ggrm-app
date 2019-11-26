@@ -64,7 +64,8 @@ namespace GGRMApp.Views
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
             savePreviousTab();
-            GlobalData.ViewData["editSelectedCustomerID"] = (int)dgvCustomers.SelectedRows[0].Cells["id"].Value;
+            string status;
+            GlobalData.ViewData["editSelectedCustomer"] = GlobalConfig.Connection.GetCustomerByID((int)dgvCustomers.SelectedRows[0].Cells["id"].Value,out status);
             mainView.SelectedTab = subtabEditCustomer;
         }
 

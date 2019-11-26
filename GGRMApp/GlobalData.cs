@@ -20,6 +20,7 @@ namespace GGRMApp
         static void InitializePOS()
         {
             ViewData.Add("posSelectedCustomer", new Customer());
+            ViewData.Add("editSelectedCustomer", new Customer());
             ViewData.Add("editSelectedCustomerID", 0);
         }
         
