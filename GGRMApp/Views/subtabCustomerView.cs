@@ -15,7 +15,7 @@ namespace GGRMApp.Views
         private void SubtabCustomers_Enter(object sender, EventArgs e)
         {
             string status;
-
+            btnEditCustomer.Enabled = false;
             // Get customer objects from database
             //List<Customer> customers = new List<Customer>();
             //customers = GlobalConfig.Connection.GetCustomersList(out status);
@@ -56,6 +56,16 @@ namespace GGRMApp.Views
         {
             savePreviousTab();
             mainView.SelectedTab = subtabNewCustomer;
+        }
+        private void dgvCustomers_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnEditCustomer.Enabled = true;
+        }
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            GlobalData.ViewData["editSelectedCustomerID"] = (int)dgvCustomers.SelectedRows[0].Cells["id"].Value;
+            mainView.SelectedTab = subtabEditCustomer;
         }
 
         private void btnCustomerSearch_Click(object sender, EventArgs e)

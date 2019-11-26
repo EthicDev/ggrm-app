@@ -249,14 +249,5 @@ namespace GGRMApp.Views
 
         }
 
-        private void TlpCustomerInfoEntry_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
-        {
-
-        }
-
-        private void BtnCreateCustomer_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
