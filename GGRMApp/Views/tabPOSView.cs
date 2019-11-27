@@ -20,7 +20,7 @@ namespace GGRMApp.Views
         private void tabPOS_Enter(object sender, EventArgs e)
         {
             Customer selectedCust = (Customer)GlobalData.ViewData["posSelectedCustomer"];
-            lblSelectedCustomer.Text = selectedCust.CustFirst ?? "No customer selected.";
+            lblSelectedCustomer.Text = selectedCust.CustFirst != null ? "Customer: " + selectedCust.CustFirst + " " + selectedCust.CustLast : "No customer selected.";
         }
     }
 }
