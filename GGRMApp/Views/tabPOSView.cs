@@ -30,12 +30,12 @@ namespace GGRMApp.Views
 
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
-            tcPOSSidebar.SelectedTab = tabItemLookup;
+            tcPOSSidebar.SelectedTab = subtabPOSAddItem;
         }
 
         private void BtnPOSItemListBack_Click(object sender, EventArgs e)
         {
-            tcPOSSidebar.SelectedTab = tabPOSButtons;
+            tcPOSSidebar.SelectedTab = subtabPOSButtons;
         }
     }
 }
