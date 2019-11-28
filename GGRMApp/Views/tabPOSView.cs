@@ -22,5 +22,20 @@ namespace GGRMApp.Views
             Customer selectedCust = (Customer)GlobalData.ViewData["posSelectedCustomer"];
             lblSelectedCustomer.Text = selectedCust.CustFirst != null ? "Customer: " + selectedCust.CustFirst + " " + selectedCust.CustLast : "No customer selected.";
         }
+
+        private void TlpItemListPOSSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 48, 48, 48)), e.CellBounds);
+        }
+
+        private void BtnAddItem_Click(object sender, EventArgs e)
+        {
+            tcPOSSidebar.SelectedTab = tabItemLookup;
+        }
+
+        private void BtnPOSItemListBack_Click(object sender, EventArgs e)
+        {
+            tcPOSSidebar.SelectedTab = tabPOSButtons;
+        }
     }
 }
