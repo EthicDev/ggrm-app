@@ -37,16 +37,16 @@ namespace GGRMApp.Views
         {
             tcPOSSidebar.SelectedTab = subtabPOSButtons;
         }
-
-        private void BtnPOSItemListBack_Click(object sender, EventArgs e)
+        private void BtnRepairReqBack_Click(object sender, EventArgs e)
         {
-            tcPOSSidebar.SelectedTab = tabPOSButtons;
+            tcPOSSidebar.SelectedTab = subtabPOSButtons;
         }
 
         private void BtnAddService_Click(object sender, EventArgs e)
         {
             savePreviousTab();
-            mainView.SelectedTab = subtabRepairRequest;
+            tcPOSSidebar.SelectedTab = subtabRepairReq;
         }
+
     }
 }
