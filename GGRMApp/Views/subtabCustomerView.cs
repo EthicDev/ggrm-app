@@ -16,20 +16,23 @@ namespace GGRMApp.Views
         {
             string status;
             btnEditCustomer.Enabled = false;
-            // Get customer objects from database
-            //List<Customer> customers = new List<Customer>();
-            //customers = GlobalConfig.Connection.GetCustomersList(out status);
-
-            // Display list of customer data in DataGridView
-            DataTable dtCustomers = GlobalConfig.Connection.GetCustomersDataTable(out status);
-            dgvCustomers.DataSource = dtCustomers;
+            
+            List<Customer> listCustomers = GlobalConfig.Connection.GetCustomersList(out status);
+            dgvCustomers.DataSource = listCustomers;
 
         }
 
         // Code to run after customer data is populated
         private void dgvCustomers_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dgvCustomers.Columns["id"].Visible = false;
+            dgvCustomers.Columns["ID"].Visible = false;
+            dgvCustomers.Columns["CustFirst"].HeaderText = "First Name";
+            dgvCustomers.Columns["CustLast"].HeaderText = "Last Name";
+            dgvCustomers.Columns["CustPhone"].HeaderText = "Phone";
+            dgvCustomers.Columns["CustAddress"].HeaderText = "Address";
+            dgvCustomers.Columns["CustEmail"].HeaderText = "Email";
+            dgvCustomers.Columns["CustPostal"].HeaderText = "Postal";
+            dgvCustomers.Columns["CustCity"].HeaderText = "City";
         }
 
         private void BtnCustomersBack_Click(object sender, EventArgs e)
@@ -39,17 +42,10 @@ namespace GGRMApp.Views
 
         private void BtnSelectCustomer_Click(object sender, EventArgs e)
         {
-            string status;
-            Customer selectedCust = GlobalConfig.Connection.GetCustomerByID((int)dgvCustomers.SelectedRows[0].Cells["id"].Value, out status);
+            Customer selectedCust = (Customer)dgvCustomers.SelectedRows[0].DataBoundItem;
 
-            if (GlobalData.ViewData.ContainsKey("posSelectedCustomer"))
-            {
-                GlobalData.ViewData["posSelectedCustomer"] = selectedCust;
-            }
-            else
-            {
-                GlobalData.ViewData.Add("posSelectedCustomer", selectedCust);
-            }
+            GlobalData.ViewData["posSelectedCustomer"] = selectedCust;
+
             mainView.SelectedTab = tabPOS;
         }
         private void BtnNewCustomer_Click(object sender, EventArgs e)
@@ -73,8 +69,8 @@ namespace GGRMApp.Views
         {
             string status;
 
-            DataTable dtCustomers = GlobalConfig.Connection.GetCustomersDataTable(out status, txtCustomerSearch.Text);
-            dgvCustomers.DataSource = dtCustomers;
+            List<Customer> listCustomers = GlobalConfig.Connection.GetCustomersList(out status, txtCustomerSearch.Text);
+            dgvCustomers.DataSource = listCustomers;
         }
     }
 }
