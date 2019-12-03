@@ -60,6 +60,8 @@ namespace GGRMApp.Views
             dgvItemCart.Columns["ID"].HeaderText = "#";
 
             dgvRepairCart.DataSource = posCurrentOrder.serviceOrders;
+            dgvRepairCart.Columns["ID"].HeaderText = "#";
+
         }
 
         private void tabPOS_RefreshCart()
@@ -100,5 +102,28 @@ namespace GGRMApp.Views
             tcPOSSidebar.SelectedTab = subtabRepairReq;
         }
 
+        private void btnCreateOrder_Click(object sender, EventArgs e)
+        {
+            string status;
+            posCurrentOrder.EmpID = 1;
+            posCurrentOrder.CustID = posSelectedCust.ID;
+            posCurrentOrder.OrdCreationDate = DateTime.UtcNow;
+            posCurrentOrder.OrdNumber = posCurrentOrder.ID;
+            posCurrentOrder.PaymentID = 1;
+
+            posCurrentOrder = GlobalConfig.Connection.CreateCustomerOrder(posCurrentOrder, out status);
+
+            for (int i = 0; i < posCurrentOrder.orderLines.Count; i++)
+            {
+                posCurrentOrder.orderLines[i].OrderID = posCurrentOrder.ID;
+                posCurrentOrder.orderLines[i] = GlobalConfig.Connection.CreateCustomerOrderLine(posCurrentOrder.orderLines[i], out status);
+            }
+            for (int i = 0; i < posCurrentOrder.serviceOrders.Count; i++)
+            {
+                posCurrentOrder.serviceOrders[i].CustOrdID = posCurrentOrder.ID;
+                posCurrentOrder.serviceOrders[i] = GlobalConfig.Connection.CreateServiceOrder(posCurrentOrder.serviceOrders[i], out status);
+            }
+            MessageBox.Show("Order creation complete.");
+        }
     }
 }

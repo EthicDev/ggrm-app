@@ -1,4 +1,4 @@
-﻿namespace GGRMApp.Views
+namespace GGRMApp.Views
 {
     partial class Main
     {
@@ -528,6 +528,7 @@
             this.btnCreateOrder.TabIndex = 2;
             this.btnCreateOrder.Text = "Create Order";
             this.btnCreateOrder.UseVisualStyleBackColor = false;
+            this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
             // 
             // lblOrderTotal
             // 
@@ -766,6 +767,7 @@
             this.subtabRepairReq.Size = new System.Drawing.Size(295, 486);
             this.subtabRepairReq.TabIndex = 2;
             this.subtabRepairReq.Text = "subtabRepairReq";
+            this.subtabRepairReq.Enter += new System.EventHandler(this.subtabRepairReq_Enter);
             // 
             // tableLayoutPanel36
             // 
@@ -855,6 +857,7 @@
             this.btnAddServiceRequest.TabIndex = 5;
             this.btnAddServiceRequest.Text = "Add Service Request";
             this.btnAddServiceRequest.UseVisualStyleBackColor = false;
+            this.btnAddServiceRequest.Click += new System.EventHandler(this.btnAddServiceRequest_Click);
             // 
             // dtpRepairRequestDate
             // 
