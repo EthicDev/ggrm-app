@@ -47,14 +47,22 @@ namespace GGRMApp.Views
             e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 48, 48, 48)), e.CellBounds);
         }
 
-        private void BtnAddItem_Click(object sender, EventArgs e)
-        {
-            tcPOSSidebar.SelectedTab = subtabPOSAddItem;
-        }
-
-        private void BtnPOSItemListBack_Click(object sender, EventArgs e)
-        {
-            tcPOSSidebar.SelectedTab = subtabPOSButtons;
+        private void BtnAddItem_Click(object sender, EventArgs e)
+
+        {
+
+            tcPOSSidebar.SelectedTab = subtabPOSAddItem;
+
+        }
+
+
+
+        private void BtnPOSItemListBack_Click(object sender, EventArgs e)
+
+        {
+
+            tcPOSSidebar.SelectedTab = subtabPOSButtons;
+
         }
         private void BtnRepairReqBack_Click(object sender, EventArgs e)
         {

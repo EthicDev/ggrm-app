@@ -248,5 +248,12 @@ namespace GGRMApp.Views
             mainView.SelectedTab = previousTab;
 
         }
+
+        private void TableLayoutPanel32_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }
