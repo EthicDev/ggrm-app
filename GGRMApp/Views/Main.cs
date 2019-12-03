@@ -248,15 +248,5 @@ namespace GGRMApp.Views
             mainView.SelectedTab = previousTab;
 
         }
-
-        private void btnSelectItems_Click(object sender, EventArgs e)
-        {
-
-            foreach (object row in dgvPOSItemLookup.SelectedRows)
-            {
-                //Inventory invItem = new Inventory();
-                //invItem.ID = row.Cells["id"].Value;
-            }
-        }
     }
 }

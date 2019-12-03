@@ -17,10 +17,29 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        CustomerOrder posCurrentOrder = new CustomerOrder();
         private void tabPOS_Enter(object sender, EventArgs e)
         {
+            string status;
+            //CustomerOrder currentOrder = (CustomerOrder)GlobalData.ViewData["posCurrentOrder"];
+            if (posCurrentOrder.ID == -1)
+            {
+                posCurrentOrder.ID = GlobalConfig.Connection.CustomerOrderNextID(out status);
+            }
+            lblNewOrder.Text = "New Order " + posCurrentOrder.ID;
+
+            //GlobalData.ViewData["posCurrentOrder"] = currentOrder;
+
             Customer selectedCust = (Customer)GlobalData.ViewData["posSelectedCustomer"];
             lblSelectedCustomer.Text = selectedCust.CustFirst != null ? "Customer: " + selectedCust.CustFirst + " " + selectedCust.CustLast : "No customer selected.";
+
+            dgvItemCart.DataSource = posCurrentOrder.orderLines;
+            dgvItemCart.Columns["ID"].HeaderText = "#";
+        }
+
+        private void tabPOS_RefreshCart()
+        {
+            dgvItemCart.DataSource = posCurrentOrder.orderLines;
         }
 
         private void TlpItemListPOSSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)

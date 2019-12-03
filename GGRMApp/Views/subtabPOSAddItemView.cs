@@ -1,4 +1,5 @@
 ﻿using GGRMLib;
+using GGRMLib.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,6 +19,39 @@ namespace GGRMApp.Views
             //Pull inventory data from DB and display in DataGridView
             DataTable dtInventoryShort = GlobalConfig.Connection.GetInventoryDataTableShort(out status);
             dgvPOSItemLookup.DataSource = dtInventoryShort;
+        }
+
+        private void dgvPOSItemLookup_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvPOSItemLookup.Columns["id"].Visible = false;
+            //dgvCustomers.Columns["CustFirst"].HeaderText = "First Name";
+        }
+
+        private void btnSelectItems_Click(object sender, EventArgs e)
+        {
+
+            foreach (DataGridViewRow row in dgvPOSItemLookup.SelectedRows)
+            {
+                
+                CustomerOrderLine col = new CustomerOrderLine();
+                col.ID = posCurrentOrder.orderLines.Count + 1;
+                col.OrderID = posCurrentOrder.ID;
+                col.InventoryID = (int)row.Cells["id"].Value;
+                col.ColQuantity = 1;
+                col.ColPrice = (decimal)row.Cells["Price"].Value;
+                col.ColNote = "hi";
+                col.ColOrderReq = false;
+                col.ColUnderWarranty = true;
+                col.ServiceID = 1;
+                posCurrentOrder.orderLines.Add(col);
+                //stomerOrderLine newCol = (CustomerOrderLine)GlobalConfig.Connection.CreateCustomerOrderLine(row.Cells["id"].Value, out status);
+                //GlobalData.ViewData["posAddedInvItems"].Add(invItem);
+            }
+
+            //dgvItemCart.DataSource = typeof(List<CustomerOrderLine>);
+            //dgvItemCart.DataSource = posCurrentOrder.orderLines;
+
+            tcPOSSidebar.SelectedTab = subtabPOSButtons;
         }
     }
 }

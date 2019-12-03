@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 
 namespace GGRMApp
 {
-    internal static class GlobalData
+    public static class GlobalData
     {
         internal static Hashtable ViewData = new Hashtable();
-        
+
+        public static CustomerOrder posCurrentOrder;
+
         static GlobalData()
         {
             InitializePOS();
@@ -19,10 +21,14 @@ namespace GGRMApp
 
         static void InitializePOS()
         {
+            
             ViewData.Add("posSelectedCustomer", new Customer());
             ViewData.Add("editSelectedCustomer", new Customer());
             ViewData.Add("editSelectedCustomerID", 0);
-            ViewData.Add("posLineItems", new List<Inventory>());
+            ViewData.Add("posCurrentOrder", new CustomerOrder());
+            ViewData.Add("posLineItems", new List<CustomerOrderLine>());
+            ViewData.Add("posAddedInvItems", new List<Inventory>());
+
         }
         
     }
