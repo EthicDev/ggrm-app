@@ -53,5 +53,13 @@ namespace GGRMApp.Views
 
             tcPOSSidebar.SelectedTab = subtabPOSButtons;
         }
+
+        private void btnPOSItemSearch_Click(object sender, EventArgs e)
+        {
+            string status;
+            string searchString = txtPOSItemSearch.Text;
+            DataTable dtInventoryShort = GlobalConfig.Connection.GetInventoryDataTableShort(out status, searchString);
+            dgvPOSItemLookup.DataSource = dtInventoryShort;
+        }
     }
 }
