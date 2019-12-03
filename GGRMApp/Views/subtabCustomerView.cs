@@ -42,9 +42,7 @@ namespace GGRMApp.Views
 
         private void BtnSelectCustomer_Click(object sender, EventArgs e)
         {
-            Customer selectedCust = (Customer)dgvCustomers.SelectedRows[0].DataBoundItem;
-
-            GlobalData.ViewData["posSelectedCustomer"] = selectedCust;
+            posSelectedCust = (Customer)dgvCustomers.SelectedRows[0].DataBoundItem;
 
             mainView.SelectedTab = tabPOS;
         }

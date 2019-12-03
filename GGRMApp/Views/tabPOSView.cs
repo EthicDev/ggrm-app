@@ -18,6 +18,7 @@ namespace GGRMApp.Views
     public partial class Main : Form
     {
         CustomerOrder posCurrentOrder = new CustomerOrder();
+        Customer posSelectedCust = new Customer();
         private void tabPOS_Enter(object sender, EventArgs e)
         {
             string status;
@@ -30,11 +31,35 @@ namespace GGRMApp.Views
 
             //GlobalData.ViewData["posCurrentOrder"] = currentOrder;
 
-            Customer selectedCust = (Customer)GlobalData.ViewData["posSelectedCustomer"];
-            lblSelectedCustomer.Text = selectedCust.CustFirst != null ? "Customer: " + selectedCust.CustFirst + " " + selectedCust.CustLast : "No customer selected.";
+            //Customer selectedCust = (Customer)GlobalData.ViewData["posSelectedCustomer"];
+
+            ToolTip ttAddItemBtn = new ToolTip();
+            ttAddItemBtn.AutoPopDelay = 5000;
+            ttAddItemBtn.InitialDelay = 500;
+            ttAddItemBtn.ReshowDelay = 500;
+            //ttAddItemBtn.ShowAlways = true;
+
+            btnAddItem.Enabled = false;
+            btnAddService.Enabled = false;
+
+            if (posSelectedCust.CustFirst == null)
+            {   
+                //ttAddItemBtn.SetToolTip(btnAddItem, "You must select a customer.");
+                //ttAddItemBtn.SetToolTip(btnAddService, "You must select a customer.");
+                //subtabPOSButtons.Refresh();
+            } else
+            {
+                ttAddItemBtn.SetToolTip(btnAddItem, null);
+                ttAddItemBtn.SetToolTip(btnAddService, null);
+                btnAddItem.Enabled = true;
+                btnAddService.Enabled = true;
+            }
+            lblSelectedCustomer.Text = posSelectedCust.CustFirst != null ? "Customer: " + posSelectedCust.CustFirst + " " + posSelectedCust.CustLast : "No customer selected.";
 
             dgvItemCart.DataSource = posCurrentOrder.orderLines;
             dgvItemCart.Columns["ID"].HeaderText = "#";
+
+            dgvRepairCart.DataSource = posCurrentOrder.serviceOrders;
         }
 
         private void tabPOS_RefreshCart()
