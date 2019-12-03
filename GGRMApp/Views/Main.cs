@@ -31,7 +31,7 @@ namespace GGRMApp.Views
             //add buttons to button list
             buttons.Add(btnPOS);
             buttons.Add(btnInventory);
-            buttons.Add(btnOrders);
+            buttons.Add(btnOrder);
             buttons.Add(btnRepairs);
             buttons.Add(btnReports);
             buttons.Add(btnUsers);
@@ -171,13 +171,13 @@ namespace GGRMApp.Views
             btnInventory.BackColor = Color.FromArgb(255, 64, 64, 64);
         }
 
-        private void BtnOrders_Click(object sender, EventArgs e)
+        private void BtnOrder_Click(object sender, EventArgs e)
         {
             mainView.SelectedTab = tabOrders;
             deselectButtons();
-            btnOrders.BackColor = Color.FromArgb(255, 64, 64, 64);
+            btnOrder.BackColor = Color.FromArgb(255, 64, 64, 64);
         }
-        private void BtnRepairs_Click(object sender, EventArgs e)
+        private void BtnRepair_Click(object sender, EventArgs e)
         {
             mainView.SelectedTab = tabRepairs;
             deselectButtons();
@@ -254,6 +254,124 @@ namespace GGRMApp.Views
 
         }
 
-        
+        private void BtnAddService_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAddItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnPOSItemListBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPOSItemLookup_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+        }
+
+        private void TlpItemListPOSSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+
+        }
+
+        private void btnSelectItems_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subtabPOSAddItem_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRepairReqBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPOS_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEditItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnManageValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabInventory_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCustomers_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void dgvCustomers_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+        }
+
+        private void btnCustomerSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnNewCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSelectCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubtabCustomers_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TlpCustomerInfoEntry_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+
+        }
+
+        private void BtnCreateCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubtabNewCustomer_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmChanges_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subtabEditCustomer_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

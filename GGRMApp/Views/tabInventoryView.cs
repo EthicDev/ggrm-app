@@ -27,5 +27,10 @@ namespace GGRMApp.Views
             savePreviousTab();
             mainView.SelectedTab = subtabEditItem;
         }
+        private void BtnManageValue_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabManageItem;
+        }
     }
 }
