@@ -126,6 +126,9 @@
     <Compile Include="Views\tabPOSView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\tabRepairsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="AddItemForm.resx">
       <DependentUpon>AddItemForm.cs</DependentUpon>
     </EmbeddedResource>
