@@ -58,9 +58,19 @@ namespace GGRMApp.Views
 
             dgvItemCart.DataSource = posCurrentOrder.orderLines;
             dgvItemCart.Columns["ID"].HeaderText = "#";
+            dgvItemCart.Columns["ColPrice"].HeaderText = "Price";
+            dgvItemCart.Columns["ColQuantity"].HeaderText = "Quantity";
+            dgvItemCart.Columns["ColOrderReq"].HeaderText = "Order Required?";
+            dgvItemCart.Columns["ColNote"].HeaderText = "Note";
 
             dgvRepairCart.DataSource = posCurrentOrder.serviceOrders;
             dgvRepairCart.Columns["ID"].HeaderText = "#";
+            dgvRepairCart.Columns["SerOrdDateIn"].HeaderText = "Date In";
+            dgvRepairCart.Columns["SerOrdDateOut"].HeaderText = "Date Out";
+            dgvRepairCart.Columns["SerOrdIssue"].HeaderText = "Issue Desc.";
+            dgvRepairCart.Columns["SerOrdWarranty"].HeaderText = "Warranty?";
+            dgvRepairCart.Columns["SerOrdStatus"].HeaderText = "Status";
+            dgvRepairCart.Columns["CustOrdID"].HeaderText = "Order ID";
 
         }
 

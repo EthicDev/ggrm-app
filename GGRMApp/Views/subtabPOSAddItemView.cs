@@ -41,7 +41,6 @@ namespace GGRMApp.Views
                 col.ColPrice = (decimal)row.Cells["Price"].Value;
                 col.ColNote = "hi";
                 col.ColOrderReq = false;
-                col.ColUnderWarranty = true;
                 col.ServiceID = 1;
                 posCurrentOrder.orderLines.Add(col);
                 //stomerOrderLine newCol = (CustomerOrderLine)GlobalConfig.Connection.CreateCustomerOrderLine(row.Cells["id"].Value, out status);
@@ -61,5 +60,6 @@ namespace GGRMApp.Views
             DataTable dtInventoryShort = GlobalConfig.Connection.GetInventoryDataTableShort(out status, searchString);
             dgvPOSItemLookup.DataSource = dtInventoryShort;
         }
+
     }
 }

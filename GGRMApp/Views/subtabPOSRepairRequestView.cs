@@ -35,7 +35,7 @@ namespace GGRMApp.Views
             serviceOrder.EquipID = (int)ddlRepairRequestEquipment.SelectedValue;
             serviceOrder.SerOrdDateIn = dtpRepairRequestDate.Value;
             serviceOrder.SerOrdIssue = txtRepairRequestDescription.Text;
-            serviceOrder.SerOrdStatus = "New Service Order";
+            serviceOrder.SerOrdStatus = "Pending";
             serviceOrder.SerOrdWarranty = cbRepairRequestWarranty.Checked;
             serviceOrder.ServiceID = (int)ddlRepairRequestServiceType.SelectedValue;
             posCurrentOrder.serviceOrders.Add(serviceOrder);
