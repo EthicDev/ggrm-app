@@ -186,7 +186,7 @@ namespace GGRMApp.Views
             this.btnConfirmChanges = new System.Windows.Forms.Button();
             this.lblEditCustomerStatus = new System.Windows.Forms.Label();
             this.btnDeleteCustomer = new System.Windows.Forms.Button();
-            this.subtabEditItem = new System.Windows.Forms.TabPage();
+            this.subtabEditProducts = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
@@ -204,7 +204,7 @@ namespace GGRMApp.Views
             this.button6 = new System.Windows.Forms.Button();
             this.btnEditItemConfirm = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
-            this.subtabManageItem = new System.Windows.Forms.TabPage();
+            this.subtabEditInventory = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel38 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel39 = new System.Windows.Forms.TableLayoutPanel();
             this.label25 = new System.Windows.Forms.Label();
@@ -289,12 +289,12 @@ namespace GGRMApp.Views
             this.tableLayoutPanel19.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel21.SuspendLayout();
-            this.subtabEditItem.SuspendLayout();
+            this.subtabEditProducts.SuspendLayout();
             this.tableLayoutPanel33.SuspendLayout();
             this.tableLayoutPanel34.SuspendLayout();
             this.tableLayoutPanel35.SuspendLayout();
             this.tableLayoutPanel37.SuspendLayout();
-            this.subtabManageItem.SuspendLayout();
+            this.subtabEditInventory.SuspendLayout();
             this.tableLayoutPanel38.SuspendLayout();
             this.tableLayoutPanel39.SuspendLayout();
             this.tableLayoutPanel40.SuspendLayout();
@@ -351,8 +351,8 @@ namespace GGRMApp.Views
             this.mainView.Controls.Add(this.subtabCustomers);
             this.mainView.Controls.Add(this.subtabNewCustomer);
             this.mainView.Controls.Add(this.subtabEditCustomer);
-            this.mainView.Controls.Add(this.subtabEditItem);
-            this.mainView.Controls.Add(this.subtabManageItem);
+            this.mainView.Controls.Add(this.subtabEditProducts);
+            this.mainView.Controls.Add(this.subtabEditInventory);
             this.mainView.Controls.Add(this.subtabDiagnose);
             this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainView.ItemSize = new System.Drawing.Size(50, 20);
@@ -2770,17 +2770,18 @@ namespace GGRMApp.Views
             this.btnDeleteCustomer.Text = "Delete Customer";
             this.btnDeleteCustomer.UseVisualStyleBackColor = false;
             // 
-            // subtabEditItem
+            // subtabEditProducts
             // 
-            this.subtabEditItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.subtabEditItem.Controls.Add(this.tableLayoutPanel33);
-            this.subtabEditItem.Location = new System.Drawing.Point(4, 24);
-            this.subtabEditItem.Margin = new System.Windows.Forms.Padding(4);
-            this.subtabEditItem.Name = "subtabEditItem";
-            this.subtabEditItem.Padding = new System.Windows.Forms.Padding(4);
-            this.subtabEditItem.Size = new System.Drawing.Size(1353, 681);
-            this.subtabEditItem.TabIndex = 11;
-            this.subtabEditItem.Text = "subtabEditItem";
+            this.subtabEditProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subtabEditProducts.Controls.Add(this.tableLayoutPanel33);
+            this.subtabEditProducts.Location = new System.Drawing.Point(4, 24);
+            this.subtabEditProducts.Margin = new System.Windows.Forms.Padding(4);
+            this.subtabEditProducts.Name = "subtabEditProducts";
+            this.subtabEditProducts.Padding = new System.Windows.Forms.Padding(4);
+            this.subtabEditProducts.Size = new System.Drawing.Size(1353, 681);
+            this.subtabEditProducts.TabIndex = 11;
+            this.subtabEditProducts.Text = "subtabEditProducts";
+            this.subtabEditProducts.Enter += new System.EventHandler(this.subtabEditProducts_Enter);
             // 
             // tableLayoutPanel33
             // 
@@ -3054,17 +3055,17 @@ namespace GGRMApp.Views
             this.label33.TabIndex = 2;
             this.label33.Text = "Test Status";
             // 
-            // subtabManageItem
+            // subtabEditInventory
             // 
-            this.subtabManageItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.subtabManageItem.Controls.Add(this.tableLayoutPanel38);
-            this.subtabManageItem.Location = new System.Drawing.Point(4, 24);
-            this.subtabManageItem.Margin = new System.Windows.Forms.Padding(4);
-            this.subtabManageItem.Name = "subtabManageItem";
-            this.subtabManageItem.Padding = new System.Windows.Forms.Padding(4);
-            this.subtabManageItem.Size = new System.Drawing.Size(1353, 681);
-            this.subtabManageItem.TabIndex = 12;
-            this.subtabManageItem.Text = "subtabManageItem";
+            this.subtabEditInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subtabEditInventory.Controls.Add(this.tableLayoutPanel38);
+            this.subtabEditInventory.Location = new System.Drawing.Point(4, 24);
+            this.subtabEditInventory.Margin = new System.Windows.Forms.Padding(4);
+            this.subtabEditInventory.Name = "subtabEditInventory";
+            this.subtabEditInventory.Padding = new System.Windows.Forms.Padding(4);
+            this.subtabEditInventory.Size = new System.Drawing.Size(1353, 681);
+            this.subtabEditInventory.TabIndex = 12;
+            this.subtabEditInventory.Text = "subtabEditInventory";
             // 
             // tableLayoutPanel38
             // 
@@ -3608,7 +3609,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel20.PerformLayout();
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel21.PerformLayout();
-            this.subtabEditItem.ResumeLayout(false);
+            this.subtabEditProducts.ResumeLayout(false);
             this.tableLayoutPanel33.ResumeLayout(false);
             this.tableLayoutPanel34.ResumeLayout(false);
             this.tableLayoutPanel34.PerformLayout();
@@ -3616,7 +3617,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel35.PerformLayout();
             this.tableLayoutPanel37.ResumeLayout(false);
             this.tableLayoutPanel37.PerformLayout();
-            this.subtabManageItem.ResumeLayout(false);
+            this.subtabEditInventory.ResumeLayout(false);
             this.tableLayoutPanel38.ResumeLayout(false);
             this.tableLayoutPanel39.ResumeLayout(false);
             this.tableLayoutPanel39.PerformLayout();
@@ -3782,7 +3783,7 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Button btnAddServiceRequest;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ddlRepairRequestServiceType;
-        private System.Windows.Forms.TabPage subtabEditItem;
+        private System.Windows.Forms.TabPage subtabEditProducts;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
         private System.Windows.Forms.Label label19;
@@ -3801,7 +3802,7 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Button btnEditItemConfirm;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btnEditItem;
-        private System.Windows.Forms.TabPage subtabManageItem;
+        private System.Windows.Forms.TabPage subtabEditInventory;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel38;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel39;
         private System.Windows.Forms.Label label25;
