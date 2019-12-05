@@ -17,10 +17,10 @@ namespace GGRMApp.Views
 
             //Pull inventory data from DB and display in DataGridView
             DataTable dtInventory = GlobalConfig.Connection.GetInventoryDataTable(out status);
-            dgvInventoryList.DataSource = dtInventory;
+            dgvInventoryListOld.DataSource = dtInventory;
 
             // Set price column to currency format
-            dgvInventoryList.Columns[6].DefaultCellStyle.Format = "c";
+            dgvInventoryListOld.Columns[6].DefaultCellStyle.Format = "c";
         }
         private void BtnEditItem_Click(object sender, EventArgs e)
         {

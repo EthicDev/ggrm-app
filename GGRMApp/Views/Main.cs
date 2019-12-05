@@ -21,6 +21,7 @@ namespace GGRMApp.Views
     public partial class Main : Form
     {
         List<Button> buttons = new List<Button>();
+        List<Button> dataButtons = new List<Button>();
 
         //Previous Tab for Back buttons
         public TabPage previousTab = null;
@@ -35,6 +36,12 @@ namespace GGRMApp.Views
             buttons.Add(btnRepairs);
             buttons.Add(btnReports);
             buttons.Add(btnUsers);
+            buttons.Add(btnData);
+
+            dataButtons.Add(btnDataInventory);
+            dataButtons.Add(btnDataProducts);
+            dataButtons.Add(btnDataCustomers);
+            dataButtons.Add(btnDataOrders);
         }
 
         //------------------------CUSTOM UI STUFF--------------------------
@@ -197,6 +204,14 @@ namespace GGRMApp.Views
             btnUsers.BackColor = Color.FromArgb(255, 64, 64, 64);
         }
 
+        private void BtnData_Click(object sender, EventArgs e)
+        {
+            mainView.SelectedTab = tabData;
+            deselectButtons();
+            btnData.BackColor = Color.FromArgb(255, 64, 64, 64);
+            tcDataView.Focus();
+        }
+
         private void BtnExit_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo);
@@ -248,5 +263,7 @@ namespace GGRMApp.Views
             mainView.SelectedTab = previousTab;
 
         }
+
+        
     }
 }
