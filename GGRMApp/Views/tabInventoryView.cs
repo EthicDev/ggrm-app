@@ -25,12 +25,12 @@ namespace GGRMApp.Views
         private void BtnEditItem_Click(object sender, EventArgs e)
         {
             savePreviousTab();
-            mainView.SelectedTab = subtabEditProducts;
+            mainView.SelectedTab = subtabEditInventory;
         }
-        private void BtnManageValue_Click(object sender, EventArgs e)
+        private void BtnManageProducts_Click(object sender, EventArgs e)
         {
             savePreviousTab();
-            mainView.SelectedTab = subtabEditInventory;
+            mainView.SelectedTab = subtabEditProducts;
         }
     }
 }
