@@ -19,6 +19,7 @@ namespace GGRMApp.Views
     {
         CustomerOrder posCurrentOrder = new CustomerOrder();
         Customer posSelectedCust = new Customer();
+        ProductOrder posProductOrder = new ProductOrder();
         private void tabPOS_Enter(object sender, EventArgs e)
         {
             string status;
@@ -59,7 +60,7 @@ namespace GGRMApp.Views
             dgvItemCart.DataSource = posCurrentOrder.orderLines;
             dgvItemCart.Columns["ID"].HeaderText = "#";
             dgvItemCart.Columns["ColPrice"].HeaderText = "Price";
-            dgvItemCart.Columns["ColQuantity"].HeaderText = "Quantity";
+            dgvItemCart.Columns["ColOrderQuantity"].HeaderText = "Quantity";
             dgvItemCart.Columns["ColOrderReq"].HeaderText = "Order Required?";
             dgvItemCart.Columns["ColNote"].HeaderText = "Note";
 
@@ -72,11 +73,6 @@ namespace GGRMApp.Views
             dgvRepairCart.Columns["SerOrdStatus"].HeaderText = "Status";
             dgvRepairCart.Columns["CustOrdID"].HeaderText = "Order ID";
 
-        }
-
-        private void tabPOS_RefreshCart()
-        {
-            dgvItemCart.DataSource = posCurrentOrder.orderLines;
         }
 
         private void TlpItemListPOSSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -123,10 +119,32 @@ namespace GGRMApp.Views
 
             posCurrentOrder = GlobalConfig.Connection.CreateCustomerOrder(posCurrentOrder, out status);
 
+            bool madeProdOrder = false;
+
             for (int i = 0; i < posCurrentOrder.orderLines.Count; i++)
             {
-                posCurrentOrder.orderLines[i].OrderID = posCurrentOrder.ID;
-                posCurrentOrder.orderLines[i] = GlobalConfig.Connection.CreateCustomerOrderLine(posCurrentOrder.orderLines[i], out status);
+                OrderLine currentLine = posCurrentOrder.orderLines[i];
+                currentLine.OrderID = posCurrentOrder.ID;
+
+                if (currentLine.ColOrderQuantity > currentLine.ColStockQuantity)
+                {
+                    currentLine.ColOrderReq = true;
+                    if (!madeProdOrder)
+                    {
+                        posProductOrder = GlobalConfig.Connection.CreateProductOrder(posProductOrder, out status);
+                        madeProdOrder = true;
+
+                        currentLine.ProdOrderID = posProductOrder.ID;
+                    } else
+                    {
+                        currentLine.ProdOrderID = posProductOrder.ID;
+                    }
+                } else
+                {
+                    currentLine.ProdOrderID = null;
+                }
+
+                currentLine = GlobalConfig.Connection.CreateOrderLine(currentLine, out status);
             }
             for (int i = 0; i < posCurrentOrder.serviceOrders.Count; i++)
             {

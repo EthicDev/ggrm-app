@@ -24,6 +24,7 @@ namespace GGRMApp.Views
         private void dgvPOSItemLookup_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgvPOSItemLookup.Columns["id"].Visible = false;
+            dgvPOSItemLookup.Columns["invQuantity"].Visible = false;
             //dgvCustomers.Columns["CustFirst"].HeaderText = "First Name";
         }
 
@@ -33,15 +34,16 @@ namespace GGRMApp.Views
             foreach (DataGridViewRow row in dgvPOSItemLookup.SelectedRows)
             {
                 
-                OrderLine col = new OrderLine();
-                col.ID = posCurrentOrder.orderLines.Count + 1;
-                col.OrderID = posCurrentOrder.ID;
-                col.InventoryID = (int)row.Cells["id"].Value;
-                col.ColQuantity = 1;
-                col.ColPrice = (decimal)row.Cells["Price"].Value;
-                col.ColNote = "hi";
-                col.ColOrderReq = false;
-                posCurrentOrder.orderLines.Add(col);
+                OrderLine ol = new OrderLine();
+                ol.ID = posCurrentOrder.orderLines.Count + 1;
+                ol.OrderID = posCurrentOrder.ID;
+                ol.InventoryID = (int)row.Cells["id"].Value;
+                ol.ColOrderQuantity = 1;
+                ol.ColStockQuantity = (int)row.Cells["invQuantity"].Value;
+                ol.ColPrice = (decimal)row.Cells["Price"].Value;
+                ol.ColNote = "hi";
+                ol.ColOrderReq = false;
+                posCurrentOrder.orderLines.Add(ol);
                 //stomerOrderLine newCol = (CustomerOrderLine)GlobalConfig.Connection.CreateCustomerOrderLine(row.Cells["id"].Value, out status);
                 //GlobalData.ViewData["posAddedInvItems"].Add(invItem);
             }
