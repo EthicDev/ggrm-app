@@ -32,7 +32,7 @@ namespace GGRMApp.Views
             //add buttons to button list
             buttons.Add(btnPOS);
             buttons.Add(btnInventory);
-            buttons.Add(btnOrder);
+            buttons.Add(btnOrdering);
             buttons.Add(btnRepairs);
             buttons.Add(btnReports);
             buttons.Add(btnUsers);
@@ -182,7 +182,7 @@ namespace GGRMApp.Views
         {
             mainView.SelectedTab = tabOrders;
             deselectButtons();
-            btnOrder.BackColor = Color.FromArgb(255, 64, 64, 64);
+            btnOrdering.BackColor = Color.FromArgb(255, 64, 64, 64);
         }
         private void BtnRepair_Click(object sender, EventArgs e)
         {
@@ -264,5 +264,14 @@ namespace GGRMApp.Views
 
         }
 
+        private void BtnEditItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TlpDataInventorySearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+
+        }
     }
 }

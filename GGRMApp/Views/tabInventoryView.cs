@@ -26,7 +26,7 @@ namespace GGRMApp.Views
         }
         private void BtnEditItem_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dgvInventoryList.SelectedRows[0];
+            DataGridViewRow selectedRow = dgvDataInventory.SelectedRows[0];
             selectedInventory.ID = (int)selectedRow.Cells["id"].Value;
             selectedInventory.DisplayName = (string)selectedRow.Cells["Name"].Value + "\n" + (string)selectedRow.Cells["Description"].Value + "\n" + (string)selectedRow.Cells["Size"].Value;
             selectedInventory.InvQuantity = (int)selectedRow.Cells["Quantity"].Value;

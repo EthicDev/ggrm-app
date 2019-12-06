@@ -50,17 +50,26 @@ namespace GGRMApp.Views
         }
 
 
-        //Inventory Tab
+        //-------------Inventory--------------
         private void TabDataInventory_Enter(object sender, EventArgs e)
         {
             string status;
 
             //Pull inventory data from DB and display in DataGridView
             DataTable dtInventory = GlobalConfig.Connection.GetInventoryDataTable(out status);
-            dgvInventoryList.DataSource = dtInventory;
+            dgvDataInventory.DataSource = dtInventory;
 
             // Set price column to currency format
-            dgvInventoryList.Columns[6].DefaultCellStyle.Format = "c";
+            dgvDataInventory.Columns[6].DefaultCellStyle.Format = "c";
+        }
+
+        //paint search bar to be dark
+        private void TlpDataInventorySearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column == 1)
+            {
+                e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 48, 48, 48)), e.CellBounds);
+            }
         }
     }
 }
