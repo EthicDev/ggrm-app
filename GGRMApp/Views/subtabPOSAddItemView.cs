@@ -33,7 +33,7 @@ namespace GGRMApp.Views
             foreach (DataGridViewRow row in dgvPOSItemLookup.SelectedRows)
             {
                 
-                CustomerOrderLine col = new CustomerOrderLine();
+                OrderLine col = new OrderLine();
                 col.ID = posCurrentOrder.orderLines.Count + 1;
                 col.OrderID = posCurrentOrder.ID;
                 col.InventoryID = (int)row.Cells["id"].Value;
@@ -41,7 +41,6 @@ namespace GGRMApp.Views
                 col.ColPrice = (decimal)row.Cells["Price"].Value;
                 col.ColNote = "hi";
                 col.ColOrderReq = false;
-                col.ServiceID = 1;
                 posCurrentOrder.orderLines.Add(col);
                 //stomerOrderLine newCol = (CustomerOrderLine)GlobalConfig.Connection.CreateCustomerOrderLine(row.Cells["id"].Value, out status);
                 //GlobalData.ViewData["posAddedInvItems"].Add(invItem);

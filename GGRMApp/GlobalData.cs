@@ -26,7 +26,7 @@ namespace GGRMApp
             ViewData.Add("editSelectedCustomer", new Customer());
             ViewData.Add("editSelectedCustomerID", 0);
             ViewData.Add("posCurrentOrder", new CustomerOrder());
-            ViewData.Add("posLineItems", new List<CustomerOrderLine>());
+            ViewData.Add("posLineItems", new List<OrderLine>());
             ViewData.Add("posAddedInvItems", new List<Inventory>());
 
         }
