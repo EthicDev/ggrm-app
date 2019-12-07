@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGRMLib;
 using GGRMLib.Models;
-using GGRMLib.DataSet_CustomersTableAdapters;
 using GGRMLib.DataAccess;
 
 //Coded by: Cooper Keddy & Macklem Curtis
@@ -31,7 +30,7 @@ namespace GGRMApp.Views
 
             //add buttons to button list
             buttons.Add(btnPOS);
-            buttons.Add(btnInventory);
+            //buttons.Add(btnInventory);
             buttons.Add(btnOrdering);
             buttons.Add(btnRepairs);
             buttons.Add(btnReports);
@@ -171,12 +170,12 @@ namespace GGRMApp.Views
             btnPOS.BackColor = Color.FromArgb(255, 64, 64, 64);
         }
 
-        private void BtnInventory_Click(object sender, EventArgs e)
-        {
-            mainView.SelectedTab = tabInventory;
-            deselectButtons();
-            btnInventory.BackColor = Color.FromArgb(255, 64, 64, 64);
-        }
+        //private void BtnInventory_Click(object sender, EventArgs e)
+        //{
+        //    mainView.SelectedTab = tabInventory;
+        //    deselectButtons();
+        //    //btnInventory.BackColor = Color.FromArgb(255, 64, 64, 64);
+        //}
 
         private void BtnOrder_Click(object sender, EventArgs e)
         {
@@ -264,14 +263,25 @@ namespace GGRMApp.Views
 
         }
 
-        private void BtnEditItem_Click(object sender, EventArgs e)
+        private void tabDataCustomers_Enter(object sender, EventArgs e)
         {
-
+            string status;
+            List<Customer> listCustomers = GlobalConfig.Connection.GetCustomersList(out status);
+            dgvDataCustomers.DataSource = listCustomers;
         }
 
-        private void TlpDataInventorySearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        private void tabDataProducts_Enter(object sender, EventArgs e)
         {
+            string status;
+            DataTable dtProducts = GlobalConfig.Connection.GetProductsDataTable(out status);
+            dgvDataProducts.DataSource = dtProducts;
+        }
 
+        private void tabDataOrders_Enter(object sender, EventArgs e)
+        {
+            string status;
+            DataTable dtCustomerOrders = GlobalConfig.Connection.GetCustomerOrdersDataTable(out status);
+            dgvDataOrders.DataSource = dtCustomerOrders;
         }
     }
 }

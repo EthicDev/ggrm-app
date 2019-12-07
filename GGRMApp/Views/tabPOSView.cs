@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGRMLib;
 using GGRMLib.Models;
-using GGRMLib.DataSet_CustomersTableAdapters;
 using GGRMLib.DataAccess;
 
 namespace GGRMApp.Views
