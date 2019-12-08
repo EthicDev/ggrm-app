@@ -17,8 +17,8 @@ namespace GGRMApp.Views
             string status;
             btnEditCustomer.Enabled = false;
             
-            List<Customer> listCustomers = GlobalConfig.Connection.GetCustomersList(out status);
-            dgvCustomers.DataSource = listCustomers;
+            DataTable dtCustomers = GlobalConfig.Connection.GetCustomersDataTable(out status);
+            dgvCustomers.DataSource = dtCustomers;
 
         }
 
@@ -26,13 +26,21 @@ namespace GGRMApp.Views
         private void dgvCustomers_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgvCustomers.Columns["ID"].Visible = false;
-            dgvCustomers.Columns["CustFirst"].HeaderText = "First Name";
-            dgvCustomers.Columns["CustLast"].HeaderText = "Last Name";
-            dgvCustomers.Columns["CustPhone"].HeaderText = "Phone";
-            dgvCustomers.Columns["CustAddress"].HeaderText = "Address";
-            dgvCustomers.Columns["CustEmail"].HeaderText = "Email";
-            dgvCustomers.Columns["CustPostal"].HeaderText = "Postal";
-            dgvCustomers.Columns["CustCity"].HeaderText = "City";
+            //dgvCustomers.Columns["CustFirst"].HeaderText = "First Name";
+            //dgvCustomers.Columns["CustLast"].HeaderText = "Last Name";
+            //dgvCustomers.Columns["CustPhone"].HeaderText = "Phone";
+            //dgvCustomers.Columns["CustAddress"].HeaderText = "Address";
+            //dgvCustomers.Columns["CustEmail"].HeaderText = "Email";
+            //dgvCustomers.Columns["CustPostal"].HeaderText = "Postal";
+            //dgvCustomers.Columns["CustCity"].HeaderText = "City";
+
+            //DataColumn nameColumn = new DataColumn();
+            //nameColumn.DataType = typeof(string);
+            //nameColumn.ColumnName = "Name";
+            //nameColumn.DefaultValue = "Name";
+            //nameColumn.Expression = "CustLast + ' ' + CustFirst";
+
+            //dgvCustomers.Columns.Add(nameColumn);
         }
 
         private void BtnCustomersBack_Click(object sender, EventArgs e)
@@ -42,7 +50,9 @@ namespace GGRMApp.Views
 
         private void BtnSelectCustomer_Click(object sender, EventArgs e)
         {
-            posSelectedCust = (Customer)dgvCustomers.SelectedRows[0].DataBoundItem;
+            string status;
+            int id = (int)dgvCustomers.SelectedRows[0].Cells["id"].Value;
+            posSelectedCust = GlobalConfig.Connection.GetCustomerByID(id, out status);
 
             mainView.SelectedTab = tabPOS;
         }
