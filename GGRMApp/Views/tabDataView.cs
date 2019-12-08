@@ -49,20 +49,6 @@ namespace GGRMApp.Views
             tcDataView.Focus();
         }
 
-
-        //-------------Inventory--------------
-        private void TabDataInventory_Enter(object sender, EventArgs e)
-        {
-            string status;
-
-            //Pull inventory data from DB and display in DataGridView
-            DataTable dtInventory = GlobalConfig.Connection.GetInventoryDataTable(out status);
-            dgvDataInventory.DataSource = dtInventory;
-
-            // Set price column to currency format
-            dgvDataInventory.Columns[6].DefaultCellStyle.Format = "c";
-        }
-
         //paint search bar to be dark
         private void TlpDataInventorySearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {

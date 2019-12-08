@@ -126,6 +126,18 @@
     <Compile Include="Views\subtabPOSRepairRequestView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\tabDataCustomersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\tabDataInventoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\tabDataOrdersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\tabDataProductsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\tabInventoryView.cs">
       <SubType>Form</SubType>
     </Compile>

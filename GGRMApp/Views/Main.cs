@@ -262,26 +262,5 @@ namespace GGRMApp.Views
             mainView.SelectedTab = previousTab;
 
         }
-
-        private void tabDataCustomers_Enter(object sender, EventArgs e)
-        {
-            string status;
-            List<Customer> listCustomers = GlobalConfig.Connection.GetCustomersList(out status);
-            dgvDataCustomers.DataSource = listCustomers;
-        }
-
-        private void tabDataProducts_Enter(object sender, EventArgs e)
-        {
-            string status;
-            DataTable dtProducts = GlobalConfig.Connection.GetProductsDataTable(out status);
-            dgvDataProducts.DataSource = dtProducts;
-        }
-
-        private void tabDataOrders_Enter(object sender, EventArgs e)
-        {
-            string status;
-            DataTable dtCustomerOrders = GlobalConfig.Connection.GetCustomerOrdersDataTable(out status);
-            dgvDataOrders.DataSource = dtCustomerOrders;
-        }
     }
 }
