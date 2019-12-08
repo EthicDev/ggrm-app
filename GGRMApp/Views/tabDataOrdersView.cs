@@ -17,5 +17,10 @@ namespace GGRMApp.Views
             DataTable dtCustomerOrders = GlobalConfig.Connection.GetCustomerOrdersDataTable(out status);
             dgvDataOrders.DataSource = dtCustomerOrders;
         }
+
+        private void dgvDataOrders_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvDataOrders.Columns["id"].Visible = false;
+        }
     }
 }

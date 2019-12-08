@@ -23,6 +23,11 @@ namespace GGRMApp.Views
             dgvDataInventory.Columns[6].DefaultCellStyle.Format = "c";
         }
 
+        private void dgvDataInventory_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvDataInventory.Columns["id"].Visible = false;
+        }
+
         private void btnDataInventorySearch_Click(object sender, EventArgs e)
         {
             string status;
