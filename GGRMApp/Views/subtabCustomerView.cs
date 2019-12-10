@@ -16,7 +16,6 @@ namespace GGRMApp.Views
         private void SubtabCustomers_Enter(object sender, EventArgs e)
         {
             string status;
-            btnManageCustomers.Enabled = false;
             
             DataTable dtCustomers = GlobalConfig.Connection.GetCustomersDataTable(out status);
             dgvCustomers.DataSource = dtCustomers;
@@ -56,11 +55,6 @@ namespace GGRMApp.Views
             posSelectedCust = GlobalConfig.Connection.GetCustomerByID(id, out status);
 
             mainView.SelectedTab = tabPOS;
-        }
-        
-        private void dgvCustomers_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            btnManageCustomers.Enabled = true;
         }
 
         private void BtnManageCustomers_Click(object sender, EventArgs e)

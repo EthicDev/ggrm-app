@@ -37,6 +37,9 @@ namespace GGRMApp.Views
                 OrderLine ol = new OrderLine();
                 ol.ID = posCurrentOrder.orderLines.Count + 1;
                 ol.OrderID = posCurrentOrder.ID;
+                ol.ColItemName = (string)row.Cells["Name"].Value;
+                ol.ColItemDesc = (string)row.Cells["Description"].Value;
+                ol.ColItemBrand = (string)row.Cells["Brand"].Value;
                 ol.InventoryID = (int)row.Cells["id"].Value;
                 ol.ColOrderQuantity = 1;
                 ol.ColStockQuantity = (int)row.Cells["invQuantity"].Value;

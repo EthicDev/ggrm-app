@@ -59,19 +59,29 @@ namespace GGRMApp.Views
             dgvItemCart.DataSource = posCurrentOrder.orderLines;
             dgvItemCart.Columns["ID"].HeaderText = "#";
             dgvItemCart.Columns["ColPrice"].HeaderText = "Price";
+            dgvItemCart.Columns["ColPrice"].DefaultCellStyle.Format = "c";
             dgvItemCart.Columns["ColOrderQuantity"].HeaderText = "Quantity";
-            dgvItemCart.Columns["ColOrderReq"].HeaderText = "Order Required?";
+            dgvItemCart.Columns["ColStockQuantity"].HeaderText = "Stock Quantity";
+            dgvItemCart.Columns["ColOrderReq"].Visible = false;
             dgvItemCart.Columns["ColNote"].HeaderText = "Note";
+            dgvItemCart.Columns["InventoryID"].Visible = false;
+            dgvItemCart.Columns["ColItemName"].HeaderText = "Item Name";
+            dgvItemCart.Columns["ColItemDesc"].HeaderText = "Item Desc";
+            dgvItemCart.Columns["ColItemBrand"].HeaderText = "Item Brand";
+            dgvItemCart.Columns["OrderID"].Visible = false;
+            dgvItemCart.Columns["ProdOrderID"].Visible = false;
 
             dgvRepairCart.DataSource = posCurrentOrder.serviceOrders;
             dgvRepairCart.Columns["ID"].HeaderText = "#";
             dgvRepairCart.Columns["SerOrdDateIn"].HeaderText = "Date In";
-            dgvRepairCart.Columns["SerOrdDateOut"].HeaderText = "Date Out";
+            dgvRepairCart.Columns["SerOrdDateOut"].Visible = false;
             dgvRepairCart.Columns["SerOrdIssue"].HeaderText = "Issue Desc.";
             dgvRepairCart.Columns["SerOrdWarranty"].HeaderText = "Warranty?";
             dgvRepairCart.Columns["SerOrdStatus"].HeaderText = "Status";
-            dgvRepairCart.Columns["CustOrdID"].HeaderText = "Order ID";
-
+            dgvRepairCart.Columns["CustOrdID"].Visible = false;
+            dgvRepairCart.Columns["ServiceID"].Visible = false;
+            dgvRepairCart.Columns["EmpID"].Visible = false;
+            dgvRepairCart.Columns["EquipID"].Visible = false;
         }
 
         private void TlpItemListPOSSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -151,6 +161,10 @@ namespace GGRMApp.Views
                 posCurrentOrder.serviceOrders[i] = GlobalConfig.Connection.CreateServiceOrder(posCurrentOrder.serviceOrders[i], out status);
             }
             MessageBox.Show("Order creation complete.");
+            posCurrentOrder = new CustomerOrder();
+            posSelectedCust = new Customer();
+            posProductOrder = new ProductOrder();
+            tabPOS_Enter(this, null);
         }
     }
 }

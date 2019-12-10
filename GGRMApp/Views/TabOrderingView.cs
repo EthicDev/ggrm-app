@@ -23,5 +23,10 @@ namespace GGRMApp.Views
 
             dgvPendingOrders.DataSource = dtPendingProductOrders;
         }
+
+        private void dgvOrderRequests_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvOrderRequests.Columns["id"].Visible = false;
+        }
     }
 }
