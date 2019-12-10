@@ -15,7 +15,7 @@ namespace GGRMApp.Views
         private void SubtabCustomers_Enter(object sender, EventArgs e)
         {
             string status;
-            btnEditCustomer.Enabled = false;
+            btnManageCustomers.Enabled = false;
             
             DataTable dtCustomers = GlobalConfig.Connection.GetCustomersDataTable(out status);
             dgvCustomers.DataSource = dtCustomers;
@@ -56,22 +56,19 @@ namespace GGRMApp.Views
 
             mainView.SelectedTab = tabPOS;
         }
-        private void BtnNewCustomer_Click(object sender, EventArgs e)
-        {
-            savePreviousTab();
-            mainView.SelectedTab = subtabNewCustomer;
-        }
+        
         private void dgvCustomers_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            btnEditCustomer.Enabled = true;
+            btnManageCustomers.Enabled = true;
         }
-        private void btnEditCustomer_Click(object sender, EventArgs e)
+
+        private void BtnManageCustomer_Click(object sender, EventArgs e)
         {
             savePreviousTab();
-            string status;
-            GlobalData.ViewData["editSelectedCustomer"] = GlobalConfig.Connection.GetCustomerByID((int)dgvCustomers.SelectedRows[0].Cells["id"].Value,out status);
-            mainView.SelectedTab = subtabEditCustomer;
+            mainView.SelectedTab = tabData;
+            tcDataView.SelectedTab = tabDataCustomers;
         }
+        
 
         private void btnCustomerSearch_Click(object sender, EventArgs e)
         {

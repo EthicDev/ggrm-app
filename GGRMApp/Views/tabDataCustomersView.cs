@@ -32,5 +32,18 @@ namespace GGRMApp.Views
             dgvDataCustomers.DataSource = dtCustomers;
         }
 
+        private void BtnDataCustomersEdit_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            string status;
+            GlobalData.ViewData["editSelectedCustomer"] = GlobalConfig.Connection.GetCustomerByID((int)dgvCustomers.SelectedRows[0].Cells["id"].Value, out status);
+            mainView.SelectedTab = subtabEditCustomer;
+        }
+
+        private void BtnDataCustomersAdd_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabNewCustomer;
+        }
     }
 }
