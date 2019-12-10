@@ -3,6 +3,7 @@ using GGRMLib.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,11 +63,14 @@ namespace GGRMApp.Views
             btnManageCustomers.Enabled = true;
         }
 
-        private void BtnManageCustomer_Click(object sender, EventArgs e)
+        private void BtnManageCustomers_Click(object sender, EventArgs e)
         {
             savePreviousTab();
             mainView.SelectedTab = tabData;
             tcDataView.SelectedTab = tabDataCustomers;
+            deselectButtons();
+            btnData.BackColor = Color.FromArgb(255, 64, 64, 64);
+            tcDataView.Focus();
         }
         
 

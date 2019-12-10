@@ -36,7 +36,7 @@ namespace GGRMApp.Views
         {
             savePreviousTab();
             string status;
-            GlobalData.ViewData["editSelectedCustomer"] = GlobalConfig.Connection.GetCustomerByID((int)dgvCustomers.SelectedRows[0].Cells["id"].Value, out status);
+            GlobalData.ViewData["editSelectedCustomer"] = GlobalConfig.Connection.GetCustomerByID((int)dgvDataCustomers.SelectedRows[0].Cells["id"].Value, out status);
             mainView.SelectedTab = subtabEditCustomer;
         }
 
