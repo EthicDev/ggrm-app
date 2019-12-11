@@ -263,8 +263,5 @@ namespace GGRMApp.Views
 
         }
 
-
-
-
     }
 }

@@ -25,15 +25,13 @@ namespace GGRMApp.Views
         {
             dgvPOSItemLookup.Columns["id"].Visible = false;
             dgvPOSItemLookup.Columns["invQuantity"].Visible = false;
-            //dgvCustomers.Columns["CustFirst"].HeaderText = "First Name";
         }
 
         private void btnSelectItems_Click(object sender, EventArgs e)
         {
 
             foreach (DataGridViewRow row in dgvPOSItemLookup.SelectedRows)
-            {
-                
+            {                
                 OrderLine ol = new OrderLine();
                 ol.ID = posCurrentOrder.orderLines.Count + 1;
                 ol.OrderID = posCurrentOrder.ID;
@@ -47,12 +45,7 @@ namespace GGRMApp.Views
                 ol.ColNote = "hi";
                 ol.ColOrderReq = false;
                 posCurrentOrder.orderLines.Add(ol);
-                //stomerOrderLine newCol = (CustomerOrderLine)GlobalConfig.Connection.CreateCustomerOrderLine(row.Cells["id"].Value, out status);
-                //GlobalData.ViewData["posAddedInvItems"].Add(invItem);
             }
-
-            //dgvItemCart.DataSource = typeof(List<CustomerOrderLine>);
-            //dgvItemCart.DataSource = posCurrentOrder.orderLines;
 
             tcPOSSidebar.SelectedTab = subtabPOSButtons;
         }

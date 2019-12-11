@@ -22,16 +22,12 @@ namespace GGRMApp.Views
         private void tabPOS_Enter(object sender, EventArgs e)
         {
             string status;
-            //CustomerOrder currentOrder = (CustomerOrder)GlobalData.ViewData["posCurrentOrder"];
+
             if (posCurrentOrder.ID == -1)
             {
                 posCurrentOrder.ID = GlobalConfig.Connection.CustomerOrderNextID(out status);
             }
             lblNewOrder.Text = "New Order " + posCurrentOrder.ID;
-
-            //GlobalData.ViewData["posCurrentOrder"] = currentOrder;
-
-            //Customer selectedCust = (Customer)GlobalData.ViewData["posSelectedCustomer"];
 
             ToolTip ttAddItemBtn = new ToolTip();
             ttAddItemBtn.AutoPopDelay = 5000;
@@ -57,31 +53,86 @@ namespace GGRMApp.Views
             lblSelectedCustomer.Text = posSelectedCust.CustFirst != null ? "Customer: " + posSelectedCust.CustFirst + " " + posSelectedCust.CustLast : "No customer selected.";
 
             dgvItemCart.DataSource = posCurrentOrder.orderLines;
+
+            dgvItemCart.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            dgvItemCart.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
             dgvItemCart.Columns["ID"].HeaderText = "#";
-            dgvItemCart.Columns["ColPrice"].HeaderText = "Price";
+            dgvItemCart.Columns["ID"].ReadOnly = true;
+
+            dgvItemCart.Columns["ColPrice"].HeaderText = "Unit Price";
+            dgvItemCart.Columns["ColPrice"].ReadOnly = true;
             dgvItemCart.Columns["ColPrice"].DefaultCellStyle.Format = "c";
+
             dgvItemCart.Columns["ColOrderQuantity"].HeaderText = "Quantity";
+
             dgvItemCart.Columns["ColStockQuantity"].HeaderText = "Stock Quantity";
+            dgvItemCart.Columns["ColStockQuantity"].ReadOnly = true;
+
             dgvItemCart.Columns["ColOrderReq"].Visible = false;
+
             dgvItemCart.Columns["ColNote"].HeaderText = "Note";
+
             dgvItemCart.Columns["InventoryID"].Visible = false;
+
             dgvItemCart.Columns["ColItemName"].HeaderText = "Item Name";
+            dgvItemCart.Columns["ColItemName"].ReadOnly = true;
+
             dgvItemCart.Columns["ColItemDesc"].HeaderText = "Item Desc";
+            dgvItemCart.Columns["ColItemDesc"].ReadOnly = true;
+
             dgvItemCart.Columns["ColItemBrand"].HeaderText = "Item Brand";
+            dgvItemCart.Columns["ColItemBrand"].ReadOnly = true;
+
             dgvItemCart.Columns["OrderID"].Visible = false;
+
             dgvItemCart.Columns["ProdOrderID"].Visible = false;
 
             dgvRepairCart.DataSource = posCurrentOrder.serviceOrders;
+
             dgvRepairCart.Columns["ID"].HeaderText = "#";
+            dgvRepairCart.Columns["ID"].ReadOnly = true;
+
             dgvRepairCart.Columns["SerOrdDateIn"].HeaderText = "Date In";
+
             dgvRepairCart.Columns["SerOrdDateOut"].Visible = false;
-            dgvRepairCart.Columns["SerOrdIssue"].HeaderText = "Issue Desc.";
+            dgvRepairCart.Columns["SerOrdIssue"].HeaderText = "Issue Desc."
+                ;
             dgvRepairCart.Columns["SerOrdWarranty"].HeaderText = "Warranty?";
+
             dgvRepairCart.Columns["SerOrdStatus"].HeaderText = "Status";
+            dgvRepairCart.Columns["SerOrdStatus"].ReadOnly = true;
+
             dgvRepairCart.Columns["CustOrdID"].Visible = false;
             dgvRepairCart.Columns["ServiceID"].Visible = false;
             dgvRepairCart.Columns["EmpID"].Visible = false;
             dgvRepairCart.Columns["EquipID"].Visible = false;
+        }
+
+
+        private void dgvItemCart_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            UpdateOrderTotal();
+        }
+
+        private void dgvItemCart_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            //Only update total if the line's quantity was changed.
+            if (e.ColumnIndex == 6)
+            {
+                UpdateOrderTotal();
+            }
+        }
+
+        private void UpdateOrderTotal()
+        { 
+            posCurrentOrder.OrdTotal = 0m;
+            foreach(OrderLine line in posCurrentOrder.orderLines)
+            {
+                posCurrentOrder.OrdTotal += line.ColPrice * line.ColOrderQuantity;
+            }
+
+            lblOrderTotal.Text = posCurrentOrder.OrdTotal.ToString("c");
         }
 
         private void TlpItemListPOSSearch_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
