@@ -53,7 +53,11 @@ namespace GGRMApp.Views
             lblSelectedCustomer.Text = posSelectedCust.CustFirst != null ? "Customer: " + posSelectedCust.CustFirst + " " + posSelectedCust.CustLast : "No customer selected.";
 
             dgvItemCart.DataSource = posCurrentOrder.orderLines;
+        }
 
+
+        private void dgvItemCart_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
             dgvItemCart.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             dgvItemCart.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
@@ -93,6 +97,9 @@ namespace GGRMApp.Views
             dgvRepairCart.Columns["ID"].HeaderText = "#";
             dgvRepairCart.Columns["ID"].ReadOnly = true;
 
+            dgvRepairCart.Columns["ServiceName"].HeaderText = "Service";
+            dgvRepairCart.Columns["ServiceName"].ReadOnly = true;
+
             dgvRepairCart.Columns["SerOrdDateIn"].HeaderText = "Date In";
 
             dgvRepairCart.Columns["SerOrdDateOut"].Visible = false;
@@ -107,11 +114,7 @@ namespace GGRMApp.Views
             dgvRepairCart.Columns["ServiceID"].Visible = false;
             dgvRepairCart.Columns["EmpID"].Visible = false;
             dgvRepairCart.Columns["EquipID"].Visible = false;
-        }
 
-
-        private void dgvItemCart_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
             UpdateOrderTotal();
         }
 

@@ -21,6 +21,9 @@ namespace GGRMApp.Views
 
         private void dgvDataCustomers_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            dgvDataCustomers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            dgvDataCustomers.Columns["Email"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvDataCustomers.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvDataCustomers.Columns["id"].Visible = false;
         }
 

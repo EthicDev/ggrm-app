@@ -20,6 +20,9 @@ namespace GGRMApp.Views
 
         private void dgvDataOrders_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            dgvDataOrders.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            
+            dgvDataOrders.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvDataOrders.Columns["id"].Visible = false;
         }
     }

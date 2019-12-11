@@ -22,6 +22,7 @@ namespace GGRMApp.Views
 
         private void dgvUsers_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            dgvUsers.ReadOnly = true;
             dgvUsers.Columns["posName"].HeaderText = "Position";
             dgvUsers.Columns["empFirst"].HeaderText = "First Name";
             dgvUsers.Columns["empLast"].HeaderText = "Last Name";

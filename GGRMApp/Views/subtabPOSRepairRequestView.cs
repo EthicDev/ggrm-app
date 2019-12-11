@@ -38,6 +38,7 @@ namespace GGRMApp.Views
             serviceOrder.SerOrdStatus = "Pending";
             serviceOrder.SerOrdWarranty = cbRepairRequestWarranty.Checked;
             serviceOrder.ServiceID = (int)ddlRepairRequestServiceType.SelectedValue;
+            serviceOrder.ServiceName = ddlRepairRequestServiceType.Text;
             posCurrentOrder.serviceOrders.Add(serviceOrder);
 
             tcPOSSidebar.SelectedTab = subtabPOSButtons;

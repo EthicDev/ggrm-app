@@ -20,6 +20,8 @@ namespace GGRMApp.Views
 
         private void dgvDataProducts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            dgvDataProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            dgvDataProducts.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvDataProducts.Columns["id"].Visible = false;
             dgvDataProducts.Columns["prodSize"].Visible = false;
             dgvDataProducts.Columns["prodMeasure"].Visible = false;

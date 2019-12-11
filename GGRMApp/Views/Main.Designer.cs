@@ -2151,6 +2151,7 @@ namespace GGRMApp.Views
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(862, 694);
             this.dgvUsers.TabIndex = 5;
+            this.dgvUsers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvUsers_DataBindingComplete);
             // 
             // label62
             // 

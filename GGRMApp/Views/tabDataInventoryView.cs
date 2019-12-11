@@ -25,6 +25,8 @@ namespace GGRMApp.Views
 
         private void dgvDataInventory_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            dgvDataInventory.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            dgvDataInventory.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvDataInventory.Columns["id"].Visible = false;
         }
 
