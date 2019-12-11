@@ -35,12 +35,24 @@ namespace GGRMApp.Views
             mainView.SelectedTab = subtabNewOrder;
         }
 
+        private void BtnManageOrder_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabManagePartOrder;
+        }
 
         // new order controls
 
         private void BtnNewOrderCreate_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //manage order controls 
+        private void BtnManagePartOrderSave_Click(object sender, EventArgs e)
+        {
+            // @ add code to change order status based on radio button selection.
+            mainView.SelectedTab = previousTab;
         }
     }
 }

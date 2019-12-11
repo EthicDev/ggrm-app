@@ -35,5 +35,10 @@ namespace GGRMApp.Views
             savePreviousTab();
             mainView.SelectedTab = subtabDiagnose;
         }
+        private void BtnBeginRepair_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabRepair;
+        }
     }
 }

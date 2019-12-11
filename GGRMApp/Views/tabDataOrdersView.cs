@@ -26,7 +26,17 @@ namespace GGRMApp.Views
             dgvDataOrders.Columns["id"].Visible = false;
         }
 
+        private void BtnDataOrdersDetails_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabDetailsOrder;
+        }
 
+        private void BtnDataOrdersPay_Click(object sender, EventArgs e)
+        {
+            //@ add code to fill POS tab with info from the selected previous order
+            mainView.SelectedTab = tabPOS;
+        }
 
     }
 }
