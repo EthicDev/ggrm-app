@@ -1746,6 +1746,7 @@ namespace GGRMApp.Views
             this.dgvPendingRepairs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPendingRepairs.Size = new System.Drawing.Size(808, 690);
             this.dgvPendingRepairs.TabIndex = 3;
+            this.dgvPendingRepairs.SelectionChanged += new System.EventHandler(this.dgvPendingRepairs_SelectionChanged);
             // 
             // label22
             // 

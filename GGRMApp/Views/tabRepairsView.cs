@@ -1,4 +1,5 @@
 ﻿using GGRMLib;
+using GGRMLib.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,8 +12,11 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        ServiceOrder selectedServiceOrder;
+
         private void tabRepairs_Enter(object sender, EventArgs e)
         {
+            btnDiagnose.Enabled = false;
             string status;
 
             DataTable dtPendingServices = GlobalConfig.Connection.GetPendingServicesDataTable(out status);
@@ -28,13 +32,22 @@ namespace GGRMApp.Views
             //dgvPendingRepairs.Columns["Customer"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             //dgvPendingRepairs.Columns["Issue"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             //dgvPendingRepairs.Columns["Issue"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+        }
+
+        private void BtnDiagnose_Click(object sender, EventArgs e)
+        {
+            string status;
+            int sID = (int)dgvPendingRepairs.SelectedRows[0].Cells["id"].Value;
+            selectedServiceOrder = GlobalConfig.Connection.GetServiceOrderByID(sID, out status);
+            savePreviousTab();
+            mainView.SelectedTab = subtabDiagnose;
+        }
+
+        private void dgvPendingRepairs_SelectionChanged(object sender, EventArgs e)
+        {
+            btnDiagnose.Enabled = true;
         }
 
-        private void BtnDiagnose_Click(object sender, EventArgs e)
-        {
-            savePreviousTab();
-            mainView.SelectedTab = subtabDiagnose;
-        }
         private void BtnBeginRepair_Click(object sender, EventArgs e)
         {
             savePreviousTab();

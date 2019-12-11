@@ -25,6 +25,7 @@ namespace GGRMApp.Views
             dgvDataProducts.Columns["id"].Visible = false;
             dgvDataProducts.Columns["prodSize"].Visible = false;
             dgvDataProducts.Columns["prodMeasure"].Visible = false;
+            dgvDataProducts.Columns["prodPrice"].DefaultCellStyle.Format = "c";
         }
 
         private void btnDataProductsSearch_Click(object sender, EventArgs e)

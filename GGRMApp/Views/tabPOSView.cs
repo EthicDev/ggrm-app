@@ -134,6 +134,7 @@ namespace GGRMApp.Views
             {
                 posCurrentOrder.OrdTotal += line.ColPrice * line.ColOrderQuantity;
             }
+            posCurrentOrder.OrdPartyPlan = posCurrentOrder.OrdTotal * 0.02m;
 
             lblOrderTotal.Text = posCurrentOrder.OrdTotal.ToString("c");
         }

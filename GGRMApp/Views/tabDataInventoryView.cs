@@ -1,4 +1,5 @@
 ﻿using GGRMLib;
+using GGRMLib.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,7 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        Inventory invToEdit;
         private void TabDataInventory_Enter(object sender, EventArgs e)
         {
             string status;
@@ -50,7 +52,11 @@ namespace GGRMApp.Views
 
         private void BtnDataInventoryEdit_Click(object sender, EventArgs e)
         {
+            string status;
+            int selectedID = (int)dgvDataInventory.SelectedRows[0].Cells["id"].Value;
+            invToEdit = GlobalConfig.Connection.GetInventoryByID(selectedID, out status);
             savePreviousTab();
+            //MessageBox.Show(invToEdit.InvPrice.ToString());
             mainView.SelectedTab = subtabEditInventory;
         }
     }

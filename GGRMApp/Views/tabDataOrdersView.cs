@@ -24,6 +24,10 @@ namespace GGRMApp.Views
             
             dgvDataOrders.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvDataOrders.Columns["id"].Visible = false;
+            dgvDataOrders.Columns["ordTotal"].DefaultCellStyle.Format = "c";
+            dgvDataOrders.Columns["ordTotal"].HeaderText = "Total";
+            dgvDataOrders.Columns["ordPartyPlan"].DefaultCellStyle.Format = "c";
+            dgvDataOrders.Columns["ordPartyPlan"].HeaderText = "2% Plan";
         }
 
         private void BtnDataOrdersDetails_Click(object sender, EventArgs e)
