@@ -41,5 +41,21 @@ namespace GGRMApp.Views
             savePreviousTab();
             mainView.SelectedTab = subtabEditProducts;
         }
+
+
+        //new inventory controls
+
+        private void BtnNewInventoryAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //edit inventory controls
+
+
+        private void BtnEditInventoryConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,5 +42,16 @@ namespace GGRMApp.Views
             // Set price column to currency format
             dgvDataInventory.Columns[6].DefaultCellStyle.Format = "c";
         }
+        private void BtnDataInventoryAdd_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabNewInventory;
+        }
+
+        private void BtnDataInventoryEdit_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabEditInventory;
+        }
     }
 }

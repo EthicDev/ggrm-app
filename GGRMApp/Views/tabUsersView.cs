@@ -29,5 +29,37 @@ namespace GGRMApp.Views
             dgvUsers.Columns["empUser"].HeaderText = "Username";
             dgvUsers.Columns["id"].Visible = false;
         }
+
+
+        private void BtnUsersAdd_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabNewUser;
+        }
+
+
+        private void BtnUsersEdit_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabEditUser;
+        }
+
+
+
+
+
+        //new user controls
+
+        private void BtnNewUserCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void BtnEditUserConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

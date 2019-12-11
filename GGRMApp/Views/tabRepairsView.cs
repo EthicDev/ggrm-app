@@ -29,5 +29,11 @@ namespace GGRMApp.Views
             //dgvPendingRepairs.Columns["Issue"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             //dgvPendingRepairs.Columns["Issue"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
+
+        private void BtnDiagnose_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabDiagnose;
+        }
     }
 }

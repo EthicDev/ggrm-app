@@ -220,5 +220,10 @@ namespace GGRMApp.Views
             posProductOrder = new ProductOrder();
             tabPOS_Enter(this, null);
         }
+
+        private void btnCreateAndPay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

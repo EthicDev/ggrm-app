@@ -28,5 +28,19 @@ namespace GGRMApp.Views
         {
             dgvOrderRequests.Columns["id"].Visible = false;
         }
+
+        private void BtnOrderSelected_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabNewOrder;
+        }
+
+
+        // new order controls
+
+        private void BtnNewOrderCreate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

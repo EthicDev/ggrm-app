@@ -191,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\GGRMLib.DataSet_CustomersTableAdapters.customerTableAdapter.datasource" />
     <None Include="Properties\DataSources\GGRMLib.DataSet_CustomersTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
@@ -210,6 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Emma v1.png" />
+    <None Include="Resources\Emma v11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

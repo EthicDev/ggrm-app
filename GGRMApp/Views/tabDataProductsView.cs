@@ -35,7 +35,32 @@ namespace GGRMApp.Views
             DataTable dtProducts = GlobalConfig.Connection.GetProductsDataTable(out status, searchString);
             dgvDataProducts.DataSource = dtProducts;
         }
+        private void BtnDataProductsEdit_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabEditProducts;
+        }
+
+        private void BtnDataProductsAdd_Click(object sender, EventArgs e)
+        {
+            savePreviousTab();
+            mainView.SelectedTab = subtabNewProduct;
+        }
+
+        
 
 
+        // new product controls
+        private void BtnNewProductAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // edit product controls
+
+        private void BtnEditProductConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

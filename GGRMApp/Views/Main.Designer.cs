@@ -158,7 +158,7 @@ namespace GGRMApp.Views
             this.tabDataInventory = new System.Windows.Forms.TabPage();
             this.tlpDataTabInventory = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDataTabInventoryButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnDataInventoryAdd = new System.Windows.Forms.Button();
             this.btnDataInventoryEdit = new System.Windows.Forms.Button();
             this.tableLayoutPanel46 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDataInventory = new System.Windows.Forms.DataGridView();
@@ -212,6 +212,20 @@ namespace GGRMApp.Views
             this.btnCustomersBack = new System.Windows.Forms.Button();
             this.btnManageCustomers = new System.Windows.Forms.Button();
             this.btnSelectCustomer = new System.Windows.Forms.Button();
+            this.subtabDiagnose = new System.Windows.Forms.TabPage();
+            this.tlpDiagnose = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel61 = new System.Windows.Forms.TableLayoutPanel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnDiagnoseSubmit = new System.Windows.Forms.Button();
+            this.lblRepairEstimatedPrice = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel62 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel60 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvDiagnoseItemList = new System.Windows.Forms.DataGridView();
+            this.label46 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel63 = new System.Windows.Forms.TableLayoutPanel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.txtDiagnoseDescription = new System.Windows.Forms.TextBox();
             this.subtabNewCustomer = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
@@ -286,6 +300,18 @@ namespace GGRMApp.Views
             this.button10 = new System.Windows.Forms.Button();
             this.btnNewProductAdd = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
+            this.subtabNewOrder = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel78 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel79 = new System.Windows.Forms.TableLayoutPanel();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel80 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvNewOrderItems = new System.Windows.Forms.DataGridView();
+            this.txtNewOrderID = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel81 = new System.Windows.Forms.TableLayoutPanel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.btnNewOrderCreate = new System.Windows.Forms.Button();
+            this.label70 = new System.Windows.Forms.Label();
             this.subtabEditCustomer = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
@@ -344,7 +370,7 @@ namespace GGRMApp.Views
             this.ddlProductName = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel37 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
-            this.btnEditItemConfirm = new System.Windows.Forms.Button();
+            this.btnEditProductConfirm = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.subtabEditInventory = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel38 = new System.Windows.Forms.TableLayoutPanel();
@@ -362,20 +388,6 @@ namespace GGRMApp.Views
             this.button2 = new System.Windows.Forms.Button();
             this.btnEditInventoryConfirm = new System.Windows.Forms.Button();
             this.lblEditItemStatus = new System.Windows.Forms.Label();
-            this.subtabDiagnose = new System.Windows.Forms.TabPage();
-            this.tlpDiagnose = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel61 = new System.Windows.Forms.TableLayoutPanel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.btnDiagnoseSubmit = new System.Windows.Forms.Button();
-            this.lblRepairEstimatedPrice = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel62 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel60 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvDiagnoseItemList = new System.Windows.Forms.DataGridView();
-            this.label46 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel63 = new System.Windows.Forms.TableLayoutPanel();
-            this.label47 = new System.Windows.Forms.Label();
-            this.txtDiagnoseDescription = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPOS = new System.Windows.Forms.Button();
             this.btnData = new System.Windows.Forms.Button();
@@ -383,10 +395,12 @@ namespace GGRMApp.Views
             this.btnRepairs = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tlpTitleBar = new System.Windows.Forms.TableLayoutPanel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnExpand = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnCreateAndPay = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.mainView.SuspendLayout();
@@ -468,6 +482,13 @@ namespace GGRMApp.Views
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tlpCustomerSearch.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.subtabDiagnose.SuspendLayout();
+            this.tlpDiagnose.SuspendLayout();
+            this.tableLayoutPanel61.SuspendLayout();
+            this.tableLayoutPanel62.SuspendLayout();
+            this.tableLayoutPanel60.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnoseItemList)).BeginInit();
+            this.tableLayoutPanel63.SuspendLayout();
             this.subtabNewCustomer.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
@@ -489,6 +510,12 @@ namespace GGRMApp.Views
             this.tableLayoutPanel66.SuspendLayout();
             this.tableLayoutPanel65.SuspendLayout();
             this.tableLayoutPanel67.SuspendLayout();
+            this.subtabNewOrder.SuspendLayout();
+            this.tableLayoutPanel78.SuspendLayout();
+            this.tableLayoutPanel79.SuspendLayout();
+            this.tableLayoutPanel80.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNewOrderItems)).BeginInit();
+            this.tableLayoutPanel81.SuspendLayout();
             this.subtabEditCustomer.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
@@ -510,14 +537,8 @@ namespace GGRMApp.Views
             this.tableLayoutPanel40.SuspendLayout();
             this.tableLayoutPanel42.SuspendLayout();
             this.tableLayoutPanel41.SuspendLayout();
-            this.subtabDiagnose.SuspendLayout();
-            this.tlpDiagnose.SuspendLayout();
-            this.tableLayoutPanel61.SuspendLayout();
-            this.tableLayoutPanel62.SuspendLayout();
-            this.tableLayoutPanel60.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnoseItemList)).BeginInit();
-            this.tableLayoutPanel63.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tlpTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -566,15 +587,16 @@ namespace GGRMApp.Views
             this.mainView.Controls.Add(this.tabUsers);
             this.mainView.Controls.Add(this.tabData);
             this.mainView.Controls.Add(this.subtabCustomers);
+            this.mainView.Controls.Add(this.subtabDiagnose);
             this.mainView.Controls.Add(this.subtabNewCustomer);
             this.mainView.Controls.Add(this.subtabNewUser);
             this.mainView.Controls.Add(this.subtabNewInventory);
             this.mainView.Controls.Add(this.subtabNewProduct);
+            this.mainView.Controls.Add(this.subtabNewOrder);
             this.mainView.Controls.Add(this.subtabEditCustomer);
             this.mainView.Controls.Add(this.subtabEditUser);
             this.mainView.Controls.Add(this.subtabEditProducts);
             this.mainView.Controls.Add(this.subtabEditInventory);
-            this.mainView.Controls.Add(this.subtabDiagnose);
             this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainView.ItemSize = new System.Drawing.Size(50, 20);
             this.mainView.Location = new System.Drawing.Point(175, 0);
@@ -663,8 +685,9 @@ namespace GGRMApp.Views
             this.tableLayoutPanel6.Controls.Add(this.btnAddService, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.btnAddItem, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.btnCustomers, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.btnCreateOrder, 0, 6);
             this.tableLayoutPanel6.Controls.Add(this.lblOrderTotal, 0, 5);
+            this.tableLayoutPanel6.Controls.Add(this.btnCreateOrder, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.btnCreateAndPay, 0, 6);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -737,10 +760,10 @@ namespace GGRMApp.Views
             this.btnCreateOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateOrder.ForeColor = System.Drawing.Color.White;
-            this.btnCreateOrder.Location = new System.Drawing.Point(2, 560);
+            this.btnCreateOrder.Location = new System.Drawing.Point(2, 281);
             this.btnCreateOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateOrder.Name = "btnCreateOrder";
-            this.btnCreateOrder.Size = new System.Drawing.Size(188, 95);
+            this.btnCreateOrder.Size = new System.Drawing.Size(188, 89);
             this.btnCreateOrder.TabIndex = 2;
             this.btnCreateOrder.Text = "Create Order";
             this.btnCreateOrder.UseVisualStyleBackColor = false;
@@ -1492,6 +1515,7 @@ namespace GGRMApp.Views
             this.btnOrderSelected.TabIndex = 1;
             this.btnOrderSelected.Text = "Order Selected";
             this.btnOrderSelected.UseVisualStyleBackColor = false;
+            this.btnOrderSelected.Click += new System.EventHandler(this.BtnOrderSelected_Click);
             // 
             // btnManageOrder
             // 
@@ -1663,6 +1687,7 @@ namespace GGRMApp.Views
             this.btnDiagnose.TabIndex = 0;
             this.btnDiagnose.Text = "Diagnose";
             this.btnDiagnose.UseVisualStyleBackColor = false;
+            this.btnDiagnose.Click += new System.EventHandler(this.BtnDiagnose_Click);
             // 
             // btnBeginRepair
             // 
@@ -2076,6 +2101,7 @@ namespace GGRMApp.Views
             this.btnUsersAdd.TabIndex = 1;
             this.btnUsersAdd.Text = "Add User";
             this.btnUsersAdd.UseVisualStyleBackColor = false;
+            this.btnUsersAdd.Click += new System.EventHandler(this.BtnUsersAdd_Click);
             // 
             // btnUsersEdit
             // 
@@ -2092,6 +2118,7 @@ namespace GGRMApp.Views
             this.btnUsersEdit.TabIndex = 1;
             this.btnUsersEdit.Text = "Edit User";
             this.btnUsersEdit.UseVisualStyleBackColor = false;
+            this.btnUsersEdit.Click += new System.EventHandler(this.BtnUsersEdit_Click);
             // 
             // tableLayoutPanel75
             // 
@@ -2340,7 +2367,7 @@ namespace GGRMApp.Views
             this.tlpDataTabInventoryButtons.ColumnCount = 1;
             this.tlpDataTabInventoryButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDataTabInventoryButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tlpDataTabInventoryButtons.Controls.Add(this.button7, 0, 1);
+            this.tlpDataTabInventoryButtons.Controls.Add(this.btnDataInventoryAdd, 0, 1);
             this.tlpDataTabInventoryButtons.Controls.Add(this.btnDataInventoryEdit, 0, 0);
             this.tlpDataTabInventoryButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDataTabInventoryButtons.Location = new System.Drawing.Point(854, 0);
@@ -2356,21 +2383,22 @@ namespace GGRMApp.Views
             this.tlpDataTabInventoryButtons.Size = new System.Drawing.Size(150, 666);
             this.tlpDataTabInventoryButtons.TabIndex = 0;
             // 
-            // button7
+            // btnDataInventoryAdd
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(2, 112);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 106);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Add Item";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnDataInventoryAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDataInventoryAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDataInventoryAdd.FlatAppearance.BorderSize = 0;
+            this.btnDataInventoryAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDataInventoryAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDataInventoryAdd.ForeColor = System.Drawing.Color.White;
+            this.btnDataInventoryAdd.Location = new System.Drawing.Point(2, 112);
+            this.btnDataInventoryAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDataInventoryAdd.Name = "btnDataInventoryAdd";
+            this.btnDataInventoryAdd.Size = new System.Drawing.Size(146, 106);
+            this.btnDataInventoryAdd.TabIndex = 4;
+            this.btnDataInventoryAdd.Text = "Add Item";
+            this.btnDataInventoryAdd.UseVisualStyleBackColor = false;
+            this.btnDataInventoryAdd.Click += new System.EventHandler(this.BtnDataInventoryAdd_Click);
             // 
             // btnDataInventoryEdit
             // 
@@ -2387,6 +2415,7 @@ namespace GGRMApp.Views
             this.btnDataInventoryEdit.TabIndex = 3;
             this.btnDataInventoryEdit.Text = "Edit";
             this.btnDataInventoryEdit.UseVisualStyleBackColor = false;
+            this.btnDataInventoryEdit.Click += new System.EventHandler(this.BtnDataInventoryEdit_Click);
             // 
             // tableLayoutPanel46
             // 
@@ -2574,6 +2603,7 @@ namespace GGRMApp.Views
             this.btnDataProductsAdd.TabIndex = 4;
             this.btnDataProductsAdd.Text = "Add Product";
             this.btnDataProductsAdd.UseVisualStyleBackColor = false;
+            this.btnDataProductsAdd.Click += new System.EventHandler(this.BtnDataProductsAdd_Click);
             // 
             // btnDataProductsEdit
             // 
@@ -2590,6 +2620,7 @@ namespace GGRMApp.Views
             this.btnDataProductsEdit.TabIndex = 3;
             this.btnDataProductsEdit.Text = "Edit";
             this.btnDataProductsEdit.UseVisualStyleBackColor = false;
+            this.btnDataProductsEdit.Click += new System.EventHandler(this.BtnDataProductsEdit_Click);
             // 
             // tableLayoutPanel49
             // 
@@ -3354,6 +3385,247 @@ namespace GGRMApp.Views
             this.btnSelectCustomer.UseVisualStyleBackColor = false;
             this.btnSelectCustomer.Click += new System.EventHandler(this.BtnSelectCustomer_Click);
             // 
+            // subtabDiagnose
+            // 
+            this.subtabDiagnose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subtabDiagnose.Controls.Add(this.tlpDiagnose);
+            this.subtabDiagnose.Location = new System.Drawing.Point(4, 24);
+            this.subtabDiagnose.Name = "subtabDiagnose";
+            this.subtabDiagnose.Padding = new System.Windows.Forms.Padding(3);
+            this.subtabDiagnose.Size = new System.Drawing.Size(1016, 737);
+            this.subtabDiagnose.TabIndex = 13;
+            this.subtabDiagnose.Text = "subtabDiagnose";
+            // 
+            // tlpDiagnose
+            // 
+            this.tlpDiagnose.ColumnCount = 2;
+            this.tlpDiagnose.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDiagnose.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tlpDiagnose.Controls.Add(this.tableLayoutPanel61, 1, 0);
+            this.tlpDiagnose.Controls.Add(this.tableLayoutPanel62, 0, 0);
+            this.tlpDiagnose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDiagnose.Location = new System.Drawing.Point(3, 3);
+            this.tlpDiagnose.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpDiagnose.Name = "tlpDiagnose";
+            this.tlpDiagnose.RowCount = 1;
+            this.tlpDiagnose.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDiagnose.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 731F));
+            this.tlpDiagnose.Size = new System.Drawing.Size(1010, 731);
+            this.tlpDiagnose.TabIndex = 0;
+            // 
+            // tableLayoutPanel61
+            // 
+            this.tableLayoutPanel61.ColumnCount = 1;
+            this.tableLayoutPanel61.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel61.Controls.Add(this.button8, 0, 0);
+            this.tableLayoutPanel61.Controls.Add(this.btnDiagnoseSubmit, 0, 8);
+            this.tableLayoutPanel61.Controls.Add(this.lblRepairEstimatedPrice, 0, 7);
+            this.tableLayoutPanel61.Controls.Add(this.label49, 0, 6);
+            this.tableLayoutPanel61.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel61.Location = new System.Drawing.Point(810, 0);
+            this.tableLayoutPanel61.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel61.Name = "tableLayoutPanel61";
+            this.tableLayoutPanel61.RowCount = 9;
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel61.Size = new System.Drawing.Size(200, 731);
+            this.tableLayoutPanel61.TabIndex = 0;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.SteelBlue;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(3, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(194, 85);
+            this.button8.TabIndex = 5;
+            this.button8.Text = "+ Item";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // btnDiagnoseSubmit
+            // 
+            this.btnDiagnoseSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
+            this.btnDiagnoseSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDiagnoseSubmit.FlatAppearance.BorderSize = 0;
+            this.btnDiagnoseSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiagnoseSubmit.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiagnoseSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnDiagnoseSubmit.Location = new System.Drawing.Point(3, 639);
+            this.btnDiagnoseSubmit.Name = "btnDiagnoseSubmit";
+            this.btnDiagnoseSubmit.Size = new System.Drawing.Size(194, 89);
+            this.btnDiagnoseSubmit.TabIndex = 5;
+            this.btnDiagnoseSubmit.Text = "Submit Diagnosis";
+            this.btnDiagnoseSubmit.UseVisualStyleBackColor = false;
+            // 
+            // lblRepairEstimatedPrice
+            // 
+            this.lblRepairEstimatedPrice.AutoSize = true;
+            this.lblRepairEstimatedPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblRepairEstimatedPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRepairEstimatedPrice.ForeColor = System.Drawing.Color.White;
+            this.lblRepairEstimatedPrice.Location = new System.Drawing.Point(3, 571);
+            this.lblRepairEstimatedPrice.Name = "lblRepairEstimatedPrice";
+            this.lblRepairEstimatedPrice.Size = new System.Drawing.Size(194, 65);
+            this.lblRepairEstimatedPrice.TabIndex = 6;
+            this.lblRepairEstimatedPrice.Text = "$0.00";
+            this.lblRepairEstimatedPrice.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.White;
+            this.label49.Location = new System.Drawing.Point(3, 546);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(194, 25);
+            this.label49.TabIndex = 7;
+            this.label49.Text = "Estimated Service Cost";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // tableLayoutPanel62
+            // 
+            this.tableLayoutPanel62.ColumnCount = 1;
+            this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel62.Controls.Add(this.tableLayoutPanel60, 0, 0);
+            this.tableLayoutPanel62.Controls.Add(this.tableLayoutPanel63, 0, 1);
+            this.tableLayoutPanel62.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel62.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel62.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel62.Name = "tableLayoutPanel62";
+            this.tableLayoutPanel62.RowCount = 2;
+            this.tableLayoutPanel62.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel62.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel62.Size = new System.Drawing.Size(810, 731);
+            this.tableLayoutPanel62.TabIndex = 1;
+            // 
+            // tableLayoutPanel60
+            // 
+            this.tableLayoutPanel60.ColumnCount = 1;
+            this.tableLayoutPanel60.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel60.Controls.Add(this.dgvDiagnoseItemList, 0, 1);
+            this.tableLayoutPanel60.Controls.Add(this.label46, 0, 0);
+            this.tableLayoutPanel60.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel60.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel60.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel60.Name = "tableLayoutPanel60";
+            this.tableLayoutPanel60.RowCount = 2;
+            this.tableLayoutPanel60.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel60.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel60.Size = new System.Drawing.Size(810, 365);
+            this.tableLayoutPanel60.TabIndex = 0;
+            // 
+            // dgvDiagnoseItemList
+            // 
+            this.dgvDiagnoseItemList.AllowUserToAddRows = false;
+            this.dgvDiagnoseItemList.AllowUserToDeleteRows = false;
+            this.dgvDiagnoseItemList.AllowUserToResizeColumns = false;
+            this.dgvDiagnoseItemList.AllowUserToResizeRows = false;
+            this.dgvDiagnoseItemList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDiagnoseItemList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvDiagnoseItemList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDiagnoseItemList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDiagnoseItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDiagnoseItemList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            this.dgvDiagnoseItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDiagnoseItemList.DefaultCellStyle = dataGridViewCellStyle29;
+            this.dgvDiagnoseItemList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDiagnoseItemList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvDiagnoseItemList.EnableHeadersVisualStyles = false;
+            this.dgvDiagnoseItemList.GridColor = System.Drawing.Color.Gray;
+            this.dgvDiagnoseItemList.Location = new System.Drawing.Point(0, 48);
+            this.dgvDiagnoseItemList.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvDiagnoseItemList.MultiSelect = false;
+            this.dgvDiagnoseItemList.Name = "dgvDiagnoseItemList";
+            this.dgvDiagnoseItemList.RowHeadersVisible = false;
+            this.dgvDiagnoseItemList.RowHeadersWidth = 51;
+            this.dgvDiagnoseItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDiagnoseItemList.Size = new System.Drawing.Size(810, 317);
+            this.dgvDiagnoseItemList.TabIndex = 5;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label46.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.Location = new System.Drawing.Point(10, 0);
+            this.label46.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(95, 48);
+            this.label46.TabIndex = 6;
+            this.label46.Text = "Item List";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel63
+            // 
+            this.tableLayoutPanel63.ColumnCount = 1;
+            this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel63.Controls.Add(this.label47, 0, 0);
+            this.tableLayoutPanel63.Controls.Add(this.txtDiagnoseDescription, 0, 1);
+            this.tableLayoutPanel63.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel63.Location = new System.Drawing.Point(0, 365);
+            this.tableLayoutPanel63.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel63.Name = "tableLayoutPanel63";
+            this.tableLayoutPanel63.RowCount = 2;
+            this.tableLayoutPanel63.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel63.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel63.Size = new System.Drawing.Size(810, 366);
+            this.tableLayoutPanel63.TabIndex = 1;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label47.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.White;
+            this.label47.Location = new System.Drawing.Point(10, 0);
+            this.label47.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(220, 48);
+            this.label47.TabIndex = 7;
+            this.label47.Text = "Diagnosis Description";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtDiagnoseDescription
+            // 
+            this.txtDiagnoseDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtDiagnoseDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiagnoseDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDiagnoseDescription.Location = new System.Drawing.Point(10, 58);
+            this.txtDiagnoseDescription.Margin = new System.Windows.Forms.Padding(10);
+            this.txtDiagnoseDescription.Multiline = true;
+            this.txtDiagnoseDescription.Name = "txtDiagnoseDescription";
+            this.txtDiagnoseDescription.Size = new System.Drawing.Size(790, 298);
+            this.txtDiagnoseDescription.TabIndex = 0;
+            // 
             // subtabNewCustomer
             // 
             this.subtabNewCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -3953,6 +4225,7 @@ namespace GGRMApp.Views
             this.btnNewUserCreate.TabIndex = 1;
             this.btnNewUserCreate.Text = "Create User";
             this.btnNewUserCreate.UseVisualStyleBackColor = false;
+            this.btnNewUserCreate.Click += new System.EventHandler(this.BtnNewUserCreate_Click);
             // 
             // label42
             // 
@@ -3981,9 +4254,9 @@ namespace GGRMApp.Views
             // tableLayoutPanel68
             // 
             this.tableLayoutPanel68.ColumnCount = 3;
-            this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel68.Controls.Add(this.tableLayoutPanel69, 0, 0);
             this.tableLayoutPanel68.Controls.Add(this.tableLayoutPanel70, 1, 0);
             this.tableLayoutPanel68.Controls.Add(this.tableLayoutPanel72, 2, 0);
@@ -4008,11 +4281,11 @@ namespace GGRMApp.Views
             this.tableLayoutPanel69.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel69.Name = "tableLayoutPanel69";
             this.tableLayoutPanel69.RowCount = 4;
-            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel69.Size = new System.Drawing.Size(71, 733);
+            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel69.Size = new System.Drawing.Size(96, 733);
             this.tableLayoutPanel69.TabIndex = 3;
             // 
             // label55
@@ -4021,7 +4294,7 @@ namespace GGRMApp.Views
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.White;
-            this.label55.Location = new System.Drawing.Point(13, 12);
+            this.label55.Location = new System.Drawing.Point(38, 16);
             this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(56, 17);
@@ -4035,7 +4308,7 @@ namespace GGRMApp.Views
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.White;
-            this.label56.Location = new System.Drawing.Point(8, 53);
+            this.label56.Location = new System.Drawing.Point(33, 66);
             this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(61, 17);
@@ -4049,7 +4322,7 @@ namespace GGRMApp.Views
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(3, 94);
+            this.label58.Location = new System.Drawing.Point(28, 116);
             this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(66, 17);
@@ -4065,15 +4338,15 @@ namespace GGRMApp.Views
             this.tableLayoutPanel70.Controls.Add(this.tableLayoutPanel71, 0, 2);
             this.tableLayoutPanel70.Controls.Add(this.ddlNewInventoryProduct, 0, 0);
             this.tableLayoutPanel70.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel70.Location = new System.Drawing.Point(77, 2);
+            this.tableLayoutPanel70.Location = new System.Drawing.Point(102, 2);
             this.tableLayoutPanel70.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel70.Name = "tableLayoutPanel70";
             this.tableLayoutPanel70.RowCount = 4;
-            this.tableLayoutPanel70.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel70.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel70.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel70.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel70.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel70.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel70.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel70.Size = new System.Drawing.Size(787, 733);
+            this.tableLayoutPanel70.Size = new System.Drawing.Size(712, 733);
             this.tableLayoutPanel70.TabIndex = 1;
             // 
             // txtNewInventoryQuantity
@@ -4083,12 +4356,12 @@ namespace GGRMApp.Views
             this.txtNewInventoryQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNewInventoryQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewInventoryQuantity.ForeColor = System.Drawing.Color.White;
-            this.txtNewInventoryQuantity.Location = new System.Drawing.Point(6, 49);
+            this.txtNewInventoryQuantity.Location = new System.Drawing.Point(6, 58);
             this.txtNewInventoryQuantity.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtNewInventoryQuantity.MaxLength = 100;
             this.txtNewInventoryQuantity.Multiline = true;
             this.txtNewInventoryQuantity.Name = "txtNewInventoryQuantity";
-            this.txtNewInventoryQuantity.Size = new System.Drawing.Size(775, 25);
+            this.txtNewInventoryQuantity.Size = new System.Drawing.Size(700, 34);
             this.txtNewInventoryQuantity.TabIndex = 1;
             // 
             // tableLayoutPanel71
@@ -4099,12 +4372,12 @@ namespace GGRMApp.Views
             this.tableLayoutPanel71.Controls.Add(this.txtNewInventoryPrice, 1, 0);
             this.tableLayoutPanel71.Controls.Add(this.label60, 0, 0);
             this.tableLayoutPanel71.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel71.Location = new System.Drawing.Point(0, 82);
+            this.tableLayoutPanel71.Location = new System.Drawing.Point(0, 100);
             this.tableLayoutPanel71.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel71.Name = "tableLayoutPanel71";
             this.tableLayoutPanel71.RowCount = 1;
             this.tableLayoutPanel71.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel71.Size = new System.Drawing.Size(787, 41);
+            this.tableLayoutPanel71.Size = new System.Drawing.Size(712, 50);
             this.tableLayoutPanel71.TabIndex = 2;
             // 
             // txtNewInventoryPrice
@@ -4119,7 +4392,7 @@ namespace GGRMApp.Views
             this.txtNewInventoryPrice.MaxLength = 100;
             this.txtNewInventoryPrice.Multiline = true;
             this.txtNewInventoryPrice.Name = "txtNewInventoryPrice";
-            this.txtNewInventoryPrice.Size = new System.Drawing.Size(753, 25);
+            this.txtNewInventoryPrice.Size = new System.Drawing.Size(678, 34);
             this.txtNewInventoryPrice.TabIndex = 1;
             // 
             // label60
@@ -4131,7 +4404,7 @@ namespace GGRMApp.Views
             this.label60.Location = new System.Drawing.Point(3, 0);
             this.label60.Margin = new System.Windows.Forms.Padding(0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(19, 41);
+            this.label60.Size = new System.Drawing.Size(19, 50);
             this.label60.TabIndex = 2;
             this.label60.Text = "$";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4142,10 +4415,10 @@ namespace GGRMApp.Views
             this.ddlNewInventoryProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ddlNewInventoryProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ddlNewInventoryProduct.FormattingEnabled = true;
-            this.ddlNewInventoryProduct.Location = new System.Drawing.Point(6, 10);
+            this.ddlNewInventoryProduct.Location = new System.Drawing.Point(6, 14);
             this.ddlNewInventoryProduct.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.ddlNewInventoryProduct.Name = "ddlNewInventoryProduct";
-            this.ddlNewInventoryProduct.Size = new System.Drawing.Size(775, 21);
+            this.ddlNewInventoryProduct.Size = new System.Drawing.Size(700, 21);
             this.ddlNewInventoryProduct.TabIndex = 8;
             // 
             // tableLayoutPanel72
@@ -4156,15 +4429,14 @@ namespace GGRMApp.Views
             this.tableLayoutPanel72.Controls.Add(this.btnNewInventoryAdd, 0, 1);
             this.tableLayoutPanel72.Controls.Add(this.label61, 0, 2);
             this.tableLayoutPanel72.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel72.Location = new System.Drawing.Point(868, 2);
+            this.tableLayoutPanel72.Location = new System.Drawing.Point(818, 2);
             this.tableLayoutPanel72.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel72.Name = "tableLayoutPanel72";
             this.tableLayoutPanel72.RowCount = 3;
-            this.tableLayoutPanel72.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel72.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel72.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel72.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel72.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel72.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel72.Size = new System.Drawing.Size(146, 733);
+            this.tableLayoutPanel72.Size = new System.Drawing.Size(196, 733);
             this.tableLayoutPanel72.TabIndex = 2;
             // 
             // button11
@@ -4178,10 +4450,11 @@ namespace GGRMApp.Views
             this.button11.Location = new System.Drawing.Point(2, 2);
             this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(142, 37);
+            this.button11.Size = new System.Drawing.Size(192, 46);
             this.button11.TabIndex = 0;
             this.button11.Text = "Back";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.GoBack);
             // 
             // btnNewInventoryAdd
             // 
@@ -4191,13 +4464,14 @@ namespace GGRMApp.Views
             this.btnNewInventoryAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewInventoryAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewInventoryAdd.ForeColor = System.Drawing.Color.White;
-            this.btnNewInventoryAdd.Location = new System.Drawing.Point(2, 43);
+            this.btnNewInventoryAdd.Location = new System.Drawing.Point(2, 52);
             this.btnNewInventoryAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewInventoryAdd.Name = "btnNewInventoryAdd";
-            this.btnNewInventoryAdd.Size = new System.Drawing.Size(142, 77);
+            this.btnNewInventoryAdd.Size = new System.Drawing.Size(192, 96);
             this.btnNewInventoryAdd.TabIndex = 1;
             this.btnNewInventoryAdd.Text = "Add Inventory";
             this.btnNewInventoryAdd.UseVisualStyleBackColor = false;
+            this.btnNewInventoryAdd.Click += new System.EventHandler(this.BtnNewInventoryAdd_Click);
             // 
             // label61
             // 
@@ -4205,10 +4479,10 @@ namespace GGRMApp.Views
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.White;
-            this.label61.Location = new System.Drawing.Point(36, 128);
+            this.label61.Location = new System.Drawing.Point(61, 156);
             this.label61.Margin = new System.Windows.Forms.Padding(2, 6, 2, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(74, 605);
+            this.label61.Size = new System.Drawing.Size(74, 577);
             this.label61.TabIndex = 2;
             this.label61.Text = "Test Status";
             // 
@@ -4226,9 +4500,9 @@ namespace GGRMApp.Views
             // tableLayoutPanel64
             // 
             this.tableLayoutPanel64.ColumnCount = 3;
-            this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel64.Controls.Add(this.tableLayoutPanel66, 0, 0);
             this.tableLayoutPanel64.Controls.Add(this.tableLayoutPanel65, 0, 0);
             this.tableLayoutPanel64.Controls.Add(this.tableLayoutPanel67, 2, 0);
@@ -4251,18 +4525,17 @@ namespace GGRMApp.Views
             this.tableLayoutPanel66.Controls.Add(this.txtNewProductMeasurement, 0, 4);
             this.tableLayoutPanel66.Controls.Add(this.txtNewProductName, 0, 0);
             this.tableLayoutPanel66.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel66.Location = new System.Drawing.Point(77, 2);
+            this.tableLayoutPanel66.Location = new System.Drawing.Point(102, 2);
             this.tableLayoutPanel66.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel66.Name = "tableLayoutPanel66";
             this.tableLayoutPanel66.RowCount = 6;
-            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 162F));
-            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel66.Size = new System.Drawing.Size(787, 733);
+            this.tableLayoutPanel66.Size = new System.Drawing.Size(712, 733);
             this.tableLayoutPanel66.TabIndex = 5;
             // 
             // txtNewProductDescription
@@ -4272,12 +4545,12 @@ namespace GGRMApp.Views
             this.txtNewProductDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNewProductDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewProductDescription.ForeColor = System.Drawing.Color.White;
-            this.txtNewProductDescription.Location = new System.Drawing.Point(6, 49);
+            this.txtNewProductDescription.Location = new System.Drawing.Point(6, 58);
             this.txtNewProductDescription.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtNewProductDescription.MaxLength = 100;
             this.txtNewProductDescription.Multiline = true;
             this.txtNewProductDescription.Name = "txtNewProductDescription";
-            this.txtNewProductDescription.Size = new System.Drawing.Size(775, 146);
+            this.txtNewProductDescription.Size = new System.Drawing.Size(700, 184);
             this.txtNewProductDescription.TabIndex = 1;
             // 
             // txtNewProductBrand
@@ -4287,11 +4560,11 @@ namespace GGRMApp.Views
             this.txtNewProductBrand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewProductBrand.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewProductBrand.ForeColor = System.Drawing.Color.White;
-            this.txtNewProductBrand.Location = new System.Drawing.Point(6, 209);
+            this.txtNewProductBrand.Location = new System.Drawing.Point(6, 260);
             this.txtNewProductBrand.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.txtNewProductBrand.MaxLength = 100;
             this.txtNewProductBrand.Name = "txtNewProductBrand";
-            this.txtNewProductBrand.Size = new System.Drawing.Size(775, 29);
+            this.txtNewProductBrand.Size = new System.Drawing.Size(700, 29);
             this.txtNewProductBrand.TabIndex = 3;
             // 
             // txtNewProductSize
@@ -4301,11 +4574,11 @@ namespace GGRMApp.Views
             this.txtNewProductSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewProductSize.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewProductSize.ForeColor = System.Drawing.Color.White;
-            this.txtNewProductSize.Location = new System.Drawing.Point(6, 250);
+            this.txtNewProductSize.Location = new System.Drawing.Point(6, 310);
             this.txtNewProductSize.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.txtNewProductSize.MaxLength = 100;
             this.txtNewProductSize.Name = "txtNewProductSize";
-            this.txtNewProductSize.Size = new System.Drawing.Size(775, 29);
+            this.txtNewProductSize.Size = new System.Drawing.Size(700, 29);
             this.txtNewProductSize.TabIndex = 4;
             // 
             // txtNewProductMeasurement
@@ -4315,11 +4588,11 @@ namespace GGRMApp.Views
             this.txtNewProductMeasurement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewProductMeasurement.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewProductMeasurement.ForeColor = System.Drawing.Color.White;
-            this.txtNewProductMeasurement.Location = new System.Drawing.Point(6, 291);
+            this.txtNewProductMeasurement.Location = new System.Drawing.Point(6, 360);
             this.txtNewProductMeasurement.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.txtNewProductMeasurement.MaxLength = 100;
             this.txtNewProductMeasurement.Name = "txtNewProductMeasurement";
-            this.txtNewProductMeasurement.Size = new System.Drawing.Size(775, 29);
+            this.txtNewProductMeasurement.Size = new System.Drawing.Size(700, 29);
             this.txtNewProductMeasurement.TabIndex = 5;
             // 
             // txtNewProductName
@@ -4329,11 +4602,11 @@ namespace GGRMApp.Views
             this.txtNewProductName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewProductName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewProductName.ForeColor = System.Drawing.Color.White;
-            this.txtNewProductName.Location = new System.Drawing.Point(6, 6);
+            this.txtNewProductName.Location = new System.Drawing.Point(6, 10);
             this.txtNewProductName.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.txtNewProductName.MaxLength = 100;
             this.txtNewProductName.Name = "txtNewProductName";
-            this.txtNewProductName.Size = new System.Drawing.Size(775, 29);
+            this.txtNewProductName.Size = new System.Drawing.Size(700, 29);
             this.txtNewProductName.TabIndex = 3;
             // 
             // tableLayoutPanel65
@@ -4350,14 +4623,13 @@ namespace GGRMApp.Views
             this.tableLayoutPanel65.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel65.Name = "tableLayoutPanel65";
             this.tableLayoutPanel65.RowCount = 6;
-            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 162F));
-            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel65.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel65.Size = new System.Drawing.Size(71, 733);
+            this.tableLayoutPanel65.Size = new System.Drawing.Size(96, 733);
             this.tableLayoutPanel65.TabIndex = 4;
             // 
             // label50
@@ -4366,10 +4638,10 @@ namespace GGRMApp.Views
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(25, 3);
+            this.label50.Location = new System.Drawing.Point(14, 16);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(44, 34);
+            this.label50.Size = new System.Drawing.Size(80, 17);
             this.label50.TabIndex = 0;
             this.label50.Text = "Prod. Name";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4380,10 +4652,10 @@ namespace GGRMApp.Views
             this.label51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label51.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.White;
-            this.label51.Location = new System.Drawing.Point(2, 49);
+            this.label51.Location = new System.Drawing.Point(2, 58);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(67, 154);
+            this.label51.Size = new System.Drawing.Size(92, 192);
             this.label51.TabIndex = 0;
             this.label51.Text = "Description";
             this.label51.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -4394,7 +4666,7 @@ namespace GGRMApp.Views
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.White;
-            this.label52.Location = new System.Drawing.Point(25, 215);
+            this.label52.Location = new System.Drawing.Point(50, 266);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(44, 17);
@@ -4408,7 +4680,7 @@ namespace GGRMApp.Views
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(38, 256);
+            this.label53.Location = new System.Drawing.Point(63, 316);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(31, 17);
@@ -4422,10 +4694,10 @@ namespace GGRMApp.Views
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.White;
-            this.label54.Location = new System.Drawing.Point(11, 288);
+            this.label54.Location = new System.Drawing.Point(4, 366);
             this.label54.Margin = new System.Windows.Forms.Padding(0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(60, 34);
+            this.label54.Size = new System.Drawing.Size(92, 17);
             this.label54.TabIndex = 0;
             this.label54.Text = "Measurement";
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4438,14 +4710,14 @@ namespace GGRMApp.Views
             this.tableLayoutPanel67.Controls.Add(this.btnNewProductAdd, 0, 1);
             this.tableLayoutPanel67.Controls.Add(this.label57, 0, 2);
             this.tableLayoutPanel67.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel67.Location = new System.Drawing.Point(868, 2);
+            this.tableLayoutPanel67.Location = new System.Drawing.Point(818, 2);
             this.tableLayoutPanel67.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel67.Name = "tableLayoutPanel67";
             this.tableLayoutPanel67.RowCount = 3;
-            this.tableLayoutPanel67.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel67.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel67.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel67.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel67.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel67.Size = new System.Drawing.Size(146, 733);
+            this.tableLayoutPanel67.Size = new System.Drawing.Size(196, 733);
             this.tableLayoutPanel67.TabIndex = 2;
             // 
             // button10
@@ -4459,10 +4731,11 @@ namespace GGRMApp.Views
             this.button10.Location = new System.Drawing.Point(2, 2);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(142, 37);
+            this.button10.Size = new System.Drawing.Size(192, 46);
             this.button10.TabIndex = 0;
             this.button10.Text = "Back";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.GoBack);
             // 
             // btnNewProductAdd
             // 
@@ -4472,13 +4745,14 @@ namespace GGRMApp.Views
             this.btnNewProductAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewProductAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewProductAdd.ForeColor = System.Drawing.Color.White;
-            this.btnNewProductAdd.Location = new System.Drawing.Point(2, 43);
+            this.btnNewProductAdd.Location = new System.Drawing.Point(2, 52);
             this.btnNewProductAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewProductAdd.Name = "btnNewProductAdd";
-            this.btnNewProductAdd.Size = new System.Drawing.Size(142, 77);
+            this.btnNewProductAdd.Size = new System.Drawing.Size(192, 96);
             this.btnNewProductAdd.TabIndex = 1;
             this.btnNewProductAdd.Text = "Add Product";
             this.btnNewProductAdd.UseVisualStyleBackColor = false;
+            this.btnNewProductAdd.Click += new System.EventHandler(this.BtnNewProductAdd_Click);
             // 
             // label57
             // 
@@ -4486,12 +4760,212 @@ namespace GGRMApp.Views
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.White;
-            this.label57.Location = new System.Drawing.Point(36, 128);
+            this.label57.Location = new System.Drawing.Point(61, 156);
             this.label57.Margin = new System.Windows.Forms.Padding(2, 6, 2, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(74, 605);
+            this.label57.Size = new System.Drawing.Size(74, 577);
             this.label57.TabIndex = 2;
             this.label57.Text = "Test Status";
+            // 
+            // subtabNewOrder
+            // 
+            this.subtabNewOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subtabNewOrder.Controls.Add(this.tableLayoutPanel78);
+            this.subtabNewOrder.Location = new System.Drawing.Point(4, 24);
+            this.subtabNewOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.subtabNewOrder.Name = "subtabNewOrder";
+            this.subtabNewOrder.Size = new System.Drawing.Size(1016, 737);
+            this.subtabNewOrder.TabIndex = 19;
+            this.subtabNewOrder.Text = "subtabNewOrder";
+            // 
+            // tableLayoutPanel78
+            // 
+            this.tableLayoutPanel78.ColumnCount = 3;
+            this.tableLayoutPanel78.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel78.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel78.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel78.Controls.Add(this.tableLayoutPanel79, 0, 0);
+            this.tableLayoutPanel78.Controls.Add(this.tableLayoutPanel80, 1, 0);
+            this.tableLayoutPanel78.Controls.Add(this.tableLayoutPanel81, 2, 0);
+            this.tableLayoutPanel78.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel78.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel78.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel78.Name = "tableLayoutPanel78";
+            this.tableLayoutPanel78.RowCount = 1;
+            this.tableLayoutPanel78.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel78.Size = new System.Drawing.Size(1016, 737);
+            this.tableLayoutPanel78.TabIndex = 3;
+            // 
+            // tableLayoutPanel79
+            // 
+            this.tableLayoutPanel79.ColumnCount = 1;
+            this.tableLayoutPanel79.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel79.Controls.Add(this.label65, 0, 0);
+            this.tableLayoutPanel79.Controls.Add(this.label66, 0, 1);
+            this.tableLayoutPanel79.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel79.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel79.Name = "tableLayoutPanel79";
+            this.tableLayoutPanel79.RowCount = 2;
+            this.tableLayoutPanel79.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel79.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel79.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel79.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel79.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel79.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel79.Size = new System.Drawing.Size(94, 731);
+            this.tableLayoutPanel79.TabIndex = 3;
+            // 
+            // label65
+            // 
+            this.label65.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.White;
+            this.label65.Location = new System.Drawing.Point(14, 8);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(77, 34);
+            this.label65.TabIndex = 0;
+            this.label65.Text = "Proprietary Order ID";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.White;
+            this.label66.Location = new System.Drawing.Point(31, 60);
+            this.label66.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(60, 34);
+            this.label66.TabIndex = 0;
+            this.label66.Text = "Items Included";
+            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tableLayoutPanel80
+            // 
+            this.tableLayoutPanel80.ColumnCount = 1;
+            this.tableLayoutPanel80.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel80.Controls.Add(this.dgvNewOrderItems, 0, 1);
+            this.tableLayoutPanel80.Controls.Add(this.txtNewOrderID, 0, 0);
+            this.tableLayoutPanel80.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel80.Location = new System.Drawing.Point(102, 2);
+            this.tableLayoutPanel80.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel80.Name = "tableLayoutPanel80";
+            this.tableLayoutPanel80.RowCount = 3;
+            this.tableLayoutPanel80.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel80.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.tableLayoutPanel80.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel80.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel80.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel80.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel80.Size = new System.Drawing.Size(712, 733);
+            this.tableLayoutPanel80.TabIndex = 1;
+            // 
+            // dgvNewOrderItems
+            // 
+            this.dgvNewOrderItems.AllowUserToAddRows = false;
+            this.dgvNewOrderItems.AllowUserToDeleteRows = false;
+            this.dgvNewOrderItems.AllowUserToResizeColumns = false;
+            this.dgvNewOrderItems.AllowUserToResizeRows = false;
+            this.dgvNewOrderItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNewOrderItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgvNewOrderItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvNewOrderItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvNewOrderItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvNewOrderItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNewOrderItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNewOrderItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvNewOrderItems.EnableHeadersVisualStyles = false;
+            this.dgvNewOrderItems.GridColor = System.Drawing.Color.Gray;
+            this.dgvNewOrderItems.Location = new System.Drawing.Point(10, 60);
+            this.dgvNewOrderItems.Margin = new System.Windows.Forms.Padding(10);
+            this.dgvNewOrderItems.MultiSelect = false;
+            this.dgvNewOrderItems.Name = "dgvNewOrderItems";
+            this.dgvNewOrderItems.RowHeadersVisible = false;
+            this.dgvNewOrderItems.RowHeadersWidth = 51;
+            this.dgvNewOrderItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNewOrderItems.Size = new System.Drawing.Size(692, 280);
+            this.dgvNewOrderItems.TabIndex = 4;
+            // 
+            // txtNewOrderID
+            // 
+            this.txtNewOrderID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtNewOrderID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewOrderID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNewOrderID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewOrderID.ForeColor = System.Drawing.Color.White;
+            this.txtNewOrderID.Location = new System.Drawing.Point(8, 10);
+            this.txtNewOrderID.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.txtNewOrderID.MaxLength = 100;
+            this.txtNewOrderID.Multiline = true;
+            this.txtNewOrderID.Name = "txtNewOrderID";
+            this.txtNewOrderID.Size = new System.Drawing.Size(696, 30);
+            this.txtNewOrderID.TabIndex = 1;
+            // 
+            // tableLayoutPanel81
+            // 
+            this.tableLayoutPanel81.ColumnCount = 1;
+            this.tableLayoutPanel81.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel81.Controls.Add(this.button12, 0, 0);
+            this.tableLayoutPanel81.Controls.Add(this.btnNewOrderCreate, 0, 1);
+            this.tableLayoutPanel81.Controls.Add(this.label70, 0, 2);
+            this.tableLayoutPanel81.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel81.Location = new System.Drawing.Point(818, 2);
+            this.tableLayoutPanel81.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel81.Name = "tableLayoutPanel81";
+            this.tableLayoutPanel81.RowCount = 3;
+            this.tableLayoutPanel81.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel81.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel81.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel81.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel81.Size = new System.Drawing.Size(196, 733);
+            this.tableLayoutPanel81.TabIndex = 2;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(3, 3);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(190, 44);
+            this.button12.TabIndex = 0;
+            this.button12.Text = "Back";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.GoBack);
+            // 
+            // btnNewOrderCreate
+            // 
+            this.btnNewOrderCreate.BackColor = System.Drawing.Color.Gold;
+            this.btnNewOrderCreate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewOrderCreate.FlatAppearance.BorderSize = 0;
+            this.btnNewOrderCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewOrderCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewOrderCreate.ForeColor = System.Drawing.Color.Black;
+            this.btnNewOrderCreate.Location = new System.Drawing.Point(3, 53);
+            this.btnNewOrderCreate.Name = "btnNewOrderCreate";
+            this.btnNewOrderCreate.Size = new System.Drawing.Size(190, 94);
+            this.btnNewOrderCreate.TabIndex = 1;
+            this.btnNewOrderCreate.Text = "Create Order";
+            this.btnNewOrderCreate.UseVisualStyleBackColor = false;
+            this.btnNewOrderCreate.Click += new System.EventHandler(this.BtnNewOrderCreate_Click);
+            // 
+            // label70
+            // 
+            this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.Location = new System.Drawing.Point(61, 158);
+            this.label70.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(74, 575);
+            this.label70.TabIndex = 2;
+            this.label70.Text = "Test Status";
             // 
             // subtabEditCustomer
             // 
@@ -5112,6 +5586,7 @@ namespace GGRMApp.Views
             this.btnEditUserConfirm.TabIndex = 1;
             this.btnEditUserConfirm.Text = "Confirm Changes";
             this.btnEditUserConfirm.UseVisualStyleBackColor = false;
+            this.btnEditUserConfirm.Click += new System.EventHandler(this.BtnEditUserConfirm_Click);
             // 
             // label48
             // 
@@ -5361,7 +5836,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel37.ColumnCount = 1;
             this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel37.Controls.Add(this.button6, 0, 0);
-            this.tableLayoutPanel37.Controls.Add(this.btnEditItemConfirm, 0, 1);
+            this.tableLayoutPanel37.Controls.Add(this.btnEditProductConfirm, 0, 1);
             this.tableLayoutPanel37.Controls.Add(this.label33, 0, 2);
             this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel37.Location = new System.Drawing.Point(810, 2);
@@ -5391,20 +5866,21 @@ namespace GGRMApp.Views
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.GoBack);
             // 
-            // btnEditItemConfirm
+            // btnEditProductConfirm
             // 
-            this.btnEditItemConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnEditItemConfirm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEditItemConfirm.FlatAppearance.BorderSize = 0;
-            this.btnEditItemConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditItemConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditItemConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnEditItemConfirm.Location = new System.Drawing.Point(3, 53);
-            this.btnEditItemConfirm.Name = "btnEditItemConfirm";
-            this.btnEditItemConfirm.Size = new System.Drawing.Size(190, 94);
-            this.btnEditItemConfirm.TabIndex = 1;
-            this.btnEditItemConfirm.Text = "Confirm Changes";
-            this.btnEditItemConfirm.UseVisualStyleBackColor = false;
+            this.btnEditProductConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnEditProductConfirm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEditProductConfirm.FlatAppearance.BorderSize = 0;
+            this.btnEditProductConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditProductConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProductConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnEditProductConfirm.Location = new System.Drawing.Point(3, 53);
+            this.btnEditProductConfirm.Name = "btnEditProductConfirm";
+            this.btnEditProductConfirm.Size = new System.Drawing.Size(190, 94);
+            this.btnEditProductConfirm.TabIndex = 1;
+            this.btnEditProductConfirm.Text = "Confirm Changes";
+            this.btnEditProductConfirm.UseVisualStyleBackColor = false;
+            this.btnEditProductConfirm.Click += new System.EventHandler(this.BtnEditProductConfirm_Click);
             // 
             // label33
             // 
@@ -5664,274 +6140,35 @@ namespace GGRMApp.Views
             this.lblEditItemStatus.TabIndex = 2;
             this.lblEditItemStatus.Text = "Test Status";
             // 
-            // subtabDiagnose
-            // 
-            this.subtabDiagnose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.subtabDiagnose.Controls.Add(this.tlpDiagnose);
-            this.subtabDiagnose.Location = new System.Drawing.Point(4, 24);
-            this.subtabDiagnose.Name = "subtabDiagnose";
-            this.subtabDiagnose.Padding = new System.Windows.Forms.Padding(3);
-            this.subtabDiagnose.Size = new System.Drawing.Size(1016, 737);
-            this.subtabDiagnose.TabIndex = 13;
-            this.subtabDiagnose.Text = "subtabDiagnose";
-            // 
-            // tlpDiagnose
-            // 
-            this.tlpDiagnose.ColumnCount = 2;
-            this.tlpDiagnose.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDiagnose.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tlpDiagnose.Controls.Add(this.tableLayoutPanel61, 1, 0);
-            this.tlpDiagnose.Controls.Add(this.tableLayoutPanel62, 0, 0);
-            this.tlpDiagnose.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDiagnose.Location = new System.Drawing.Point(3, 3);
-            this.tlpDiagnose.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpDiagnose.Name = "tlpDiagnose";
-            this.tlpDiagnose.RowCount = 1;
-            this.tlpDiagnose.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDiagnose.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 731F));
-            this.tlpDiagnose.Size = new System.Drawing.Size(1010, 731);
-            this.tlpDiagnose.TabIndex = 0;
-            // 
-            // tableLayoutPanel61
-            // 
-            this.tableLayoutPanel61.ColumnCount = 1;
-            this.tableLayoutPanel61.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel61.Controls.Add(this.button8, 0, 0);
-            this.tableLayoutPanel61.Controls.Add(this.btnDiagnoseSubmit, 0, 8);
-            this.tableLayoutPanel61.Controls.Add(this.lblRepairEstimatedPrice, 0, 7);
-            this.tableLayoutPanel61.Controls.Add(this.label49, 0, 6);
-            this.tableLayoutPanel61.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel61.Location = new System.Drawing.Point(810, 0);
-            this.tableLayoutPanel61.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel61.Name = "tableLayoutPanel61";
-            this.tableLayoutPanel61.RowCount = 9;
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.5F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel61.Size = new System.Drawing.Size(200, 731);
-            this.tableLayoutPanel61.TabIndex = 0;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.SteelBlue;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(3, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(194, 85);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "+ Item";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // btnDiagnoseSubmit
-            // 
-            this.btnDiagnoseSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
-            this.btnDiagnoseSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDiagnoseSubmit.FlatAppearance.BorderSize = 0;
-            this.btnDiagnoseSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiagnoseSubmit.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiagnoseSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnDiagnoseSubmit.Location = new System.Drawing.Point(3, 639);
-            this.btnDiagnoseSubmit.Name = "btnDiagnoseSubmit";
-            this.btnDiagnoseSubmit.Size = new System.Drawing.Size(194, 89);
-            this.btnDiagnoseSubmit.TabIndex = 5;
-            this.btnDiagnoseSubmit.Text = "Submit Diagnosis";
-            this.btnDiagnoseSubmit.UseVisualStyleBackColor = false;
-            // 
-            // lblRepairEstimatedPrice
-            // 
-            this.lblRepairEstimatedPrice.AutoSize = true;
-            this.lblRepairEstimatedPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblRepairEstimatedPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRepairEstimatedPrice.ForeColor = System.Drawing.Color.White;
-            this.lblRepairEstimatedPrice.Location = new System.Drawing.Point(3, 571);
-            this.lblRepairEstimatedPrice.Name = "lblRepairEstimatedPrice";
-            this.lblRepairEstimatedPrice.Size = new System.Drawing.Size(194, 65);
-            this.lblRepairEstimatedPrice.TabIndex = 6;
-            this.lblRepairEstimatedPrice.Text = "$0.00";
-            this.lblRepairEstimatedPrice.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.White;
-            this.label49.Location = new System.Drawing.Point(3, 546);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(194, 25);
-            this.label49.TabIndex = 7;
-            this.label49.Text = "Estimated Service Cost";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // tableLayoutPanel62
-            // 
-            this.tableLayoutPanel62.ColumnCount = 1;
-            this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel62.Controls.Add(this.tableLayoutPanel60, 0, 0);
-            this.tableLayoutPanel62.Controls.Add(this.tableLayoutPanel63, 0, 1);
-            this.tableLayoutPanel62.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel62.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel62.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel62.Name = "tableLayoutPanel62";
-            this.tableLayoutPanel62.RowCount = 2;
-            this.tableLayoutPanel62.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel62.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel62.Size = new System.Drawing.Size(810, 731);
-            this.tableLayoutPanel62.TabIndex = 1;
-            // 
-            // tableLayoutPanel60
-            // 
-            this.tableLayoutPanel60.ColumnCount = 1;
-            this.tableLayoutPanel60.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel60.Controls.Add(this.dgvDiagnoseItemList, 0, 1);
-            this.tableLayoutPanel60.Controls.Add(this.label46, 0, 0);
-            this.tableLayoutPanel60.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel60.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel60.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel60.Name = "tableLayoutPanel60";
-            this.tableLayoutPanel60.RowCount = 2;
-            this.tableLayoutPanel60.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel60.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel60.Size = new System.Drawing.Size(810, 365);
-            this.tableLayoutPanel60.TabIndex = 0;
-            // 
-            // dgvDiagnoseItemList
-            // 
-            this.dgvDiagnoseItemList.AllowUserToAddRows = false;
-            this.dgvDiagnoseItemList.AllowUserToDeleteRows = false;
-            this.dgvDiagnoseItemList.AllowUserToResizeColumns = false;
-            this.dgvDiagnoseItemList.AllowUserToResizeRows = false;
-            this.dgvDiagnoseItemList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDiagnoseItemList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvDiagnoseItemList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDiagnoseItemList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDiagnoseItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDiagnoseItemList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
-            this.dgvDiagnoseItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDiagnoseItemList.DefaultCellStyle = dataGridViewCellStyle29;
-            this.dgvDiagnoseItemList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDiagnoseItemList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dgvDiagnoseItemList.EnableHeadersVisualStyles = false;
-            this.dgvDiagnoseItemList.GridColor = System.Drawing.Color.Gray;
-            this.dgvDiagnoseItemList.Location = new System.Drawing.Point(0, 48);
-            this.dgvDiagnoseItemList.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvDiagnoseItemList.MultiSelect = false;
-            this.dgvDiagnoseItemList.Name = "dgvDiagnoseItemList";
-            this.dgvDiagnoseItemList.RowHeadersVisible = false;
-            this.dgvDiagnoseItemList.RowHeadersWidth = 51;
-            this.dgvDiagnoseItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDiagnoseItemList.Size = new System.Drawing.Size(810, 317);
-            this.dgvDiagnoseItemList.TabIndex = 5;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label46.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(10, 0);
-            this.label46.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(95, 48);
-            this.label46.TabIndex = 6;
-            this.label46.Text = "Item List";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel63
-            // 
-            this.tableLayoutPanel63.ColumnCount = 1;
-            this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel63.Controls.Add(this.label47, 0, 0);
-            this.tableLayoutPanel63.Controls.Add(this.txtDiagnoseDescription, 0, 1);
-            this.tableLayoutPanel63.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel63.Location = new System.Drawing.Point(0, 365);
-            this.tableLayoutPanel63.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel63.Name = "tableLayoutPanel63";
-            this.tableLayoutPanel63.RowCount = 2;
-            this.tableLayoutPanel63.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel63.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel63.Size = new System.Drawing.Size(810, 366);
-            this.tableLayoutPanel63.TabIndex = 1;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label47.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.White;
-            this.label47.Location = new System.Drawing.Point(10, 0);
-            this.label47.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(220, 48);
-            this.label47.TabIndex = 7;
-            this.label47.Text = "Diagnosis Description";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtDiagnoseDescription
-            // 
-            this.txtDiagnoseDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtDiagnoseDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiagnoseDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDiagnoseDescription.Location = new System.Drawing.Point(10, 58);
-            this.txtDiagnoseDescription.Margin = new System.Windows.Forms.Padding(10);
-            this.txtDiagnoseDescription.Multiline = true;
-            this.txtDiagnoseDescription.Name = "txtDiagnoseDescription";
-            this.txtDiagnoseDescription.Size = new System.Drawing.Size(790, 298);
-            this.txtDiagnoseDescription.TabIndex = 0;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.btnPOS, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnData, 0, 11);
-            this.tableLayoutPanel3.Controls.Add(this.btnOrdering, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnRepairs, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnReports, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.btnUsers, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.btnPOS, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnData, 0, 12);
+            this.tableLayoutPanel3.Controls.Add(this.btnOrdering, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btnRepairs, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.btnReports, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.btnUsers, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 12;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowCount = 13;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(175, 765);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -5944,10 +6181,10 @@ namespace GGRMApp.Views
             this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPOS.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPOS.ForeColor = System.Drawing.Color.White;
-            this.btnPOS.Location = new System.Drawing.Point(0, 0);
+            this.btnPOS.Location = new System.Drawing.Point(0, 50);
             this.btnPOS.Margin = new System.Windows.Forms.Padding(0);
             this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Size = new System.Drawing.Size(175, 63);
+            this.btnPOS.Size = new System.Drawing.Size(175, 59);
             this.btnPOS.TabIndex = 0;
             this.btnPOS.Text = "POS";
             this.btnPOS.UseVisualStyleBackColor = true;
@@ -5962,10 +6199,10 @@ namespace GGRMApp.Views
             this.btnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnData.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnData.ForeColor = System.Drawing.Color.White;
-            this.btnData.Location = new System.Drawing.Point(0, 693);
+            this.btnData.Location = new System.Drawing.Point(0, 699);
             this.btnData.Margin = new System.Windows.Forms.Padding(0);
             this.btnData.Name = "btnData";
-            this.btnData.Size = new System.Drawing.Size(175, 72);
+            this.btnData.Size = new System.Drawing.Size(175, 66);
             this.btnData.TabIndex = 5;
             this.btnData.Text = "Data Manage";
             this.btnData.UseVisualStyleBackColor = true;
@@ -5980,10 +6217,10 @@ namespace GGRMApp.Views
             this.btnOrdering.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdering.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdering.ForeColor = System.Drawing.Color.White;
-            this.btnOrdering.Location = new System.Drawing.Point(0, 63);
+            this.btnOrdering.Location = new System.Drawing.Point(0, 109);
             this.btnOrdering.Margin = new System.Windows.Forms.Padding(0);
             this.btnOrdering.Name = "btnOrdering";
-            this.btnOrdering.Size = new System.Drawing.Size(175, 63);
+            this.btnOrdering.Size = new System.Drawing.Size(175, 59);
             this.btnOrdering.TabIndex = 2;
             this.btnOrdering.Text = "Ordering";
             this.btnOrdering.UseVisualStyleBackColor = true;
@@ -5998,10 +6235,10 @@ namespace GGRMApp.Views
             this.btnRepairs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRepairs.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepairs.ForeColor = System.Drawing.Color.White;
-            this.btnRepairs.Location = new System.Drawing.Point(0, 126);
+            this.btnRepairs.Location = new System.Drawing.Point(0, 168);
             this.btnRepairs.Margin = new System.Windows.Forms.Padding(0);
             this.btnRepairs.Name = "btnRepairs";
-            this.btnRepairs.Size = new System.Drawing.Size(175, 63);
+            this.btnRepairs.Size = new System.Drawing.Size(175, 59);
             this.btnRepairs.TabIndex = 3;
             this.btnRepairs.Text = "Repair";
             this.btnRepairs.UseVisualStyleBackColor = true;
@@ -6016,10 +6253,10 @@ namespace GGRMApp.Views
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.Color.White;
-            this.btnReports.Location = new System.Drawing.Point(0, 189);
+            this.btnReports.Location = new System.Drawing.Point(0, 227);
             this.btnReports.Margin = new System.Windows.Forms.Padding(0);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(175, 63);
+            this.btnReports.Size = new System.Drawing.Size(175, 59);
             this.btnReports.TabIndex = 4;
             this.btnReports.Text = "Reports";
             this.btnReports.UseVisualStyleBackColor = true;
@@ -6034,14 +6271,25 @@ namespace GGRMApp.Views
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Location = new System.Drawing.Point(0, 252);
+            this.btnUsers.Location = new System.Drawing.Point(0, 286);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(175, 63);
+            this.btnUsers.Size = new System.Drawing.Size(175, 59);
             this.btnUsers.TabIndex = 5;
             this.btnUsers.Text = "Users";
             this.btnUsers.UseVisualStyleBackColor = true;
             this.btnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::GGRMApp.Properties.Resources.Emma_v1;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // tlpTitleBar
             // 
@@ -6116,6 +6364,23 @@ namespace GGRMApp.Views
             this.btnMinimize.Text = "0";
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // btnCreateAndPay
+            // 
+            this.btnCreateAndPay.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnCreateAndPay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCreateAndPay.FlatAppearance.BorderSize = 0;
+            this.btnCreateAndPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateAndPay.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateAndPay.ForeColor = System.Drawing.Color.White;
+            this.btnCreateAndPay.Location = new System.Drawing.Point(2, 560);
+            this.btnCreateAndPay.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreateAndPay.Name = "btnCreateAndPay";
+            this.btnCreateAndPay.Size = new System.Drawing.Size(188, 95);
+            this.btnCreateAndPay.TabIndex = 2;
+            this.btnCreateAndPay.Text = "Create and Pay";
+            this.btnCreateAndPay.UseVisualStyleBackColor = false;
+            this.btnCreateAndPay.Click += new System.EventHandler(this.btnCreateAndPay_Click);
             // 
             // Main
             // 
@@ -6228,6 +6493,16 @@ namespace GGRMApp.Views
             this.tlpCustomerSearch.ResumeLayout(false);
             this.tlpCustomerSearch.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
+            this.subtabDiagnose.ResumeLayout(false);
+            this.tlpDiagnose.ResumeLayout(false);
+            this.tableLayoutPanel61.ResumeLayout(false);
+            this.tableLayoutPanel61.PerformLayout();
+            this.tableLayoutPanel62.ResumeLayout(false);
+            this.tableLayoutPanel60.ResumeLayout(false);
+            this.tableLayoutPanel60.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnoseItemList)).EndInit();
+            this.tableLayoutPanel63.ResumeLayout(false);
+            this.tableLayoutPanel63.PerformLayout();
             this.subtabNewCustomer.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
@@ -6262,6 +6537,15 @@ namespace GGRMApp.Views
             this.tableLayoutPanel65.PerformLayout();
             this.tableLayoutPanel67.ResumeLayout(false);
             this.tableLayoutPanel67.PerformLayout();
+            this.subtabNewOrder.ResumeLayout(false);
+            this.tableLayoutPanel78.ResumeLayout(false);
+            this.tableLayoutPanel79.ResumeLayout(false);
+            this.tableLayoutPanel79.PerformLayout();
+            this.tableLayoutPanel80.ResumeLayout(false);
+            this.tableLayoutPanel80.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNewOrderItems)).EndInit();
+            this.tableLayoutPanel81.ResumeLayout(false);
+            this.tableLayoutPanel81.PerformLayout();
             this.subtabEditCustomer.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
@@ -6296,17 +6580,8 @@ namespace GGRMApp.Views
             this.tableLayoutPanel42.PerformLayout();
             this.tableLayoutPanel41.ResumeLayout(false);
             this.tableLayoutPanel41.PerformLayout();
-            this.subtabDiagnose.ResumeLayout(false);
-            this.tlpDiagnose.ResumeLayout(false);
-            this.tableLayoutPanel61.ResumeLayout(false);
-            this.tableLayoutPanel61.PerformLayout();
-            this.tableLayoutPanel62.ResumeLayout(false);
-            this.tableLayoutPanel60.ResumeLayout(false);
-            this.tableLayoutPanel60.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnoseItemList)).EndInit();
-            this.tableLayoutPanel63.ResumeLayout(false);
-            this.tableLayoutPanel63.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tlpTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -6462,7 +6737,7 @@ namespace GGRMApp.Views
         private System.Windows.Forms.TextBox txtEditItemMeasure;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel37;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnEditItemConfirm;
+        private System.Windows.Forms.Button btnEditProductConfirm;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TabPage subtabEditInventory;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel38;
@@ -6503,7 +6778,7 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnDataInventorySearch;
         private System.Windows.Forms.Button btnDataInventoryEdit;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnDataInventoryAdd;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel47;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel48;
         private System.Windows.Forms.Button btnDataProductsAdd;
@@ -6644,5 +6919,19 @@ namespace GGRMApp.Views
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button btnReportsGenerate;
+        private System.Windows.Forms.TabPage subtabNewOrder;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel78;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel79;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel80;
+        private System.Windows.Forms.DataGridView dgvNewOrderItems;
+        private System.Windows.Forms.TextBox txtNewOrderID;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel81;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnNewOrderCreate;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCreateAndPay;
     }
 }

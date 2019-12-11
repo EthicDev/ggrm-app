@@ -25,5 +25,8 @@ namespace GGRMApp.Views
             dgvDataOrders.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvDataOrders.Columns["id"].Visible = false;
         }
+
+
+
     }
 }
