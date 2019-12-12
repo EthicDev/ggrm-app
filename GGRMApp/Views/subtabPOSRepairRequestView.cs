@@ -31,7 +31,7 @@ namespace GGRMApp.Views
             ServiceOrder serviceOrder = new ServiceOrder();
             serviceOrder.ID = posCurrentOrder.serviceOrders.Count + 1;
             serviceOrder.CustOrdID = posCurrentOrder.ID;
-            serviceOrder.EmpID = 1;
+            serviceOrder.RequestingEmpID = 1;
             serviceOrder.EquipID = (int)ddlRepairRequestEquipment.SelectedValue;
             serviceOrder.SerOrdDateIn = dtpRepairRequestDate.Value;
             serviceOrder.SerOrdIssue = txtRepairRequestDescription.Text;

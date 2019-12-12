@@ -112,7 +112,7 @@ namespace GGRMApp.Views
 
             dgvRepairCart.Columns["CustOrdID"].Visible = false;
             dgvRepairCart.Columns["ServiceID"].Visible = false;
-            dgvRepairCart.Columns["EmpID"].Visible = false;
+            dgvRepairCart.Columns["RequestingEmpID"].Visible = false;
             dgvRepairCart.Columns["EquipID"].Visible = false;
 
             UpdateOrderTotal();

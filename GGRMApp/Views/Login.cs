@@ -25,7 +25,7 @@ namespace GGRMApp
             int empID = GlobalConfig.Connection.AuthenticateLogin(txtUsername.Text, txtPassword.Text, out status);
             if (empID != -1)
             {
-                Main main = new Main();
+                Main main = new Main(empID);
                 main.Show();
                 this.Hide();
             } else
