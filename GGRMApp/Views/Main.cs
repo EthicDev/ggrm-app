@@ -34,6 +34,26 @@ namespace GGRMApp.Views
             currentUser = GlobalConfig.Connection.GetEmployeeByID(empID, out status);
 
             lblCurrentUser.Text = currentUser.EmpFirst + " " + currentUser.EmpLast;
+            lblCurrentUserRole.Text = currentUser.PosName;
+            //user icon
+            switch(currentUser.PosID)
+            {
+                case 1:
+                    picUserIcon.Image = GGRMApp.Properties.Resources.iconSales;
+                    break;
+                case 2:
+                    picUserIcon.Image = GGRMApp.Properties.Resources.iconTechnician;
+                    break;
+                case 3:
+                    picUserIcon.Image = GGRMApp.Properties.Resources.iconAdmin;
+                    break;
+                case 4:
+                    picUserIcon.Image = GGRMApp.Properties.Resources.iconManager;
+                    break;
+                case 5:
+                    picUserIcon.Image = GGRMApp.Properties.Resources.iconOrdering;
+                    break;
+            }
 
             //add buttons to button list
             buttons.Add(btnPOS);
@@ -269,5 +289,9 @@ namespace GGRMApp.Views
             mainView.SelectedTab = previousTab;
 
         }
+
+
+
+
     }
 }

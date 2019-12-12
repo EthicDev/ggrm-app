@@ -105,7 +105,13 @@
     <Compile Include="TablessControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\subtabDiagnose.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\subtabCustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subtabItemPicker.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\subtabEditCustomer.cs">
@@ -210,7 +216,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ordering icon.png" />
+    <None Include="Resources\technician icon.png" />
+    <None Include="Resources\sales icon.png" />
+    <None Include="Resources\admin icon.png" />
     <Content Include="Resources\Emma v1.png" />
+    <None Include="Resources\manager icon.png" />
     <None Include="Resources\Emma v11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

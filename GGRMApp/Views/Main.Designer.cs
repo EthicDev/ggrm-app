@@ -65,20 +65,10 @@ namespace GGRMApp.Views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnPOS = new System.Windows.Forms.Button();
-            this.btnData = new System.Windows.Forms.Button();
-            this.btnOrdering = new System.Windows.Forms.Button();
-            this.btnRepairs = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tlpTitleBar = new System.Windows.Forms.TableLayoutPanel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnExpand = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.mainView = new TablessControl();
             this.tabPOS = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -479,12 +469,36 @@ namespace GGRMApp.Views
             this.tableLayoutPanel91 = new System.Windows.Forms.TableLayoutPanel();
             this.btnManagePartOrderSave = new System.Windows.Forms.Button();
             this.label96 = new System.Windows.Forms.Label();
+            this.subtabItemPicker = new System.Windows.Forms.TabPage();
+            this.tlpItemPicker = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel103 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvItemPicker = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel105 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtItemPickerSearch = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.btnItemPickerSearch = new System.Windows.Forms.Button();
+            this.tableLayoutPanel104 = new System.Windows.Forms.TableLayoutPanel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.btnItemPickerSelect = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPOS = new System.Windows.Forms.Button();
+            this.btnData = new System.Windows.Forms.Button();
+            this.btnOrdering = new System.Windows.Forms.Button();
+            this.btnRepairs = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel101 = new System.Windows.Forms.TableLayoutPanel();
+            this.picUserIcon = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel102 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCurrentUserRole = new System.Windows.Forms.Label();
             this.lblCurrentUser = new System.Windows.Forms.Label();
+            this.tlpTitleBar = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnExpand = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tlpTitleBar.SuspendLayout();
             this.mainView.SuspendLayout();
             this.tabPOS.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -646,6 +660,18 @@ namespace GGRMApp.Views
             this.panel1.SuspendLayout();
             this.tableLayoutPanel90.SuspendLayout();
             this.tableLayoutPanel91.SuspendLayout();
+            this.subtabItemPicker.SuspendLayout();
+            this.tlpItemPicker.SuspendLayout();
+            this.tableLayoutPanel103.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemPicker)).BeginInit();
+            this.tableLayoutPanel105.SuspendLayout();
+            this.tableLayoutPanel104.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel101.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).BeginInit();
+            this.tableLayoutPanel102.SuspendLayout();
+            this.tlpTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -683,233 +709,6 @@ namespace GGRMApp.Views
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1196, 765);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.btnPOS, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnData, 0, 13);
-            this.tableLayoutPanel3.Controls.Add(this.btnOrdering, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.btnRepairs, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.btnReports, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.btnUsers, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblCurrentUser, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 14;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(175, 765);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // btnPOS
-            // 
-            this.btnPOS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPOS.FlatAppearance.BorderSize = 0;
-            this.btnPOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnPOS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPOS.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPOS.ForeColor = System.Drawing.Color.White;
-            this.btnPOS.Location = new System.Drawing.Point(0, 90);
-            this.btnPOS.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Size = new System.Drawing.Size(175, 56);
-            this.btnPOS.TabIndex = 0;
-            this.btnPOS.Text = "POS";
-            this.btnPOS.UseVisualStyleBackColor = true;
-            this.btnPOS.Click += new System.EventHandler(this.BtnPOS_Click);
-            // 
-            // btnData
-            // 
-            this.btnData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnData.FlatAppearance.BorderSize = 0;
-            this.btnData.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnData.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnData.ForeColor = System.Drawing.Color.White;
-            this.btnData.Location = new System.Drawing.Point(0, 706);
-            this.btnData.Margin = new System.Windows.Forms.Padding(0);
-            this.btnData.Name = "btnData";
-            this.btnData.Size = new System.Drawing.Size(175, 59);
-            this.btnData.TabIndex = 5;
-            this.btnData.Text = "Data Manage";
-            this.btnData.UseVisualStyleBackColor = true;
-            this.btnData.Click += new System.EventHandler(this.BtnData_Click);
-            // 
-            // btnOrdering
-            // 
-            this.btnOrdering.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOrdering.FlatAppearance.BorderSize = 0;
-            this.btnOrdering.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnOrdering.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnOrdering.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdering.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdering.ForeColor = System.Drawing.Color.White;
-            this.btnOrdering.Location = new System.Drawing.Point(0, 146);
-            this.btnOrdering.Margin = new System.Windows.Forms.Padding(0);
-            this.btnOrdering.Name = "btnOrdering";
-            this.btnOrdering.Size = new System.Drawing.Size(175, 56);
-            this.btnOrdering.TabIndex = 2;
-            this.btnOrdering.Text = "Ordering";
-            this.btnOrdering.UseVisualStyleBackColor = true;
-            this.btnOrdering.Click += new System.EventHandler(this.BtnOrder_Click);
-            // 
-            // btnRepairs
-            // 
-            this.btnRepairs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRepairs.FlatAppearance.BorderSize = 0;
-            this.btnRepairs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnRepairs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRepairs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepairs.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRepairs.ForeColor = System.Drawing.Color.White;
-            this.btnRepairs.Location = new System.Drawing.Point(0, 202);
-            this.btnRepairs.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRepairs.Name = "btnRepairs";
-            this.btnRepairs.Size = new System.Drawing.Size(175, 56);
-            this.btnRepairs.TabIndex = 3;
-            this.btnRepairs.Text = "Repair";
-            this.btnRepairs.UseVisualStyleBackColor = true;
-            this.btnRepairs.Click += new System.EventHandler(this.BtnRepair_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.White;
-            this.btnReports.Location = new System.Drawing.Point(0, 258);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(175, 56);
-            this.btnReports.TabIndex = 4;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.BtnReports_Click);
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Location = new System.Drawing.Point(0, 314);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(175, 56);
-            this.btnUsers.TabIndex = 5;
-            this.btnUsers.Text = "Users";
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::GGRMApp.Properties.Resources.Emma_v1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tlpTitleBar
-            // 
-            this.tlpTitleBar.ColumnCount = 4;
-            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpTitleBar.Controls.Add(this.btnExit, 3, 0);
-            this.tlpTitleBar.Controls.Add(this.btnExpand, 2, 0);
-            this.tlpTitleBar.Controls.Add(this.btnMinimize, 1, 0);
-            this.tlpTitleBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.tlpTitleBar.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpTitleBar.Name = "tlpTitleBar";
-            this.tlpTitleBar.RowCount = 1;
-            this.tlpTitleBar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpTitleBar.Size = new System.Drawing.Size(1196, 20);
-            this.tlpTitleBar.TabIndex = 1;
-            this.tlpTitleBar.DoubleClick += new System.EventHandler(this.BtnExpand_Click);
-            this.tlpTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseDown);
-            this.tlpTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseMove);
-            this.tlpTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseUp);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Marlett", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1176, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(20, 20);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "r";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // btnExpand
-            // 
-            this.btnExpand.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExpand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnExpand.FlatAppearance.BorderSize = 0;
-            this.btnExpand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpand.Font = new System.Drawing.Font("Marlett", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnExpand.ForeColor = System.Drawing.Color.White;
-            this.btnExpand.Location = new System.Drawing.Point(1156, 0);
-            this.btnExpand.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExpand.Name = "btnExpand";
-            this.btnExpand.Size = new System.Drawing.Size(20, 20);
-            this.btnExpand.TabIndex = 2;
-            this.btnExpand.Text = "1";
-            this.btnExpand.UseVisualStyleBackColor = false;
-            this.btnExpand.Click += new System.EventHandler(this.BtnExpand_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Marlett", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(1136, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(20, 20);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.Text = "0";
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
             // mainView
             // 
             this.mainView.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
@@ -933,6 +732,7 @@ namespace GGRMApp.Views
             this.mainView.Controls.Add(this.subtabEditInventory);
             this.mainView.Controls.Add(this.subtabDetailsOrder);
             this.mainView.Controls.Add(this.subtabManagePartOrder);
+            this.mainView.Controls.Add(this.subtabItemPicker);
             this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainView.ItemSize = new System.Drawing.Size(10, 10);
             this.mainView.Location = new System.Drawing.Point(175, 0);
@@ -3739,6 +3539,7 @@ namespace GGRMApp.Views
             this.subtabDiagnose.Size = new System.Drawing.Size(1016, 747);
             this.subtabDiagnose.TabIndex = 13;
             this.subtabDiagnose.Text = "subtabDiagnose";
+            this.subtabDiagnose.Enter += new System.EventHandler(this.SubtabDiagnose_Enter);
             // 
             // tlpDiagnose
             // 
@@ -3799,6 +3600,7 @@ namespace GGRMApp.Views
             this.btnDiagnoseAddItem.TabIndex = 5;
             this.btnDiagnoseAddItem.Text = "+ Item";
             this.btnDiagnoseAddItem.UseVisualStyleBackColor = false;
+            this.btnDiagnoseAddItem.Click += new System.EventHandler(this.BtnDiagnoseAddItem_Click);
             // 
             // btnDiagnoseSubmit
             // 
@@ -7077,7 +6879,7 @@ namespace GGRMApp.Views
             this.label72.Location = new System.Drawing.Point(72, 0);
             this.label72.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(77, 43);
+            this.label72.Size = new System.Drawing.Size(77, 44);
             this.label72.TabIndex = 7;
             this.label72.Text = "Order #";
             this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7088,10 +6890,10 @@ namespace GGRMApp.Views
             this.label73.Dock = System.Windows.Forms.DockStyle.Right;
             this.label73.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.DarkGray;
-            this.label73.Location = new System.Drawing.Point(42, 43);
+            this.label73.Location = new System.Drawing.Point(42, 44);
             this.label73.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(107, 43);
+            this.label73.Size = new System.Drawing.Size(107, 44);
             this.label73.TabIndex = 7;
             this.label73.Text = "Order Date";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7102,10 +6904,10 @@ namespace GGRMApp.Views
             this.label74.Dock = System.Windows.Forms.DockStyle.Right;
             this.label74.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.Color.DarkGray;
-            this.label74.Location = new System.Drawing.Point(96, 86);
+            this.label74.Location = new System.Drawing.Point(96, 88);
             this.label74.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(53, 43);
+            this.label74.Size = new System.Drawing.Size(53, 44);
             this.label74.TabIndex = 7;
             this.label74.Text = "Total";
             this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7116,10 +6918,10 @@ namespace GGRMApp.Views
             this.label75.Dock = System.Windows.Forms.DockStyle.Right;
             this.label75.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.ForeColor = System.Drawing.Color.DarkGray;
-            this.label75.Location = new System.Drawing.Point(101, 129);
+            this.label75.Location = new System.Drawing.Point(101, 132);
             this.label75.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(48, 43);
+            this.label75.Size = new System.Drawing.Size(48, 44);
             this.label75.TabIndex = 7;
             this.label75.Text = "Paid";
             this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7130,10 +6932,10 @@ namespace GGRMApp.Views
             this.label76.Dock = System.Windows.Forms.DockStyle.Right;
             this.label76.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.ForeColor = System.Drawing.Color.DarkGray;
-            this.label76.Location = new System.Drawing.Point(17, 172);
+            this.label76.Location = new System.Drawing.Point(17, 176);
             this.label76.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(132, 43);
+            this.label76.Size = new System.Drawing.Size(132, 44);
             this.label76.TabIndex = 7;
             this.label76.Text = "Payment Type";
             this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7144,10 +6946,10 @@ namespace GGRMApp.Views
             this.label77.Dock = System.Windows.Forms.DockStyle.Right;
             this.label77.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.ForeColor = System.Drawing.Color.DarkGray;
-            this.label77.Location = new System.Drawing.Point(54, 215);
+            this.label77.Location = new System.Drawing.Point(54, 220);
             this.label77.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(95, 43);
+            this.label77.Size = new System.Drawing.Size(95, 44);
             this.label77.TabIndex = 7;
             this.label77.Text = "Customer";
             this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7158,7 +6960,7 @@ namespace GGRMApp.Views
             this.label78.Dock = System.Windows.Forms.DockStyle.Right;
             this.label78.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.ForeColor = System.Drawing.Color.DarkGray;
-            this.label78.Location = new System.Drawing.Point(53, 258);
+            this.label78.Location = new System.Drawing.Point(53, 264);
             this.label78.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(96, 49);
@@ -7175,7 +6977,7 @@ namespace GGRMApp.Views
             this.lblDetailsOrderNumber.Location = new System.Drawing.Point(162, 0);
             this.lblDetailsOrderNumber.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lblDetailsOrderNumber.Name = "lblDetailsOrderNumber";
-            this.lblDetailsOrderNumber.Size = new System.Drawing.Size(64, 43);
+            this.lblDetailsOrderNumber.Size = new System.Drawing.Size(64, 44);
             this.lblDetailsOrderNumber.TabIndex = 8;
             this.lblDetailsOrderNumber.Text = "12345";
             this.lblDetailsOrderNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7186,10 +6988,10 @@ namespace GGRMApp.Views
             this.lblDetailsOrderDate.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDetailsOrderDate.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsOrderDate.ForeColor = System.Drawing.Color.White;
-            this.lblDetailsOrderDate.Location = new System.Drawing.Point(162, 43);
+            this.lblDetailsOrderDate.Location = new System.Drawing.Point(162, 44);
             this.lblDetailsOrderDate.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lblDetailsOrderDate.Name = "lblDetailsOrderDate";
-            this.lblDetailsOrderDate.Size = new System.Drawing.Size(88, 43);
+            this.lblDetailsOrderDate.Size = new System.Drawing.Size(88, 44);
             this.lblDetailsOrderDate.TabIndex = 8;
             this.lblDetailsOrderDate.Text = "1/1/2020";
             this.lblDetailsOrderDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7200,10 +7002,10 @@ namespace GGRMApp.Views
             this.lblDetailsOrderTotal.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDetailsOrderTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsOrderTotal.ForeColor = System.Drawing.Color.White;
-            this.lblDetailsOrderTotal.Location = new System.Drawing.Point(162, 86);
+            this.lblDetailsOrderTotal.Location = new System.Drawing.Point(162, 88);
             this.lblDetailsOrderTotal.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lblDetailsOrderTotal.Name = "lblDetailsOrderTotal";
-            this.lblDetailsOrderTotal.Size = new System.Drawing.Size(80, 43);
+            this.lblDetailsOrderTotal.Size = new System.Drawing.Size(80, 44);
             this.lblDetailsOrderTotal.TabIndex = 8;
             this.lblDetailsOrderTotal.Text = "$123.45";
             this.lblDetailsOrderTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7214,10 +7016,10 @@ namespace GGRMApp.Views
             this.lblDetailsOrderPaid.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDetailsOrderPaid.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsOrderPaid.ForeColor = System.Drawing.Color.White;
-            this.lblDetailsOrderPaid.Location = new System.Drawing.Point(162, 129);
+            this.lblDetailsOrderPaid.Location = new System.Drawing.Point(162, 132);
             this.lblDetailsOrderPaid.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lblDetailsOrderPaid.Name = "lblDetailsOrderPaid";
-            this.lblDetailsOrderPaid.Size = new System.Drawing.Size(83, 43);
+            this.lblDetailsOrderPaid.Size = new System.Drawing.Size(83, 44);
             this.lblDetailsOrderPaid.TabIndex = 8;
             this.lblDetailsOrderPaid.Text = "Yes / No";
             this.lblDetailsOrderPaid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7228,10 +7030,10 @@ namespace GGRMApp.Views
             this.lblDetailsOrderPayType.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDetailsOrderPayType.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsOrderPayType.ForeColor = System.Drawing.Color.White;
-            this.lblDetailsOrderPayType.Location = new System.Drawing.Point(162, 172);
+            this.lblDetailsOrderPayType.Location = new System.Drawing.Point(162, 176);
             this.lblDetailsOrderPayType.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lblDetailsOrderPayType.Name = "lblDetailsOrderPayType";
-            this.lblDetailsOrderPayType.Size = new System.Drawing.Size(188, 43);
+            this.lblDetailsOrderPayType.Size = new System.Drawing.Size(188, 44);
             this.lblDetailsOrderPayType.TabIndex = 8;
             this.lblDetailsOrderPayType.Text = "Cash / Debit / Credit";
             this.lblDetailsOrderPayType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7242,10 +7044,10 @@ namespace GGRMApp.Views
             this.lblDetailsOrderCustomer.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDetailsOrderCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsOrderCustomer.ForeColor = System.Drawing.Color.White;
-            this.lblDetailsOrderCustomer.Location = new System.Drawing.Point(162, 215);
+            this.lblDetailsOrderCustomer.Location = new System.Drawing.Point(162, 220);
             this.lblDetailsOrderCustomer.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lblDetailsOrderCustomer.Name = "lblDetailsOrderCustomer";
-            this.lblDetailsOrderCustomer.Size = new System.Drawing.Size(150, 43);
+            this.lblDetailsOrderCustomer.Size = new System.Drawing.Size(150, 44);
             this.lblDetailsOrderCustomer.TabIndex = 8;
             this.lblDetailsOrderCustomer.Text = "Billy Joe #12345";
             this.lblDetailsOrderCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7256,7 +7058,7 @@ namespace GGRMApp.Views
             this.lblDetailsOrderEmployee.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDetailsOrderEmployee.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsOrderEmployee.ForeColor = System.Drawing.Color.White;
-            this.lblDetailsOrderEmployee.Location = new System.Drawing.Point(162, 258);
+            this.lblDetailsOrderEmployee.Location = new System.Drawing.Point(162, 264);
             this.lblDetailsOrderEmployee.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lblDetailsOrderEmployee.Name = "lblDetailsOrderEmployee";
             this.lblDetailsOrderEmployee.Size = new System.Drawing.Size(163, 49);
@@ -7696,18 +7498,508 @@ namespace GGRMApp.Views
             this.label96.Text = "Manage Order #";
             this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // subtabItemPicker
+            // 
+            this.subtabItemPicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subtabItemPicker.Controls.Add(this.tlpItemPicker);
+            this.subtabItemPicker.Location = new System.Drawing.Point(4, 14);
+            this.subtabItemPicker.Margin = new System.Windows.Forms.Padding(0);
+            this.subtabItemPicker.Name = "subtabItemPicker";
+            this.subtabItemPicker.Size = new System.Drawing.Size(1016, 747);
+            this.subtabItemPicker.TabIndex = 23;
+            this.subtabItemPicker.Text = "subtabItemPicker";
+            this.subtabItemPicker.Enter += new System.EventHandler(this.SubtabItemPicker_Enter);
+            // 
+            // tlpItemPicker
+            // 
+            this.tlpItemPicker.ColumnCount = 2;
+            this.tlpItemPicker.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpItemPicker.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tlpItemPicker.Controls.Add(this.tableLayoutPanel103, 0, 0);
+            this.tlpItemPicker.Controls.Add(this.tableLayoutPanel104, 1, 0);
+            this.tlpItemPicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpItemPicker.Location = new System.Drawing.Point(0, 0);
+            this.tlpItemPicker.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpItemPicker.Name = "tlpItemPicker";
+            this.tlpItemPicker.RowCount = 1;
+            this.tlpItemPicker.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpItemPicker.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 747F));
+            this.tlpItemPicker.Size = new System.Drawing.Size(1016, 747);
+            this.tlpItemPicker.TabIndex = 0;
+            // 
+            // tableLayoutPanel103
+            // 
+            this.tableLayoutPanel103.ColumnCount = 1;
+            this.tableLayoutPanel103.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel103.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel103.Controls.Add(this.dgvItemPicker, 0, 1);
+            this.tableLayoutPanel103.Controls.Add(this.tableLayoutPanel105, 0, 0);
+            this.tableLayoutPanel103.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel103.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel103.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel103.Name = "tableLayoutPanel103";
+            this.tableLayoutPanel103.RowCount = 2;
+            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel103.Size = new System.Drawing.Size(816, 747);
+            this.tableLayoutPanel103.TabIndex = 0;
+            // 
+            // dgvItemPicker
+            // 
+            this.dgvItemPicker.AllowUserToAddRows = false;
+            this.dgvItemPicker.AllowUserToDeleteRows = false;
+            this.dgvItemPicker.AllowUserToResizeColumns = false;
+            this.dgvItemPicker.AllowUserToResizeRows = false;
+            this.dgvItemPicker.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvItemPicker.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvItemPicker.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvItemPicker.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvItemPicker.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItemPicker.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            this.dgvItemPicker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvItemPicker.DefaultCellStyle = dataGridViewCellStyle39;
+            this.dgvItemPicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvItemPicker.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvItemPicker.EnableHeadersVisualStyles = false;
+            this.dgvItemPicker.GridColor = System.Drawing.Color.Gray;
+            this.dgvItemPicker.Location = new System.Drawing.Point(0, 32);
+            this.dgvItemPicker.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvItemPicker.MultiSelect = false;
+            this.dgvItemPicker.Name = "dgvItemPicker";
+            this.dgvItemPicker.RowHeadersVisible = false;
+            this.dgvItemPicker.RowHeadersWidth = 51;
+            this.dgvItemPicker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvItemPicker.Size = new System.Drawing.Size(816, 715);
+            this.dgvItemPicker.TabIndex = 6;
+            this.dgvItemPicker.SelectionChanged += new System.EventHandler(this.DgvItemPicker_SelectionChanged);
+            // 
+            // tableLayoutPanel105
+            // 
+            this.tableLayoutPanel105.ColumnCount = 3;
+            this.tableLayoutPanel105.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel105.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel105.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel105.Controls.Add(this.txtItemPickerSearch, 0, 0);
+            this.tableLayoutPanel105.Controls.Add(this.label48, 0, 0);
+            this.tableLayoutPanel105.Controls.Add(this.btnItemPickerSearch, 2, 0);
+            this.tableLayoutPanel105.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel105.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel105.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel105.Name = "tableLayoutPanel105";
+            this.tableLayoutPanel105.RowCount = 1;
+            this.tableLayoutPanel105.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel105.Size = new System.Drawing.Size(816, 32);
+            this.tableLayoutPanel105.TabIndex = 5;
+            // 
+            // txtItemPickerSearch
+            // 
+            this.txtItemPickerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtItemPickerSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtItemPickerSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtItemPickerSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemPickerSearch.ForeColor = System.Drawing.Color.White;
+            this.txtItemPickerSearch.Location = new System.Drawing.Point(32, 5);
+            this.txtItemPickerSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtItemPickerSearch.MaxLength = 50;
+            this.txtItemPickerSearch.Name = "txtItemPickerSearch";
+            this.txtItemPickerSearch.Size = new System.Drawing.Size(692, 22);
+            this.txtItemPickerSearch.TabIndex = 6;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.White;
+            this.label48.Location = new System.Drawing.Point(0, 0);
+            this.label48.Margin = new System.Windows.Forms.Padding(0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(30, 25);
+            this.label48.TabIndex = 5;
+            this.label48.Text = "🔎";
+            // 
+            // btnItemPickerSearch
+            // 
+            this.btnItemPickerSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnItemPickerSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnItemPickerSearch.FlatAppearance.BorderSize = 0;
+            this.btnItemPickerSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItemPickerSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItemPickerSearch.ForeColor = System.Drawing.Color.White;
+            this.btnItemPickerSearch.Location = new System.Drawing.Point(729, 3);
+            this.btnItemPickerSearch.Name = "btnItemPickerSearch";
+            this.btnItemPickerSearch.Size = new System.Drawing.Size(84, 26);
+            this.btnItemPickerSearch.TabIndex = 4;
+            this.btnItemPickerSearch.Text = "Search";
+            this.btnItemPickerSearch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnItemPickerSearch.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel104
+            // 
+            this.tableLayoutPanel104.ColumnCount = 1;
+            this.tableLayoutPanel104.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel104.Controls.Add(this.button13, 0, 0);
+            this.tableLayoutPanel104.Controls.Add(this.btnItemPickerSelect, 0, 1);
+            this.tableLayoutPanel104.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel104.Location = new System.Drawing.Point(819, 3);
+            this.tableLayoutPanel104.Name = "tableLayoutPanel104";
+            this.tableLayoutPanel104.RowCount = 9;
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
+            this.tableLayoutPanel104.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50328F));
+            this.tableLayoutPanel104.Size = new System.Drawing.Size(194, 741);
+            this.tableLayoutPanel104.TabIndex = 1;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(190, 46);
+            this.button13.TabIndex = 2;
+            this.button13.Text = "Back";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.GoBack);
+            // 
+            // btnItemPickerSelect
+            // 
+            this.btnItemPickerSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnItemPickerSelect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnItemPickerSelect.Enabled = false;
+            this.btnItemPickerSelect.FlatAppearance.BorderSize = 0;
+            this.btnItemPickerSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItemPickerSelect.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItemPickerSelect.ForeColor = System.Drawing.Color.White;
+            this.btnItemPickerSelect.Location = new System.Drawing.Point(2, 52);
+            this.btnItemPickerSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnItemPickerSelect.Name = "btnItemPickerSelect";
+            this.btnItemPickerSelect.Size = new System.Drawing.Size(190, 82);
+            this.btnItemPickerSelect.TabIndex = 3;
+            this.btnItemPickerSelect.Text = "Select Item";
+            this.btnItemPickerSelect.UseVisualStyleBackColor = false;
+            this.btnItemPickerSelect.Click += new System.EventHandler(this.BtnItemPickerSelect_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.btnPOS, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btnData, 0, 13);
+            this.tableLayoutPanel3.Controls.Add(this.btnOrdering, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.btnRepairs, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.btnReports, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.btnUsers, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel101, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 14;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(175, 765);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // btnPOS
+            // 
+            this.btnPOS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPOS.FlatAppearance.BorderSize = 0;
+            this.btnPOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnPOS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPOS.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPOS.ForeColor = System.Drawing.Color.White;
+            this.btnPOS.Location = new System.Drawing.Point(0, 100);
+            this.btnPOS.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Size = new System.Drawing.Size(175, 55);
+            this.btnPOS.TabIndex = 0;
+            this.btnPOS.Text = "POS";
+            this.btnPOS.UseVisualStyleBackColor = true;
+            this.btnPOS.Click += new System.EventHandler(this.BtnPOS_Click);
+            // 
+            // btnData
+            // 
+            this.btnData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnData.FlatAppearance.BorderSize = 0;
+            this.btnData.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnData.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnData.ForeColor = System.Drawing.Color.White;
+            this.btnData.Location = new System.Drawing.Point(0, 705);
+            this.btnData.Margin = new System.Windows.Forms.Padding(0);
+            this.btnData.Name = "btnData";
+            this.btnData.Size = new System.Drawing.Size(175, 60);
+            this.btnData.TabIndex = 5;
+            this.btnData.Text = "Data Manage";
+            this.btnData.UseVisualStyleBackColor = true;
+            this.btnData.Click += new System.EventHandler(this.BtnData_Click);
+            // 
+            // btnOrdering
+            // 
+            this.btnOrdering.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOrdering.FlatAppearance.BorderSize = 0;
+            this.btnOrdering.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnOrdering.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOrdering.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdering.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdering.ForeColor = System.Drawing.Color.White;
+            this.btnOrdering.Location = new System.Drawing.Point(0, 155);
+            this.btnOrdering.Margin = new System.Windows.Forms.Padding(0);
+            this.btnOrdering.Name = "btnOrdering";
+            this.btnOrdering.Size = new System.Drawing.Size(175, 55);
+            this.btnOrdering.TabIndex = 2;
+            this.btnOrdering.Text = "Ordering";
+            this.btnOrdering.UseVisualStyleBackColor = true;
+            this.btnOrdering.Click += new System.EventHandler(this.BtnOrder_Click);
+            // 
+            // btnRepairs
+            // 
+            this.btnRepairs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRepairs.FlatAppearance.BorderSize = 0;
+            this.btnRepairs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnRepairs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRepairs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRepairs.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepairs.ForeColor = System.Drawing.Color.White;
+            this.btnRepairs.Location = new System.Drawing.Point(0, 210);
+            this.btnRepairs.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRepairs.Name = "btnRepairs";
+            this.btnRepairs.Size = new System.Drawing.Size(175, 55);
+            this.btnRepairs.TabIndex = 3;
+            this.btnRepairs.Text = "Repair";
+            this.btnRepairs.UseVisualStyleBackColor = true;
+            this.btnRepairs.Click += new System.EventHandler(this.BtnRepair_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.White;
+            this.btnReports.Location = new System.Drawing.Point(0, 265);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(175, 55);
+            this.btnReports.TabIndex = 4;
+            this.btnReports.Text = "Reports";
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.BtnReports_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Location = new System.Drawing.Point(0, 320);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(175, 55);
+            this.btnUsers.TabIndex = 5;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::GGRMApp.Properties.Resources.Emma_v1;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tableLayoutPanel101
+            // 
+            this.tableLayoutPanel101.ColumnCount = 2;
+            this.tableLayoutPanel101.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel101.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel101.Controls.Add(this.picUserIcon, 0, 0);
+            this.tableLayoutPanel101.Controls.Add(this.tableLayoutPanel102, 1, 0);
+            this.tableLayoutPanel101.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel101.Location = new System.Drawing.Point(0, 50);
+            this.tableLayoutPanel101.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel101.Name = "tableLayoutPanel101";
+            this.tableLayoutPanel101.RowCount = 1;
+            this.tableLayoutPanel101.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel101.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel101.Size = new System.Drawing.Size(175, 50);
+            this.tableLayoutPanel101.TabIndex = 7;
+            // 
+            // picUserIcon
+            // 
+            this.picUserIcon.Image = global::GGRMApp.Properties.Resources.iconManager;
+            this.picUserIcon.Location = new System.Drawing.Point(7, 7);
+            this.picUserIcon.Margin = new System.Windows.Forms.Padding(7);
+            this.picUserIcon.Name = "picUserIcon";
+            this.picUserIcon.Size = new System.Drawing.Size(36, 36);
+            this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUserIcon.TabIndex = 0;
+            this.picUserIcon.TabStop = false;
+            // 
+            // tableLayoutPanel102
+            // 
+            this.tableLayoutPanel102.ColumnCount = 1;
+            this.tableLayoutPanel102.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel102.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel102.Controls.Add(this.lblCurrentUserRole, 0, 1);
+            this.tableLayoutPanel102.Controls.Add(this.lblCurrentUser, 0, 0);
+            this.tableLayoutPanel102.Location = new System.Drawing.Point(50, 0);
+            this.tableLayoutPanel102.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel102.Name = "tableLayoutPanel102";
+            this.tableLayoutPanel102.RowCount = 2;
+            this.tableLayoutPanel102.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel102.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel102.Size = new System.Drawing.Size(125, 50);
+            this.tableLayoutPanel102.TabIndex = 1;
+            // 
+            // lblCurrentUserRole
+            // 
+            this.lblCurrentUserRole.AutoSize = true;
+            this.lblCurrentUserRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCurrentUserRole.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentUserRole.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblCurrentUserRole.Location = new System.Drawing.Point(3, 25);
+            this.lblCurrentUserRole.Name = "lblCurrentUserRole";
+            this.lblCurrentUserRole.Size = new System.Drawing.Size(119, 25);
+            this.lblCurrentUserRole.TabIndex = 9;
+            this.lblCurrentUserRole.Text = "user role";
+            // 
             // lblCurrentUser
             // 
             this.lblCurrentUser.AutoSize = true;
             this.lblCurrentUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentUser.ForeColor = System.Drawing.Color.White;
-            this.lblCurrentUser.Location = new System.Drawing.Point(3, 50);
+            this.lblCurrentUser.Location = new System.Drawing.Point(3, 0);
             this.lblCurrentUser.Name = "lblCurrentUser";
-            this.lblCurrentUser.Size = new System.Drawing.Size(169, 40);
-            this.lblCurrentUser.TabIndex = 7;
+            this.lblCurrentUser.Size = new System.Drawing.Size(119, 25);
+            this.lblCurrentUser.TabIndex = 8;
             this.lblCurrentUser.Text = "user logged in";
-            this.lblCurrentUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCurrentUser.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // tlpTitleBar
+            // 
+            this.tlpTitleBar.ColumnCount = 4;
+            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpTitleBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpTitleBar.Controls.Add(this.btnExit, 3, 0);
+            this.tlpTitleBar.Controls.Add(this.btnExpand, 2, 0);
+            this.tlpTitleBar.Controls.Add(this.btnMinimize, 1, 0);
+            this.tlpTitleBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.tlpTitleBar.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpTitleBar.Name = "tlpTitleBar";
+            this.tlpTitleBar.RowCount = 1;
+            this.tlpTitleBar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpTitleBar.Size = new System.Drawing.Size(1196, 20);
+            this.tlpTitleBar.TabIndex = 1;
+            this.tlpTitleBar.DoubleClick += new System.EventHandler(this.BtnExpand_Click);
+            this.tlpTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseDown);
+            this.tlpTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseMove);
+            this.tlpTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseUp);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Marlett", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(1176, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 20);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "r";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // btnExpand
+            // 
+            this.btnExpand.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnExpand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnExpand.FlatAppearance.BorderSize = 0;
+            this.btnExpand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpand.Font = new System.Drawing.Font("Marlett", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnExpand.ForeColor = System.Drawing.Color.White;
+            this.btnExpand.Location = new System.Drawing.Point(1156, 0);
+            this.btnExpand.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExpand.Name = "btnExpand";
+            this.btnExpand.Size = new System.Drawing.Size(20, 20);
+            this.btnExpand.TabIndex = 2;
+            this.btnExpand.Text = "1";
+            this.btnExpand.UseVisualStyleBackColor = false;
+            this.btnExpand.Click += new System.EventHandler(this.BtnExpand_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Marlett", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Location = new System.Drawing.Point(1136, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.Text = "0";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // Main
             // 
@@ -7724,10 +8016,6 @@ namespace GGRMApp.Views
             this.Text = "Main";
             this.tlpMain.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tlpTitleBar.ResumeLayout(false);
             this.mainView.ResumeLayout(false);
             this.tabPOS.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -7949,6 +8237,20 @@ namespace GGRMApp.Views
             this.panel1.PerformLayout();
             this.tableLayoutPanel90.ResumeLayout(false);
             this.tableLayoutPanel91.ResumeLayout(false);
+            this.subtabItemPicker.ResumeLayout(false);
+            this.tlpItemPicker.ResumeLayout(false);
+            this.tableLayoutPanel103.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemPicker)).EndInit();
+            this.tableLayoutPanel105.ResumeLayout(false);
+            this.tableLayoutPanel105.PerformLayout();
+            this.tableLayoutPanel104.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel101.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).EndInit();
+            this.tableLayoutPanel102.ResumeLayout(false);
+            this.tableLayoutPanel102.PerformLayout();
+            this.tlpTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -8369,6 +8671,21 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Label lblRepairTimeElapsed;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel101;
+        private System.Windows.Forms.PictureBox picUserIcon;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel102;
         private System.Windows.Forms.Label lblCurrentUser;
+        private System.Windows.Forms.Label lblCurrentUserRole;
+        private System.Windows.Forms.TabPage subtabItemPicker;
+        private System.Windows.Forms.TableLayoutPanel tlpItemPicker;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel103;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel105;
+        private System.Windows.Forms.TextBox txtItemPickerSearch;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Button btnItemPickerSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel104;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnItemPickerSelect;
+        private System.Windows.Forms.DataGridView dgvItemPicker;
     }
 }

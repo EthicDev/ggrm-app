@@ -25,7 +25,7 @@ namespace GGRMApp
             GlobalConfig.InitializeConnections();
 
             //Application.Run(new Login());
-            Application.Run(new Main(0));
+            Application.Run(new Main(5));
         }
     }
     
