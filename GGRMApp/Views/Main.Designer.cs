@@ -1536,7 +1536,6 @@ namespace GGRMApp.Views
             this.dgvOrderRequests.GridColor = System.Drawing.Color.Gray;
             this.dgvOrderRequests.Location = new System.Drawing.Point(0, 39);
             this.dgvOrderRequests.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvOrderRequests.MultiSelect = false;
             this.dgvOrderRequests.Name = "dgvOrderRequests";
             this.dgvOrderRequests.ReadOnly = true;
             this.dgvOrderRequests.RowHeadersVisible = false;
@@ -5350,6 +5349,7 @@ namespace GGRMApp.Views
             this.subtabNewOrder.Size = new System.Drawing.Size(1016, 747);
             this.subtabNewOrder.TabIndex = 19;
             this.subtabNewOrder.Text = "subtabNewOrder";
+            this.subtabNewOrder.Enter += new System.EventHandler(this.subtabNewOrder_Enter);
             // 
             // tableLayoutPanel78
             // 

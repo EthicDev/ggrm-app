@@ -1,4 +1,5 @@
 ﻿using GGRMLib;
+using GGRMLib.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,7 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        List<ProductOrder> selectedProdOrderRequests = new List<ProductOrder>();
         private void tabOrders_Enter(object sender, EventArgs e)
         {
             string status;
@@ -31,6 +33,14 @@ namespace GGRMApp.Views
 
         private void BtnOrderSelected_Click(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow row in dgvPendingOrders.SelectedRows)
+            {
+                string status;
+                int selectedID = (int)row.Cells[0].Value;
+                ProductOrder selectedRequest = GlobalConfig.Connection.GetProductOrderByID(selectedID, out status);
+                selectedProdOrderRequests.Add(selectedRequest);
+            }
+
             savePreviousTab();
             mainView.SelectedTab = subtabNewOrder;
         }
