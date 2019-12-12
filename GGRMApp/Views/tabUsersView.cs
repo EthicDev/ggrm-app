@@ -6,11 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GGRMLib.Models;
 
 namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        Employee empToEdit;
         private void tabUsers_Enter(object sender, EventArgs e)
         {
             string searchString;
@@ -40,6 +42,11 @@ namespace GGRMApp.Views
 
         private void BtnUsersEdit_Click(object sender, EventArgs e)
         {
+            string status;
+            int empID = (int)dgvUsers.SelectedRows[0].Cells[0].Value;
+
+            empToEdit = GlobalConfig.Connection.GetEmployeeByID(empID, out status);
+
             savePreviousTab();
             mainView.SelectedTab = subtabEditUser;
         }
@@ -50,16 +57,61 @@ namespace GGRMApp.Views
 
         //new user controls
 
+
+        private void SubtabNewUser_Enter(object sender, EventArgs e)
+        {
+            string status;
+            DataTable dtPosition = GlobalConfig.Connection.GetPositionDataTable(out status);
+            ddlNewUserPosition.DataSource = dtPosition;
+            ddlNewUserPosition.DisplayMember = "posName";
+            ddlNewUserPosition.ValueMember = "id";
+        }
+
         private void BtnNewUserCreate_Click(object sender, EventArgs e)
         {
 
+            string status;
+            Employee emp = new Employee();
+            emp.EmpFirst = txtNewUserFirst.Text;
+            emp.EmpLast = txtNewUserLast.Text;
+            emp.PosID = (int)ddlNewUserPosition.SelectedValue;
+            emp.EmpUser = txtNewUserUsername.Text;
+            emp.EmpPassword = txtNewUserPassword.Text;
+
+            
+
+            emp = GlobalConfig.Connection.CreateEmployee(emp, out status);
+            lblNewCustomerStatus.Text = status;
         }
 
 
+        // edit user controls
 
+        private void SubtabEditUser_Enter(object sender, EventArgs e)
+        {
+            string status;
+            DataTable dtPosition = GlobalConfig.Connection.GetPositionDataTable(out status);
+            ddlEditUserPosition.DataSource = dtPosition;
+            ddlEditUserPosition.DisplayMember = "posName";
+            ddlEditUserPosition.ValueMember = "id";
+
+            txtEditUserFirst.Text = empToEdit.EmpFirst;
+            txtEditUserLast.Text = empToEdit.EmpLast;
+            ddlEditUserPosition.SelectedValue = empToEdit.PosID;
+            txtEditUserUsername.Text = empToEdit.EmpUser;
+        }
         private void BtnEditUserConfirm_Click(object sender, EventArgs e)
         {
+            string status;
 
+            empToEdit.EmpFirst = txtEditUserFirst.Text;
+            empToEdit.EmpLast = txtEditUserLast.Text;
+            empToEdit.PosID = (int)ddlEditUserPosition.SelectedValue;
+            empToEdit.EmpUser = txtEditUserUsername.Text;
+            empToEdit.EmpPassword = txtEditUserPassword.Text;
+
+            GlobalConfig.Connection.EditEmployee(empToEdit, out status);
+            lblEditUserStatus.Text = status;
         }
     }
 }
