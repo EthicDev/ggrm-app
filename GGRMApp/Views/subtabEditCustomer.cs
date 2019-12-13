@@ -12,10 +12,11 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        Customer customerToEdit;
         private void subtabEditCustomer_Enter(object sender, EventArgs e)
         {
             
-            Customer customerToEdit = (Customer)GlobalData.ViewData["editSelectedCustomer"];
+            customerToEdit = (Customer)GlobalData.ViewData["editSelectedCustomer"];
             lblEditCustomerStatus.Text = customerToEdit.CustFirst;
             txtEditCustomerAddress.Text = customerToEdit.CustAddress;
             txtEditCustomerCity.Text = customerToEdit.CustCity;
@@ -98,6 +99,11 @@ namespace GGRMApp.Views
             {
                 lblEditCustomerStatus.Text = validStatus;
             }
+        }
+
+        private void BtnDeleteCustomer_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void EditCustomerClearInfo()

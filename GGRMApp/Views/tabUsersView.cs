@@ -99,6 +99,16 @@ namespace GGRMApp.Views
             txtEditUserLast.Text = empToEdit.EmpLast;
             ddlEditUserPosition.SelectedValue = empToEdit.PosID;
             txtEditUserUsername.Text = empToEdit.EmpUser;
+
+            switch(empToEdit.EmpDisabled)
+            {
+                case 0:
+                    btnEditUserDisable.Text = "Disable Employee";
+                    break;
+                case 1:
+                    btnEditUserDisable.Text = "Enable Employee";
+                    break;
+            }
         }
         private void BtnEditUserConfirm_Click(object sender, EventArgs e)
         {
@@ -112,6 +122,23 @@ namespace GGRMApp.Views
 
             GlobalConfig.Connection.EditEmployee(empToEdit, out status);
             lblEditUserStatus.Text = status;
+        }
+
+        private void BtnEditUserDisable_Click(object sender, EventArgs e)
+        {
+            string status;
+            GlobalConfig.Connection.ToggleEmployeeDisabled(empToEdit, out status);
+            lblEditUserStatus.Text = status;
+
+            switch (empToEdit.EmpDisabled)
+            {
+                case 0:
+                    btnEditUserDisable.Text = "Disable Employee";
+                    break;
+                case 1:
+                    btnEditUserDisable.Text = "Enable Employee";
+                    break;
+            }
         }
     }
 }

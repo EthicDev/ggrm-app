@@ -13,44 +13,40 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        ServiceOrder diagnoseItemList = new ServiceOrder();
         private void SubtabDiagnose_Enter(object sender, EventArgs e)
         {
 
-            dgvDiagnoseItemList.DataSource = 
+            dgvDiagnoseItemList.DataSource = diagnoseItemList;
+
             
-            dgvDiagnoseItemList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            dgvDiagnoseItemList.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-            dgvDiagnoseItemList.Columns["ID"].HeaderText = "#";
-            dgvDiagnoseItemList.Columns["ID"].ReadOnly = true;
+            /*
+              public int ID { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColPrice"].HeaderText = "Unit Price";
-            dgvDiagnoseItemList.Columns["ColPrice"].ReadOnly = true;
-            dgvDiagnoseItemList.Columns["ColPrice"].DefaultCellStyle.Format = "c";
+        public string ColItemName { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColOrderQuantity"].HeaderText = "Quantity";
+        public string ColItemBrand { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColStockQuantity"].HeaderText = "Stock Quantity";
-            dgvDiagnoseItemList.Columns["ColStockQuantity"].ReadOnly = true;
+        public string ColItemDesc { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColOrderReq"].Visible = false;
+        public decimal ColPrice { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColNote"].HeaderText = "Note";
+        public int ColStockQuantity { get; set; }
 
-            dgvDiagnoseItemList.Columns["InventoryID"].Visible = false;
+        public int ColOrderQuantity { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColItemName"].HeaderText = "Item Name";
-            dgvDiagnoseItemList.Columns["ColItemName"].ReadOnly = true;
+        public bool ColOrderReq { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColItemDesc"].HeaderText = "Item Desc";
-            dgvDiagnoseItemList.Columns["ColItemDesc"].ReadOnly = true;
+        public string ColNote { get; set; }
 
-            dgvDiagnoseItemList.Columns["ColItemBrand"].HeaderText = "Item Brand";
-            dgvDiagnoseItemList.Columns["ColItemBrand"].ReadOnly = true;
+        public int InventoryID { get; set; }
 
-            dgvDiagnoseItemList.Columns["OrderID"].Visible = false;
+        public int? OrderID { get; set; }
 
-            dgvDiagnoseItemList.Columns["ProdOrderID"].Visible = false;
+        public int? ProdOrderID { get; set; }
+
+        public int? ServiceOrderID { get; set; } */
         }
         private void BtnDiagnoseAddItem_Click(object sender, EventArgs e)
         {

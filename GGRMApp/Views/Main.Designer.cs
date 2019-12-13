@@ -369,7 +369,6 @@ namespace GGRMApp.Views
             this.button5 = new System.Windows.Forms.Button();
             this.btnConfirmChanges = new System.Windows.Forms.Button();
             this.lblEditCustomerStatus = new System.Windows.Forms.Label();
-            this.btnDeleteCustomer = new System.Windows.Forms.Button();
             this.subtabEditUser = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel30 = new System.Windows.Forms.TableLayoutPanel();
@@ -388,7 +387,7 @@ namespace GGRMApp.Views
             this.button9 = new System.Windows.Forms.Button();
             this.btnEditUserConfirm = new System.Windows.Forms.Button();
             this.lblEditUserStatus = new System.Windows.Forms.Label();
-            this.btnEditUserDelete = new System.Windows.Forms.Button();
+            this.btnEditUserDisable = new System.Windows.Forms.Button();
             this.subtabEditProducts = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
@@ -2304,6 +2303,7 @@ namespace GGRMApp.Views
             this.dgvUsers.Size = new System.Drawing.Size(862, 704);
             this.dgvUsers.TabIndex = 5;
             this.dgvUsers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvUsers_DataBindingComplete);
+            this.dgvUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.DgvUsers_Paint);
             // 
             // label62
             // 
@@ -5823,7 +5823,6 @@ namespace GGRMApp.Views
             this.tableLayoutPanel21.Controls.Add(this.button5, 0, 0);
             this.tableLayoutPanel21.Controls.Add(this.btnConfirmChanges, 0, 1);
             this.tableLayoutPanel21.Controls.Add(this.lblEditCustomerStatus, 0, 2);
-            this.tableLayoutPanel21.Controls.Add(this.btnDeleteCustomer, 0, 3);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel21.Location = new System.Drawing.Point(814, 2);
             this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2);
@@ -5880,21 +5879,6 @@ namespace GGRMApp.Views
             this.lblEditCustomerStatus.Size = new System.Drawing.Size(74, 481);
             this.lblEditCustomerStatus.TabIndex = 2;
             this.lblEditCustomerStatus.Text = "Test Status";
-            // 
-            // btnDeleteCustomer
-            // 
-            this.btnDeleteCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(69)))), ((int)(((byte)(60)))));
-            this.btnDeleteCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeleteCustomer.FlatAppearance.BorderSize = 0;
-            this.btnDeleteCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(3, 642);
-            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(190, 94);
-            this.btnDeleteCustomer.TabIndex = 3;
-            this.btnDeleteCustomer.Text = "Delete Customer";
-            this.btnDeleteCustomer.UseVisualStyleBackColor = false;
             // 
             // subtabEditUser
             // 
@@ -6119,7 +6103,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel59.Controls.Add(this.button9, 0, 0);
             this.tableLayoutPanel59.Controls.Add(this.btnEditUserConfirm, 0, 1);
             this.tableLayoutPanel59.Controls.Add(this.lblEditUserStatus, 0, 2);
-            this.tableLayoutPanel59.Controls.Add(this.btnEditUserDelete, 0, 3);
+            this.tableLayoutPanel59.Controls.Add(this.btnEditUserDisable, 0, 3);
             this.tableLayoutPanel59.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel59.Location = new System.Drawing.Point(818, 2);
             this.tableLayoutPanel59.Margin = new System.Windows.Forms.Padding(2);
@@ -6179,21 +6163,22 @@ namespace GGRMApp.Views
             this.lblEditUserStatus.TabIndex = 2;
             this.lblEditUserStatus.Text = "Test Status";
             // 
-            // btnEditUserDelete
+            // btnEditUserDisable
             // 
-            this.btnEditUserDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(69)))), ((int)(((byte)(60)))));
-            this.btnEditUserDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEditUserDelete.FlatAppearance.BorderSize = 0;
-            this.btnEditUserDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditUserDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUserDelete.ForeColor = System.Drawing.Color.White;
-            this.btnEditUserDelete.Location = new System.Drawing.Point(2, 645);
-            this.btnEditUserDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditUserDelete.Name = "btnEditUserDelete";
-            this.btnEditUserDelete.Size = new System.Drawing.Size(192, 96);
-            this.btnEditUserDelete.TabIndex = 3;
-            this.btnEditUserDelete.Text = "Delete User";
-            this.btnEditUserDelete.UseVisualStyleBackColor = false;
+            this.btnEditUserDisable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(69)))), ((int)(((byte)(60)))));
+            this.btnEditUserDisable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEditUserDisable.FlatAppearance.BorderSize = 0;
+            this.btnEditUserDisable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditUserDisable.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditUserDisable.ForeColor = System.Drawing.Color.White;
+            this.btnEditUserDisable.Location = new System.Drawing.Point(2, 645);
+            this.btnEditUserDisable.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditUserDisable.Name = "btnEditUserDisable";
+            this.btnEditUserDisable.Size = new System.Drawing.Size(192, 96);
+            this.btnEditUserDisable.TabIndex = 3;
+            this.btnEditUserDisable.Text = "Disable User";
+            this.btnEditUserDisable.UseVisualStyleBackColor = false;
+            this.btnEditUserDisable.Click += new System.EventHandler(this.BtnEditUserDisable_Click);
             // 
             // subtabEditProducts
             // 
@@ -7692,7 +7677,6 @@ namespace GGRMApp.Views
             // 
             this.btnItemPickerSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnItemPickerSelect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnItemPickerSelect.Enabled = false;
             this.btnItemPickerSelect.FlatAppearance.BorderSize = 0;
             this.btnItemPickerSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnItemPickerSelect.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8322,7 +8306,6 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnConfirmChanges;
         private System.Windows.Forms.Label lblEditCustomerStatus;
-        private System.Windows.Forms.Button btnDeleteCustomer;
         private System.Windows.Forms.Label lblSelectedCustomer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
@@ -8517,7 +8500,6 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnEditUserConfirm;
         private System.Windows.Forms.Label lblEditUserStatus;
-        private System.Windows.Forms.Button btnEditUserDelete;
         private System.Windows.Forms.TableLayoutPanel tlpDiagnose;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel61;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel62;
@@ -8689,5 +8671,6 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnItemPickerSelect;
         private System.Windows.Forms.DataGridView dgvItemPicker;
+        private System.Windows.Forms.Button btnEditUserDisable;
     }
 }
