@@ -289,6 +289,5 @@ namespace GGRMApp.Views
             mainView.SelectedTab = previousTab;
 
         }
-
     }
 }

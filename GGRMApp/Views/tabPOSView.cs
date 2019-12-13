@@ -196,6 +196,7 @@ namespace GGRMApp.Views
                     if (!madeProdOrder)
                     {
                         posProductOrder = GlobalConfig.Connection.CreateProductOrder(posProductOrder, out status);
+                        posProductOrder.PordRequestSource = "CO-" + posCurrentOrder.ID.ToString();
                         madeProdOrder = true;
 
                         currentLine.ProdOrderID = posProductOrder.ID;

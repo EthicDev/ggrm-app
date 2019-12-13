@@ -346,7 +346,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel81 = new System.Windows.Forms.TableLayoutPanel();
             this.button12 = new System.Windows.Forms.Button();
             this.btnNewOrderCreate = new System.Windows.Forms.Button();
-            this.label70 = new System.Windows.Forms.Label();
+            this.lblNewOrderStatus = new System.Windows.Forms.Label();
             this.subtabEditCustomer = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
@@ -1616,6 +1616,7 @@ namespace GGRMApp.Views
             this.dgvPendingOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPendingOrders.Size = new System.Drawing.Size(808, 314);
             this.dgvPendingOrders.TabIndex = 2;
+            this.dgvPendingOrders.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPendingOrders_DataBindingComplete);
             // 
             // label21
             // 
@@ -5460,6 +5461,7 @@ namespace GGRMApp.Views
             this.dgvNewOrderItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNewOrderItems.Size = new System.Drawing.Size(692, 280);
             this.dgvNewOrderItems.TabIndex = 4;
+            this.dgvNewOrderItems.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvNewOrderItems_DataBindingComplete);
             // 
             // txtNewOrderID
             // 
@@ -5482,7 +5484,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel81.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel81.Controls.Add(this.button12, 0, 0);
             this.tableLayoutPanel81.Controls.Add(this.btnNewOrderCreate, 0, 1);
-            this.tableLayoutPanel81.Controls.Add(this.label70, 0, 2);
+            this.tableLayoutPanel81.Controls.Add(this.lblNewOrderStatus, 0, 2);
             this.tableLayoutPanel81.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel81.Location = new System.Drawing.Point(818, 2);
             this.tableLayoutPanel81.Margin = new System.Windows.Forms.Padding(2);
@@ -5527,18 +5529,18 @@ namespace GGRMApp.Views
             this.btnNewOrderCreate.UseVisualStyleBackColor = false;
             this.btnNewOrderCreate.Click += new System.EventHandler(this.BtnNewOrderCreate_Click);
             // 
-            // label70
+            // lblNewOrderStatus
             // 
-            this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.White;
-            this.label70.Location = new System.Drawing.Point(61, 158);
-            this.label70.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(74, 585);
-            this.label70.TabIndex = 2;
-            this.label70.Text = "Test Status";
+            this.lblNewOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblNewOrderStatus.AutoSize = true;
+            this.lblNewOrderStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewOrderStatus.ForeColor = System.Drawing.Color.White;
+            this.lblNewOrderStatus.Location = new System.Drawing.Point(61, 158);
+            this.lblNewOrderStatus.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.lblNewOrderStatus.Name = "lblNewOrderStatus";
+            this.lblNewOrderStatus.Size = new System.Drawing.Size(74, 585);
+            this.lblNewOrderStatus.TabIndex = 2;
+            this.lblNewOrderStatus.Text = "Test Status";
             // 
             // subtabEditCustomer
             // 
@@ -8595,7 +8597,7 @@ namespace GGRMApp.Views
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel81;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button btnNewOrderCreate;
-        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label lblNewOrderStatus;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCreateAndPay;
         private System.Windows.Forms.Button button7;

@@ -2,6 +2,7 @@
 using GGRMLib.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -31,13 +32,21 @@ namespace GGRMApp.Views
             dgvOrderRequests.Columns["id"].Visible = false;
         }
 
+        private void dgvPendingOrders_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvPendingOrders.Columns["id"].Visible = false;
+        }
+
         private void BtnOrderSelected_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvPendingOrders.SelectedRows)
+            selectedProdOrderRequests = new List<ProductOrder>();
+            foreach (DataGridViewRow row in dgvOrderRequests.SelectedRows)
             {
                 string status;
-                int selectedID = (int)row.Cells[0].Value;
+                int selectedID = (int)row.Cells["id"].Value;
                 ProductOrder selectedRequest = GlobalConfig.Connection.GetProductOrderByID(selectedID, out status);
+                //BindingList<OrderLine> prodOrderLines = GlobalConfig.Connection.GetOrderLinesByProdOrdID(selectedRequest.ID, out status);
+                //selectedRequest.orderLines = prodOrderLines;
                 selectedProdOrderRequests.Add(selectedRequest);
             }
 
@@ -49,13 +58,6 @@ namespace GGRMApp.Views
         {
             savePreviousTab();
             mainView.SelectedTab = subtabManagePartOrder;
-        }
-
-        // new order controls
-
-        private void BtnNewOrderCreate_Click(object sender, EventArgs e)
-        {
-
         }
 
         //manage order controls 
