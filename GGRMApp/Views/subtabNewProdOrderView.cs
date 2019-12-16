@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GGRMApp.Views
 {
+
+    //Coded by: Macklem Curtis & Cooper Keddy
+    //Date: Nov/Dec 2019
     public partial class Main : Form
     {
         private void subtabNewOrder_Enter(object sender, EventArgs e)

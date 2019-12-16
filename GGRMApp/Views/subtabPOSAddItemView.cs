@@ -25,8 +25,10 @@ namespace GGRMApp.Views
         {
             dgvPOSItemLookup.Columns["id"].Visible = false;
             dgvPOSItemLookup.Columns["invQuantity"].Visible = false;
+            dgvPOSItemLookup.Columns["Description"].Visible = false;
             dgvPOSItemLookup.Columns["prodSize"].Visible = false;
             dgvPOSItemLookup.Columns["prodMeasure"].Visible = false;
+            dgvPOSItemLookup.Columns["Price"].DefaultCellStyle.Format = "c";
         }
 
         private void btnSelectItems_Click(object sender, EventArgs e)

@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace GGRMApp
 {
+    //Coded by: Macklem Curtis
+    //Date: Nov/Dec 2019
     public static class GlobalData
     {
         internal static Hashtable ViewData = new Hashtable();

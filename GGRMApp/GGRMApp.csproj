@@ -51,25 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Old Forms\AddItemForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Old Forms\AddItemForm.Designer.cs">
-      <DependentUpon>AddItemForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Old Forms\CustomerLookup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Old Forms\CustomerLookup.Designer.cs">
-      <DependentUpon>CustomerLookup.cs</DependentUpon>
-    </Compile>
     <Compile Include="GlobalData.cs" />
-    <Compile Include="Old Forms\InventoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Old Forms\InventoryForm.Designer.cs">
-      <DependentUpon>InventoryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,24 +63,6 @@
     </Compile>
     <Compile Include="Views\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Old Forms\SalesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Old Forms\SalesForm.Designer.cs">
-      <DependentUpon>SalesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Old Forms\CustomersFormOld.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Old Forms\CustomersFormOld.Designer.cs">
-      <DependentUpon>CustomersFormOld.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Old Forms\NewCustomerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Old Forms\NewCustomerForm.Designer.cs">
-      <DependentUpon>NewCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +102,9 @@
     <Compile Include="Views\subtabPOSRepairRequestView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\subtabRepairView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\tabDataCustomersView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,29 +138,11 @@
     <Compile Include="Views\tabUsersView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Old Forms\AddItemForm.resx">
-      <DependentUpon>AddItemForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Old Forms\CustomerLookup.resx">
-      <DependentUpon>CustomerLookup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Old Forms\InventoryForm.resx">
-      <DependentUpon>InventoryForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Old Forms\SalesForm.resx">
-      <DependentUpon>SalesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Old Forms\CustomersFormOld.resx">
-      <DependentUpon>CustomersFormOld.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Old Forms\NewCustomerForm.resx">
-      <DependentUpon>NewCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

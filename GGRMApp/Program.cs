@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace GGRMApp
 {
+    //Coded by: Macklem Curtis & Cooper Keddy
+    //Date: Nov/Dec 2019
     static class Program
     {
         /// <summary>
@@ -24,8 +26,8 @@ namespace GGRMApp
             //Initialize the database connection
             GlobalConfig.InitializeConnections();
 
-            //Application.Run(new Login());
-            Application.Run(new Main(5));
+            Application.Run(new Login());
+            //Application.Run(new Main(5));
         }
     }
     

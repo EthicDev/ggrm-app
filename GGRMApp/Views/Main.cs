@@ -17,6 +17,9 @@ using GGRMLib.DataAccess;
 
 namespace GGRMApp.Views
 {
+    //Coded by: Cooper Keddy & Macklem Curtis
+    //Date: Nov/Dec 2019
+
     public partial class Main : Form
     {
         List<Button> buttons = new List<Button>();
@@ -289,5 +292,6 @@ namespace GGRMApp.Views
             mainView.SelectedTab = previousTab;
 
         }
+
     }
 }

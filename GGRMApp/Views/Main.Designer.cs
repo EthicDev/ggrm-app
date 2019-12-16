@@ -255,7 +255,7 @@ namespace GGRMApp.Views
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.lblRepairTimeElapsed = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
+            this.lblRepairEquipName = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.dgvRepairItemList = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel98 = new System.Windows.Forms.TableLayoutPanel();
@@ -1316,7 +1316,6 @@ namespace GGRMApp.Views
             // dgvRepairCart
             // 
             this.dgvRepairCart.AllowUserToAddRows = false;
-            this.dgvRepairCart.AllowUserToDeleteRows = false;
             this.dgvRepairCart.AllowUserToResizeColumns = false;
             this.dgvRepairCart.AllowUserToResizeRows = false;
             this.dgvRepairCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1342,7 +1341,6 @@ namespace GGRMApp.Views
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRepairCart.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvRepairCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRepairCart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvRepairCart.EnableHeadersVisualStyles = false;
             this.dgvRepairCart.GridColor = System.Drawing.Color.Gray;
             this.dgvRepairCart.Location = new System.Drawing.Point(0, 347);
@@ -1359,7 +1357,6 @@ namespace GGRMApp.Views
             // dgvItemCart
             // 
             this.dgvItemCart.AllowUserToAddRows = false;
-            this.dgvItemCart.AllowUserToDeleteRows = false;
             this.dgvItemCart.AllowUserToResizeColumns = false;
             this.dgvItemCart.AllowUserToResizeRows = false;
             this.dgvItemCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1385,7 +1382,6 @@ namespace GGRMApp.Views
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvItemCart.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvItemCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvItemCart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvItemCart.EnableHeadersVisualStyles = false;
             this.dgvItemCart.GridColor = System.Drawing.Color.Gray;
             this.dgvItemCart.Location = new System.Drawing.Point(0, 0);
@@ -1627,9 +1623,9 @@ namespace GGRMApp.Views
             this.label21.Location = new System.Drawing.Point(2, 0);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(123, 20);
+            this.label21.Size = new System.Drawing.Size(122, 20);
             this.label21.TabIndex = 1;
-            this.label21.Text = "Pending Orders";
+            this.label21.Text = "Created Orders";
             // 
             // tableLayoutPanel26
             // 
@@ -3616,6 +3612,7 @@ namespace GGRMApp.Views
             this.btnDiagnoseSubmit.TabIndex = 5;
             this.btnDiagnoseSubmit.Text = "Submit Diagnosis";
             this.btnDiagnoseSubmit.UseVisualStyleBackColor = false;
+            this.btnDiagnoseSubmit.Click += new System.EventHandler(this.btnDiagnoseSubmit_Click);
             // 
             // lblRepairEstimatedPrice
             // 
@@ -3657,7 +3654,7 @@ namespace GGRMApp.Views
             this.button7.TabIndex = 5;
             this.button7.Text = "Back";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.GoBack);
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // tableLayoutPanel62
             // 
@@ -3733,6 +3730,7 @@ namespace GGRMApp.Views
             this.dgvDiagnoseItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDiagnoseItemList.Size = new System.Drawing.Size(810, 322);
             this.dgvDiagnoseItemList.TabIndex = 5;
+            this.dgvDiagnoseItemList.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDiagnoseItemList_DataBindingComplete);
             // 
             // tableLayoutPanel92
             // 
@@ -3832,6 +3830,7 @@ namespace GGRMApp.Views
             this.subtabRepair.Size = new System.Drawing.Size(1016, 747);
             this.subtabRepair.TabIndex = 22;
             this.subtabRepair.Text = "subtabRepair";
+            this.subtabRepair.Enter += new System.EventHandler(this.subtabRepair_Enter);
             // 
             // tableLayoutPanel93
             // 
@@ -3887,8 +3886,9 @@ namespace GGRMApp.Views
             this.btnRepairComplete.Name = "btnRepairComplete";
             this.btnRepairComplete.Size = new System.Drawing.Size(194, 83);
             this.btnRepairComplete.TabIndex = 5;
-            this.btnRepairComplete.Text = "Submit Diagnosis";
+            this.btnRepairComplete.Text = "Complete Repair";
             this.btnRepairComplete.UseVisualStyleBackColor = false;
+            this.btnRepairComplete.Click += new System.EventHandler(this.btnRepairComplete_Click);
             // 
             // button15
             // 
@@ -3979,9 +3979,9 @@ namespace GGRMApp.Views
             this.label87.Location = new System.Drawing.Point(10, 0);
             this.label87.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(157, 48);
+            this.label87.Size = new System.Drawing.Size(120, 48);
             this.label87.TabIndex = 7;
-            this.label87.Text = "Items Required";
+            this.label87.Text = "Items Used";
             this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel99
@@ -4010,7 +4010,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel100.Controls.Add(this.label92, 0, 1);
             this.tableLayoutPanel100.Controls.Add(this.label93, 0, 2);
             this.tableLayoutPanel100.Controls.Add(this.lblRepairTimeElapsed, 1, 0);
-            this.tableLayoutPanel100.Controls.Add(this.label100, 1, 1);
+            this.tableLayoutPanel100.Controls.Add(this.lblRepairEquipName, 1, 1);
             this.tableLayoutPanel100.Controls.Add(this.label101, 1, 2);
             this.tableLayoutPanel100.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel100.Location = new System.Drawing.Point(405, 0);
@@ -4047,12 +4047,12 @@ namespace GGRMApp.Views
             this.label92.Dock = System.Windows.Forms.DockStyle.Right;
             this.label92.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label92.ForeColor = System.Drawing.Color.DarkGray;
-            this.label92.Location = new System.Drawing.Point(59, 45);
+            this.label92.Location = new System.Drawing.Point(21, 45);
             this.label92.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(79, 45);
+            this.label92.Size = new System.Drawing.Size(117, 45);
             this.label92.TabIndex = 7;
-            this.label92.Text = "Product";
+            this.label92.Text = "Equip Name";
             this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label93
@@ -4083,19 +4083,19 @@ namespace GGRMApp.Views
             this.lblRepairTimeElapsed.Text = "0:00";
             this.lblRepairTimeElapsed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label100
+            // lblRepairEquipName
             // 
-            this.label100.AutoSize = true;
-            this.label100.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label100.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label100.ForeColor = System.Drawing.Color.White;
-            this.label100.Location = new System.Drawing.Point(151, 45);
-            this.label100.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(147, 45);
-            this.label100.TabIndex = 8;
-            this.label100.Text = "Sample Product";
-            this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRepairEquipName.AutoSize = true;
+            this.lblRepairEquipName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblRepairEquipName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRepairEquipName.ForeColor = System.Drawing.Color.White;
+            this.lblRepairEquipName.Location = new System.Drawing.Point(151, 45);
+            this.lblRepairEquipName.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.lblRepairEquipName.Name = "lblRepairEquipName";
+            this.lblRepairEquipName.Size = new System.Drawing.Size(147, 45);
+            this.lblRepairEquipName.TabIndex = 8;
+            this.lblRepairEquipName.Text = "Sample Product";
+            this.lblRepairEquipName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label101
             // 
@@ -4152,6 +4152,7 @@ namespace GGRMApp.Views
             this.dgvRepairItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRepairItemList.Size = new System.Drawing.Size(405, 322);
             this.dgvRepairItemList.TabIndex = 6;
+            this.dgvRepairItemList.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvRepairItemList_DataBindingComplete);
             // 
             // tableLayoutPanel98
             // 
@@ -8655,7 +8656,7 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Label lblRepairTimeElapsed;
-        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label lblRepairEquipName;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel101;
         private System.Windows.Forms.PictureBox picUserIcon;

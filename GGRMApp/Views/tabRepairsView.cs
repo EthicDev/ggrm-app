@@ -17,7 +17,9 @@ namespace GGRMApp.Views
 
         private void tabRepairs_Enter(object sender, EventArgs e)
         {
+            selectedServiceOrder = new ServiceOrder();
             btnDiagnose.Enabled = false;
+            btnBeginRepair.Enabled = false;
             string status;
 
             DataTable dtPendingServices = GlobalConfig.Connection.GetPendingServicesDataTable(out status);
@@ -58,13 +60,35 @@ namespace GGRMApp.Views
         private void dgvPendingRepairs_SelectionChanged(object sender, EventArgs e)
 
         {
-
-            btnDiagnose.Enabled = true;
-
+            if (dgvPendingRepairs.SelectedRows.Count >= 1)
+            {
+                DataGridViewRow selectedRow = dgvPendingRepairs.SelectedRows[0];
+                if (selectedRow.Cells["Status"].Value.ToString() == "Pending")
+                {
+                    btnDiagnose.Enabled = true;
+                    btnBeginRepair.Enabled = false;
+                }
+                else if (selectedRow.Cells["Status"].Value.ToString() != "Repair Complete")
+                {
+                    btnBeginRepair.Enabled = true;
+                    btnDiagnose.Enabled = false;
+                }
+                else
+                {
+                    btnBeginRepair.Enabled = false;
+                    btnDiagnose.Enabled = false;
+                }
+            }
         }
 
         private void BtnBeginRepair_Click(object sender, EventArgs e)
         {
+            string status;
+            int sID = (int)dgvPendingRepairs.SelectedRows[0].Cells["id"].Value;
+
+            selectedServiceOrder = GlobalConfig.Connection.GetServiceOrderByID(sID, out status);
+            selectedServiceOrder.serviceParts = GlobalConfig.Connection.GetServicePartsListByServOrdID(selectedServiceOrder.ID, out status);
+
             savePreviousTab();
             mainView.SelectedTab = subtabRepair;
         }

@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace GGRMApp.Views
 {
+    //Coded by: Cooper Keddy
+    //Date: Nov/Dec 2019
     public partial class Main : Form
     {
         string itemPickerContext;

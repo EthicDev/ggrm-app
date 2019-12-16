@@ -12,6 +12,8 @@ using System.Windows.Forms;
 
 namespace GGRMApp
 {
+    //Coded by: Cooper Keddy & Macklem Curtis
+    //Date: Nov/Dec 2019
     public partial class Login : Form
     {
         public Login()
