@@ -183,8 +183,7 @@ namespace GGRMApp.Views
         private void BtnAddItem_Click(object sender, EventArgs e)
 
         {
-
-            tcPOSSidebar.SelectedTab = subtabPOSAddItem;
+            OpenItemPicker("POS");
 
         }
 
@@ -194,7 +193,7 @@ namespace GGRMApp.Views
 
         {
 
-            tcPOSSidebar.SelectedTab = subtabPOSButtons;
+            
 
         }
         private void BtnRepairReqBack_Click(object sender, EventArgs e)

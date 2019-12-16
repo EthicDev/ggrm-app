@@ -18,14 +18,15 @@ namespace GGRMApp.Views
         string itemPickerContext;
 
         public void OpenItemPicker(string context)
-        {
-            this.itemPickerContext = context;
+        {           
+            savePreviousTab();
             mainView.SelectedTab = subtabItemPicker;
+            itemPickerContext = context;
         }
         private void SubtabItemPicker_Enter(object sender, EventArgs e)
         {
             string status;
-            DataTable dtInventory = GlobalConfig.Connection.GetInventoryDataTable(out status);
+            DataTable dtInventory = GlobalConfig.Connection.GetInventoryDataTableShort(out status);
             dgvItemPicker.DataSource = dtInventory;
             dgvItemPicker.Focus();
             btnItemPickerSelect.Visible = false;
@@ -73,6 +74,27 @@ namespace GGRMApp.Views
 
                         mainView.SelectedTab = subtabDiagnose;
                     }
+                    break;
+                case "POS":
+                    foreach (DataGridViewRow row in dgvItemPicker.SelectedRows)
+                    {
+                        OrderLine ol = new OrderLine();
+                        ol.ID = posCurrentOrder.orderLines.Count + 1;
+                        ol.OrderID = posCurrentOrder.ID;
+                        ol.ColItemName = (string)row.Cells["Name"].Value;
+                        ol.ColItemDesc = (string)row.Cells["Description"].Value;
+                        ol.ColItemBrand = (string)row.Cells["Brand"].Value;
+                        ol.ColItemSize = (decimal)row.Cells["prodSize"].Value;
+                        ol.ColItemMeasure = (string)row.Cells["prodMeasure"].Value;
+                        ol.InventoryID = (int)row.Cells["id"].Value;
+                        ol.ColOrderQuantity = 1;
+                        ol.ColStockQuantity = (int)row.Cells["invQuantity"].Value;
+                        ol.ColPrice = (decimal)row.Cells["Price"].Value;
+                        ol.ColNote = "hi";
+                        ol.ColOrderReq = false;
+                        posCurrentOrder.orderLines.Add(ol);
+                    }
+                    mainView.SelectedTab = tabPOS;
                     break;
             }
         }

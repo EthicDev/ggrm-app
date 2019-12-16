@@ -93,6 +93,9 @@
     <Compile Include="Views\subtabNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\subtabNewProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\subtabNewProdOrderView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +112,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\tabDataInventoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\tabDetailsOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\tabDataOrdersView.cs">

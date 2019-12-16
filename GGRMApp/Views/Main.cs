@@ -288,9 +288,7 @@ namespace GGRMApp.Views
         public void GoBack(object sender, EventArgs e)
 
         {
-
             mainView.SelectedTab = previousTab;
-
         }
 
     }

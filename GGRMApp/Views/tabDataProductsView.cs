@@ -1,4 +1,5 @@
 ﻿using GGRMLib;
+using GGRMLib.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,7 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
+        Product productToEdit;
         private void tabDataProducts_Enter(object sender, EventArgs e)
         {
             string status;
@@ -38,30 +40,18 @@ namespace GGRMApp.Views
         }
         private void BtnDataProductsEdit_Click(object sender, EventArgs e)
         {
+            int selectedID = (int)dgvDataProducts.SelectedRows[0].Cells["id"].Value;
+            productToEdit = GlobalConfig.Connection.GetProductByID(selectedID, out string status);
+            MessageBox.Show(status);
             savePreviousTab();
             mainView.SelectedTab = subtabEditProducts;
+            
         }
 
         private void BtnDataProductsAdd_Click(object sender, EventArgs e)
         {
             savePreviousTab();
             mainView.SelectedTab = subtabNewProduct;
-        }
-
-        
-
-
-        // new product controls
-        private void BtnNewProductAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // edit product controls
-
-        private void BtnEditProductConfirm_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
