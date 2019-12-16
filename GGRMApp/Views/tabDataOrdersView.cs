@@ -37,7 +37,7 @@ namespace GGRMApp.Views
             savePreviousTab();
             mainView.SelectedTab = subtabDetailsOrder;
 
-            orderViewing = GlobalConfig.Connection.GetCustomerOrder
+            //orderViewing = GlobalConfig.Connection.GetCustomerOrder
         }
 
         private void BtnDataOrdersPay_Click(object sender, EventArgs e)
