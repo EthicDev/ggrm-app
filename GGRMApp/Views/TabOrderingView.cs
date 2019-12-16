@@ -14,6 +14,7 @@ namespace GGRMApp.Views
     public partial class Main : Form
     {
         List<ProductOrder> selectedProdOrderRequests = new List<ProductOrder>();
+        ProductOrder orderToManage;
         private void tabOrders_Enter(object sender, EventArgs e)
         {
             string status;
@@ -56,6 +57,11 @@ namespace GGRMApp.Views
 
         private void BtnManageOrder_Click(object sender, EventArgs e)
         {
+            int orderToManageID = (int)dgvPendingOrders.SelectedRows[0].Cells["id"].Value;
+            string status;
+
+            orderToManage = GlobalConfig.Connection.GetProductOrderByID(orderToManageID, out status);
+
             savePreviousTab();
             mainView.SelectedTab = subtabManagePartOrder;
         }

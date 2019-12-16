@@ -234,7 +234,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel60 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDiagnoseItemList = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel92 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblServiceNumber = new System.Windows.Forms.Label();
+            this.lblDiagnoseServiceNumber = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.tableLayoutPanel63 = new System.Windows.Forms.TableLayoutPanel();
             this.label47 = new System.Windows.Forms.Label();
@@ -1354,6 +1354,7 @@ namespace GGRMApp.Views
             this.dgvRepairCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRepairCart.Size = new System.Drawing.Size(812, 348);
             this.dgvRepairCart.TabIndex = 4;
+            this.dgvRepairCart.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvRepairCart_DataBindingComplete);
             // 
             // dgvItemCart
             // 
@@ -2303,7 +2304,6 @@ namespace GGRMApp.Views
             this.dgvUsers.Size = new System.Drawing.Size(862, 704);
             this.dgvUsers.TabIndex = 5;
             this.dgvUsers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvUsers_DataBindingComplete);
-            this.dgvUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.DgvUsers_Paint);
             // 
             // label62
             // 
@@ -3739,7 +3739,7 @@ namespace GGRMApp.Views
             this.tableLayoutPanel92.ColumnCount = 2;
             this.tableLayoutPanel92.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel92.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel92.Controls.Add(this.lblServiceNumber, 0, 0);
+            this.tableLayoutPanel92.Controls.Add(this.lblDiagnoseServiceNumber, 0, 0);
             this.tableLayoutPanel92.Controls.Add(this.label46, 0, 0);
             this.tableLayoutPanel92.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel92.Location = new System.Drawing.Point(0, 0);
@@ -3751,19 +3751,19 @@ namespace GGRMApp.Views
             this.tableLayoutPanel92.Size = new System.Drawing.Size(810, 48);
             this.tableLayoutPanel92.TabIndex = 6;
             // 
-            // lblServiceNumber
+            // lblDiagnoseServiceNumber
             // 
-            this.lblServiceNumber.AutoSize = true;
-            this.lblServiceNumber.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblServiceNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceNumber.ForeColor = System.Drawing.Color.White;
-            this.lblServiceNumber.Location = new System.Drawing.Point(415, 0);
-            this.lblServiceNumber.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
-            this.lblServiceNumber.Name = "lblServiceNumber";
-            this.lblServiceNumber.Size = new System.Drawing.Size(99, 48);
-            this.lblServiceNumber.TabIndex = 8;
-            this.lblServiceNumber.Text = "Service #";
-            this.lblServiceNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDiagnoseServiceNumber.AutoSize = true;
+            this.lblDiagnoseServiceNumber.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDiagnoseServiceNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiagnoseServiceNumber.ForeColor = System.Drawing.Color.White;
+            this.lblDiagnoseServiceNumber.Location = new System.Drawing.Point(415, 0);
+            this.lblDiagnoseServiceNumber.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.lblDiagnoseServiceNumber.Name = "lblDiagnoseServiceNumber";
+            this.lblDiagnoseServiceNumber.Size = new System.Drawing.Size(99, 48);
+            this.lblDiagnoseServiceNumber.TabIndex = 8;
+            this.lblDiagnoseServiceNumber.Text = "Service #";
+            this.lblDiagnoseServiceNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label46
             // 
@@ -7184,6 +7184,7 @@ namespace GGRMApp.Views
             this.subtabManagePartOrder.Size = new System.Drawing.Size(1016, 747);
             this.subtabManagePartOrder.TabIndex = 21;
             this.subtabManagePartOrder.Text = "subtabManagePartOrder";
+            this.subtabManagePartOrder.Enter += new System.EventHandler(this.subtabManagePartOrder_Enter);
             // 
             // tableLayoutPanel87
             // 
@@ -7278,6 +7279,7 @@ namespace GGRMApp.Views
             this.dgvPartOrderItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPartOrderItems.Size = new System.Drawing.Size(508, 313);
             this.dgvPartOrderItems.TabIndex = 4;
+            this.dgvPartOrderItems.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPartOrderItems_DataBindingComplete);
             // 
             // label80
             // 
@@ -8631,7 +8633,7 @@ namespace GGRMApp.Views
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.Button btnDataOrdersPay;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel92;
-        private System.Windows.Forms.Label lblServiceNumber;
+        private System.Windows.Forms.Label lblDiagnoseServiceNumber;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TabPage subtabRepair;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel93;

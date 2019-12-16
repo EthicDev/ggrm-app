@@ -102,10 +102,10 @@ namespace GGRMApp.Views
 
             switch(empToEdit.EmpDisabled)
             {
-                case 0:
+                case false:
                     btnEditUserDisable.Text = "Disable Employee";
                     break;
-                case 1:
+                case true:
                     btnEditUserDisable.Text = "Enable Employee";
                     break;
             }
@@ -132,10 +132,10 @@ namespace GGRMApp.Views
 
             switch (empToEdit.EmpDisabled)
             {
-                case 0:
+                case true:
                     btnEditUserDisable.Text = "Disable Employee";
                     break;
-                case 1:
+                case false:
                     btnEditUserDisable.Text = "Enable Employee";
                     break;
             }

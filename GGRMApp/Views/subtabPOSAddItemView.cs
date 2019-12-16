@@ -25,6 +25,8 @@ namespace GGRMApp.Views
         {
             dgvPOSItemLookup.Columns["id"].Visible = false;
             dgvPOSItemLookup.Columns["invQuantity"].Visible = false;
+            dgvPOSItemLookup.Columns["prodSize"].Visible = false;
+            dgvPOSItemLookup.Columns["prodMeasure"].Visible = false;
         }
 
         private void btnSelectItems_Click(object sender, EventArgs e)
@@ -38,6 +40,8 @@ namespace GGRMApp.Views
                 ol.ColItemName = (string)row.Cells["Name"].Value;
                 ol.ColItemDesc = (string)row.Cells["Description"].Value;
                 ol.ColItemBrand = (string)row.Cells["Brand"].Value;
+                ol.ColItemSize = (decimal)row.Cells["prodSize"].Value;
+                ol.ColItemMeasure = (string)row.Cells["prodMeasure"].Value;
                 ol.InventoryID = (int)row.Cells["id"].Value;
                 ol.ColOrderQuantity = 1;
                 ol.ColStockQuantity = (int)row.Cells["invQuantity"].Value;

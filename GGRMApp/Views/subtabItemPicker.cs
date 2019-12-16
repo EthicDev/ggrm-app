@@ -13,11 +13,11 @@ namespace GGRMApp.Views
 {
     public partial class Main : Form
     {
-        string context;
+        string itemPickerContext;
 
         public void OpenItemPicker(string context)
         {
-            this.context = context;
+            this.itemPickerContext = context;
             mainView.SelectedTab = subtabItemPicker;
         }
         private void SubtabItemPicker_Enter(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace GGRMApp.Views
         }
         private void BtnItemPickerSelect_Click(object sender, EventArgs e)
         {
-            switch (context)
+            switch (itemPickerContext)
             {
                 case "diagnose":
                     foreach (DataGridViewRow row in dgvItemPicker.SelectedRows)
@@ -59,15 +59,17 @@ namespace GGRMApp.Views
                         ol.ColItemName = (string)row.Cells["Name"].Value;
                         ol.ColItemDesc = (string)row.Cells["Description"].Value;
                         ol.ColItemBrand = (string)row.Cells["Brand"].Value;
-                        ol.InventoryID = (int)row.Cells["Inventory ID"].Value;
+                        ol.InventoryID = (int)row.Cells["id"].Value;
                         ol.ColOrderQuantity = 1;
                         ol.ColStockQuantity = (int)row.Cells["Quantity"].Value;
-                        ol.ColPrice = (decimal)row.Cells["Price"].Value;
-                        ol.ColNote = "hi";
+                        ol.ColPrice = (decimal)row.Cells["Unit Price"].Value;
+                        ol.ColNote = "Note";
                         ol.ColOrderReq = false;
-                        diagnoseItemList.serviceParts.Add(ol);
+                        selectedServiceOrder.serviceParts.Add(ol);
 
-                        context = "";
+                        this.itemPickerContext = "";
+
+                        mainView.SelectedTab = subtabDiagnose;
                     }
                     break;
             }

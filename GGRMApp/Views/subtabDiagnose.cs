@@ -16,8 +16,8 @@ namespace GGRMApp.Views
         ServiceOrder diagnoseItemList = new ServiceOrder();
         private void SubtabDiagnose_Enter(object sender, EventArgs e)
         {
-
-            dgvDiagnoseItemList.DataSource = diagnoseItemList;
+            lblDiagnoseServiceNumber.Text = "Service #SO-" + selectedServiceOrder.SerOrdNumber;
+            dgvDiagnoseItemList.DataSource = selectedServiceOrder.serviceParts;
 
             
 

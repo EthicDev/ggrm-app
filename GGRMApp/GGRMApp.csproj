@@ -123,6 +123,9 @@
     <Compile Include="Views\subtabEditProductsView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\subtabManageProdOrderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\subtabNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>

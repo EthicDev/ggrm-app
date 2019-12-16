@@ -53,6 +53,7 @@ namespace GGRMApp.Views
             lblSelectedCustomer.Text = posSelectedCust.CustFirst != null ? "Customer: " + posSelectedCust.CustFirst + " " + posSelectedCust.CustLast : "No customer selected.";
 
             dgvItemCart.DataSource = posCurrentOrder.orderLines;
+            dgvRepairCart.DataSource = posCurrentOrder.serviceOrders;
         }
 
 
@@ -88,12 +89,23 @@ namespace GGRMApp.Views
             dgvItemCart.Columns["ColItemBrand"].HeaderText = "Item Brand";
             dgvItemCart.Columns["ColItemBrand"].ReadOnly = true;
 
+            dgvItemCart.Columns["ColItemSize"].HeaderText = "Item Size";
+            dgvItemCart.Columns["ColItemSize"].ReadOnly = true;
+
+            dgvItemCart.Columns["ColItemMeasure"].HeaderText = "Measurement Units";
+            dgvItemCart.Columns["ColItemMeasure"].ReadOnly = true;
+
             dgvItemCart.Columns["OrderID"].Visible = false;
 
             dgvItemCart.Columns["ProdOrderID"].Visible = false;
 
-            dgvRepairCart.DataSource = posCurrentOrder.serviceOrders;
+            dgvItemCart.Columns["ServiceOrderID"].Visible = false;
 
+            UpdateOrderTotal();
+        }
+
+        private void dgvRepairCart_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
             dgvRepairCart.Columns["ID"].HeaderText = "#";
             dgvRepairCart.Columns["ID"].ReadOnly = true;
 
@@ -114,6 +126,8 @@ namespace GGRMApp.Views
             dgvRepairCart.Columns["ServiceID"].Visible = false;
             dgvRepairCart.Columns["RequestingEmpID"].Visible = false;
             dgvRepairCart.Columns["EquipID"].Visible = false;
+
+            dgvRepairCart.Columns["TechnicianID"].Visible = false;
 
             UpdateOrderTotal();
         }
@@ -195,8 +209,9 @@ namespace GGRMApp.Views
                     currentLine.ColOrderReq = true;
                     if (!madeProdOrder)
                     {
-                        posProductOrder = GlobalConfig.Connection.CreateProductOrder(posProductOrder, out status);
                         posProductOrder.PordRequestSource = "CO-" + posCurrentOrder.ID.ToString();
+                        posProductOrder.RequestingEmpID = currentUser.ID;
+                        posProductOrder = GlobalConfig.Connection.CreateProductOrder(posProductOrder, out status);
                         madeProdOrder = true;
 
                         currentLine.ProdOrderID = posProductOrder.ID;

@@ -53,7 +53,12 @@ namespace GGRMApp.Views
             string status = "Order creation failed.";
             foreach (DataGridViewRow row in dgvNewOrderItems.Rows)
             {
-                if (row.Cells["orlSupplierQuantityOrdered"].Value == null || (int)row.Cells["orlSupplierQuantityOrdered"].Value < 1)
+                var quantity = row.Cells["orlSupplierQuantityOrdered"].Value;
+                if (quantity == null)
+                {
+                    createOrder = false;
+                    break;
+                } else if ((int)quantity < 1)
                 {
                     createOrder = false;
                     break;
@@ -77,6 +82,7 @@ namespace GGRMApp.Views
                     po.PordStatus = "Ordered";
                     po.PordSupplierOrderNum = txtNewOrderID.Text;
                     po.PordDateOrdered = DateTime.UtcNow;
+                    po.OrderingEmpID = currentUser.ID;
                     GlobalConfig.Connection.EditProductOrder(po, out status);
                 }
             }
