@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace GGRMApp.Views
 {
+    //Coded By: Cooper Keddy & Macklem Curtis
+    //Date: Nov/Dec 2019
     public partial class Main : Form
     {
 

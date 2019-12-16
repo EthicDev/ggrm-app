@@ -14,6 +14,8 @@ using GGRMLib.DataAccess;
 
 namespace GGRMApp.Views
 {
+    //Coded By: Macklem Curtis & Cooper Keddy
+    //Date: Nov/Dec 2019
     public partial class Main : Form
     {
         CustomerOrder posCurrentOrder = new CustomerOrder();
